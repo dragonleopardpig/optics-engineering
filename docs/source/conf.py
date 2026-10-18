@@ -30,6 +30,7 @@ html_logo = "_static/logo.svg"
 html_favicon = "_static/logo.svg"
 html_title = project
 html_short_title = project
+html_baseurl = "https://optics.engineering/"
 html_static_path = ["_static"]
 html_css_files = [
     "custom.css",
