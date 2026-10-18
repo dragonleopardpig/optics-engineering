@@ -31,6 +31,11 @@ jobs:
       - name: Build documentation
         run: python -m sphinx -W --keep-going -b html -d docs/build/doctrees docs/source docs/build/html
 
+      - name: Verify notebook assets
+        run: |
+          test -s docs/build/html/lite/files/photodiode.py
+          test -s docs/build/html/lite/files/ch03_photodiode_lab.ipynb
+
       - name: Upload GitHub Pages artifact
         if: github.event_name != 'pull_request'
         uses: actions/upload-pages-artifact@v4

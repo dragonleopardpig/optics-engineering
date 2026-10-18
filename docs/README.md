@@ -8,7 +8,7 @@ Build and publishing instructions are in the [project README](../README.md).
 - `source/future_plan/`: retained optics development roadmap.
 - `source/_static/`: logo, illustrations, CSS, JavaScript, and vendored libraries.
 - `source/_ext/`: worked-solution and formula-plotter Sphinx extensions.
-- `source/_contents/photodiode.py`: standalone module bundled with JupyterLite.
+- `source/_notebook_support/photodiode.py`: module bundled with JupyterLite.
 - `source/knowledge_base/worked_exercises/photonics_essentials/notebooks/`:
   browser-based Python lab.
 

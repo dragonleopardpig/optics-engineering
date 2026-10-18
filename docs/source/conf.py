@@ -41,7 +41,7 @@ html_js_files = [
 ]
 
 jupyterlite_contents = [
-    "_contents/photodiode.py",
+    "_notebook_support/photodiode.py",
     (
         "knowledge_base/worked_exercises/photonics_essentials/"
         "notebooks/*.ipynb"

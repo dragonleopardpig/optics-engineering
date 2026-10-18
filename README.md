@@ -27,7 +27,7 @@ installing the dependencies. On Windows, use `.venv\Scripts\activate` and
 `docs\make.bat html`.
 
 The JupyterLite notebook runs Python entirely in the browser. Its photodiode
-module is included in `docs/source/_contents/photodiode.py`, so building this
+module is included in `docs/source/_notebook_support/photodiode.py`, so building this
 site does not require the original simulator checkout or its dependencies.
 The first build needs internet access for the JupyterLite runtime assets;
 the notebook also needs internet access to load its Pyodide kernel/packages.

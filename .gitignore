@@ -11,3 +11,4 @@ __pycache__/
 !/docs/make.bat
 !/docs/requirements.txt
 !/docs/README.md
+/docs/source/_contents/
