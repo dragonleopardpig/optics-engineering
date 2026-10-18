@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="560" viewBox="0 0 1200 560" role="img" aria-labelledby="title desc" data-category="plano_concave" data-figure="65">
+  <title id="title">Figure 65 — Exercise 10.2-2: Plano-concave cavity</title>
+  <desc id="desc">Figure 65, a concept diagram for Exercise 10.2-2, Plano-concave cavity. The input, physical model, output, variables, and verification method are labeled.</desc>
+  <defs>
+    <style>
+      .bg{fill:#f7fafc}.card{fill:#fff;stroke:#b9c7d6;stroke-width:2}.band{fill:#eaf2f8}.figureid{font:700 14px sans-serif;fill:#286f9e;letter-spacing:1.2px}.head{font:700 25px sans-serif;fill:#18324a}.sub{font:17px sans-serif;fill:#486581}.tag{font:700 16px sans-serif;fill:#286f9e;letter-spacing:1px}.label{font:700 20px sans-serif;fill:#243b53;text-anchor:middle}.legend{font:16px sans-serif;fill:#334e68}.check{font:15px sans-serif;fill:#486581}.accent{fill:none;stroke:#d9485f;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}.accent2{fill:none;stroke:#8b5cf6;stroke-width:4;stroke-linecap:round;stroke-linejoin:round}.optic{fill:none;stroke:#286f9e;stroke-width:5}.thin{fill:none;stroke:#61788a;stroke-width:3}.axis{fill:none;stroke:#8295a5;stroke-width:2}.point{fill:#173f5f}.iconbox{fill:#edf7ff;stroke:#286f9e;stroke-width:3}.opticfill{fill:#286f9e}.layer1{fill:#d9ecff;stroke:#286f9e;stroke-width:2}.layer2{fill:#e7f7ee;stroke:#2b7a78;stroke-width:2}.icontext{font:italic 22px serif;fill:#6d28d9}.var{font:italic 20px serif;fill:#54278f;text-anchor:middle;paint-order:stroke;stroke:#fff;stroke-width:5px;stroke-linejoin:round}.smallvar{font-size:17px}.annotation{font:14px sans-serif;fill:#486581;text-anchor:middle;paint-order:stroke;stroke:#fff;stroke-width:4px}.callout{fill:none;stroke:#54278f;stroke-width:2}.tick{fill:none;stroke:#54278f;stroke-width:2}.flow{stroke:#334e68;stroke-width:3;marker-end:url(#arrow)}
+    </style>
+    <marker id="arrow" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="13" refX="13" refY="6.5" orient="auto"><path d="M0,0 L13,6.5 L0,13 Z" fill="#334e68"/></marker>
+  </defs>
+  <rect class="bg" width="1200" height="560" rx="18"/>
+  <text class="figureid" x="55" y="25">FIGURE 65</text>
+  <text class="head" x="55" y="55">Plano-concave cavity</text>
+  <text class="sub" x="55" y="84">Exercise 10.2-2 • illustrated calculation map</text>
+
+  <rect class="card" x="45" y="120" width="300" height="295" rx="16"/>
+  <rect class="card" x="450" y="120" width="315" height="295" rx="16"/>
+  <rect class="card" x="855" y="120" width="300" height="295" rx="16"/>
+  <text class="tag" x="70" y="153">GIVEN / DEFINITIONS</text>
+  <text class="tag" x="475" y="153">MODEL / OPERATION</text>
+  <text class="tag" x="880" y="153">RESULT / INTERPRETATION</text>
+  <text class="label" x="195"><tspan x="195" y="272">one plane and one</tspan><tspan x="195" y="299">concave mirror</tspan></text>
+  <text class="label" x="607"><tspan x="607" y="377">Gaussian waist at plane</tspan><tspan x="607" y="404">mirror</tspan></text>
+  <text class="label" x="1005"><tspan x="1005" y="272">stable length and spot</tspan><tspan x="1005" y="299">sizes</tspan></text>
+  <line class="flow" x1="345" y1="270" x2="440" y2="270"/>
+  <line class="flow" x1="765" y1="270" x2="845" y2="270"/>
+  <line class="optic" x1="515" y1="190" x2="515" y2="350"/><path class="optic" d="M665 190 Q720 230 720 270 Q720 310 665 350"/><path class="thin" d="M502 200 l13 8 M502 220 l13 8 M502 320 l13 8 M502 340 l13 8 M665 190 l16 8 M665 350 l16 -8"/><path class="accent" d="M525 270 H710"/><path class="accent2" d="M525 250 Q610 235 710 200 M525 290 Q610 305 710 340"/>
+  <g id="variable-labels"><line class="callout" x1="515" y1="365" x2="720" y2="365"/><path class="tick" d="M515 359 V371 M720 359 V371"/><text class="var" x="615" y="355">d</text><text class="var" x="690" y="205">R₂</text><text class="var smallvar" x="585" y="255">z₀</text><text class="var smallvar" x="535" y="245">W₀</text><text class="var smallvar" x="695" y="230">W₂</text><text class="var" x="625" y="295">λ</text><text class="annotation" x="610" y="335">waist at plane mirror</text></g>
+
+  <rect class="band" x="45" y="430" width="1110" height="115" rx="12"/>
+  <text class="legend" x="65"><tspan x="65" y="462">Variables labeled on model — d: separation • R₂: concave radius • z₀: Rayleigh range • W₀,W₂: beam radii • λ:</tspan><tspan x="65" y="484">wavelength</tspan></text>
+  <text class="check" x="65"><tspan x="65" y="522">Independent check — 0&lt;d&lt;|R₂|, z₀²=d(|R₂|−d), and the curved face opens toward the plane mirror</tspan></text>
+</svg>

@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 560" role="img" aria-labelledby="title desc">
+  <title id="title">Nd:YAG pump absorption versus path length</title>
+  <desc id="desc">Beer-law absorption curves for absorption coefficients of 8 and 4 inverse centimeters, with a ten millimeter rod selection.</desc>
+  <defs>
+    <style>
+      .title { font: 700 25px sans-serif; fill: #163447; }
+      .axis { stroke: #244b62; stroke-width: 2; }
+      .grid { stroke: #d8e1e3; stroke-width: 1; }
+      .tick { font: 14px sans-serif; fill: #294957; }
+      .label { font: 600 17px sans-serif; fill: #163447; }
+      .peak { stroke: #c0523e; stroke-width: 4; fill: none; }
+      .fwhm { stroke: #35758b; stroke-width: 4; fill: none; }
+      .select { stroke: #bd8525; stroke-width: 3; stroke-dasharray: 8 7; }
+      .legend { font: 16px sans-serif; fill: #294957; }
+      .legend-box { fill: #fffdf7; stroke: #9db0b7; stroke-width: 1.5; rx: 8; }
+    </style>
+  </defs>
+  <rect width="1100" height="560" fill="#fbfaf6"/>
+  <text x="550" y="38" text-anchor="middle" class="title">Nd:YAG pump absorption: A = 1 − exp(−αL)</text>
+  <g transform="translate(100,70)">
+    <line x1="0" y1="410" x2="900" y2="410" class="axis"/>
+    <line x1="0" y1="0" x2="0" y2="410" class="axis"/>
+    <g class="grid">
+      <line x1="0" y1="328" x2="900" y2="328"/><line x1="0" y1="246" x2="900" y2="246"/>
+      <line x1="0" y1="164" x2="900" y2="164"/><line x1="0" y1="82" x2="900" y2="82"/>
+    </g>
+    <g class="tick">
+      <text x="-12" y="415" text-anchor="end">0%</text><text x="-12" y="333" text-anchor="end">20%</text>
+      <text x="-12" y="251" text-anchor="end">40%</text><text x="-12" y="169" text-anchor="end">60%</text>
+      <text x="-12" y="87" text-anchor="end">80%</text><text x="-12" y="5" text-anchor="end">100%</text>
+      <text x="0" y="435" text-anchor="middle">0</text><text x="225" y="435" text-anchor="middle">2.5</text>
+      <text x="450" y="435" text-anchor="middle">5</text><text x="675" y="435" text-anchor="middle">7.5</text>
+      <text x="900" y="435" text-anchor="middle">10 mm</text>
+    </g>
+    <text x="450" y="475" text-anchor="middle" class="label">Crystal path length L</text>
+    <text x="-70" y="205" text-anchor="middle" transform="rotate(-90 -70 205)" class="label">Absorbed fraction A</text>
+    <line x1="900" y1="0" x2="900" y2="410" class="select"/>
+    <polyline points="0,410 112.5,150.8 225,55.5 337.5,20.4 450,7.5 562.5,2.8 675,1.0 787.5,0.4 900,0.1" class="peak"/>
+    <polyline points="0,410 112.5,248.7 225,150.8 337.5,91.5 450,55.5 562.5,33.7 675,20.4 787.5,12.4 900,7.5" class="fwhm"/>
+    <circle cx="900" cy="0.1" r="6" fill="#c0523e"/><circle cx="900" cy="7.5" r="6" fill="#35758b"/>
+    <text x="790" y="390" class="legend" fill="#8a611e">selected L = 10 mm</text>
+    <rect x="470" y="245" width="365" height="105" class="legend-box"/>
+    <line x1="495" y1="278" x2="555" y2="278" class="peak"/>
+    <text x="570" y="284" class="legend">α = 8 cm⁻¹ (peak): 99.97% at 10 mm</text>
+    <line x1="495" y1="318" x2="555" y2="318" class="fwhm"/>
+    <text x="570" y="324" class="legend">α = 4 cm⁻¹ (FWHM): 98.17% at 10 mm</text>
+  </g>
+</svg>

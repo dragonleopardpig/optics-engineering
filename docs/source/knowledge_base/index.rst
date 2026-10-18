@@ -1,0 +1,24 @@
+Knowledge Base
+==============
+
+Cross-cutting notes on optical-imaging physics that informs design decisions
+in KrakenOS — sampling, contrast mechanisms, sensor noise, and the kinds of
+trade-offs that show up when the simulator output meets a real lens and a
+real sensor.
+
+.. toctree::
+   :maxdepth: 1
+
+   rules_of_thumb
+   formula_plotter
+   cardinal_points
+   active_fiber_alignment
+   pupil_sampling
+   lens_design_intro
+   aberration_polynomial
+   ir_subpixel_detection
+   eol_imaging_qualification/index
+   laser_design_interview/index
+   step_overlay_promotion
+   coaxial_led_dark_edges
+   om05a_bench_geometry

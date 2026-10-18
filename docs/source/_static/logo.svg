@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 140" width="260" height="140" role="img" aria-labelledby="logo-title logo-description">
+  <title id="logo-title">Optics Engineering</title>
+  <desc id="logo-description">Two blue lenses focus and recollimate golden light rays, with turquoise plane and spherical wavefronts.</desc>
+  <defs>
+    <linearGradient id="lensGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#bfdbfe" stop-opacity="0.55"/>
+      <stop offset="50%" stop-color="#93c5fd" stop-opacity="0.30"/>
+      <stop offset="100%" stop-color="#bfdbfe" stop-opacity="0.55"/>
+    </linearGradient>
+  </defs>
+
+  <line x1="6" y1="70" x2="254" y2="70"
+        stroke="#e5e7eb" stroke-width="1"
+        stroke-dasharray="3 4" stroke-opacity="0.6"/>
+
+  <g stroke="#5eead4" stroke-width="1.5" stroke-linecap="round" fill="none" stroke-opacity="0.8">
+    <path d="M 18 35 V 105 M 38 35 V 105 M 58 35 V 105"/>
+    <path d="M 95.4 50.4 A 38 38 0 0 0 95.4 89.6"/>
+    <path d="M 107.4 57.7 A 24 24 0 0 0 107.4 82.3"/>
+    <path d="M 148.6 57.7 A 24 24 0 0 1 148.6 82.3"/>
+    <path d="M 160.6 50.4 A 38 38 0 0 1 160.6 89.6"/>
+    <path d="M 198 35 V 105 M 218 35 V 105 M 238 35 V 105"/>
+  </g>
+
+  <g stroke="#fbbf24" stroke-width="2.2" stroke-linecap="round" fill="none">
+    <path d="M 8 40 H 78 L 178 100 H 248"/>
+    <path d="M 8 70 H 248"/>
+    <path d="M 8 100 H 78 L 178 40 H 248"/>
+  </g>
+
+  <g fill="url(#lensGrad)" stroke="#60a5fa" stroke-width="2.5" stroke-linejoin="round">
+    <path d="M 78 15 Q 53 70 78 125 Q 103 70 78 15 Z"/>
+    <path d="M 178 15 Q 153 70 178 125 Q 203 70 178 15 Z"/>
+  </g>
+
+  <circle cx="128" cy="70" r="3.5" fill="#fbbf24" stroke="#ffffff" stroke-width="0.8"/>
+</svg>

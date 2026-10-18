@@ -1,0 +1,13 @@
+.venv/
+docs/build/
+__pycache__/
+*.py[cod]
+.jupyterlite*
+.ipynb_checkpoints/
+.DS_Store
+/docs/*
+!/docs/source/
+!/docs/Makefile
+!/docs/make.bat
+!/docs/requirements.txt
+!/docs/README.md
