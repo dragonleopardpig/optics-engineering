@@ -2,7 +2,7 @@ Worked Exercise Solutions
 =========================
 
 This section contains eleven reference-specific collections of textbook-style
-exercises, a five-book set of KrakenOS cross-references, a contributor guide,
+exercises, a five-book set of optics reading guides, a contributor guide,
 and a compact worked example.  The aim is not only to obtain an answer, but to
 make each mathematical decision visible: what is known, which equation
 applies, how it is rearranged, how units are handled, and how the result is
@@ -36,9 +36,9 @@ own parent pages.
 
 .. toctree::
    :maxdepth: 1
-   :caption: KrakenOS Textbook Cross-References
+   :caption: Optical Engineering Reading Guides
 
-   krakenos_textbook_maps/index
+   textbook_guides/index
 
 .. toctree::
    :maxdepth: 1

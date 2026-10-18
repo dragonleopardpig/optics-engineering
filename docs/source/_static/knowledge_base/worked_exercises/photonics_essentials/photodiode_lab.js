@@ -501,7 +501,7 @@
         const enteringPower = incidentPower * (1 - reflectance);
         // bugs/0481: the depth at which the beam falls to an ABSOLUTE level is the only depth
         // source power moves -- z = ln(P_enter / P_floor) / alpha. Mirrors
-        // KrakenOS.Physics.photodiode.absorption_depth_for_power; keep the two in step.
+        // photodiode.absorption_depth_for_power; keep the two in step.
         const floorDepthUm =
             enteringPower > floorPower
                 ? (Math.log(enteringPower / floorPower) / alpha) * 1e4
@@ -1236,7 +1236,7 @@
         // bugs/0481: headless (node) -- there is no DOM to attach to, so export the pure panel
         // models instead. Every `calculate` is a pure function of its control state, and this is
         // the only way a guard can check that the lab and
-        // KrakenOS.Physics.photodiode agree: the same equations live in both, and two
+        // photodiode agree: the same equations live in both, and two
         // implementations of one model drift silently. Inert in a browser, where `module` is
         // undefined and the DOM branch below runs exactly as before.
         if (typeof module !== "undefined" && module.exports) {

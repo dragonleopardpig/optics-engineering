@@ -8,7 +8,7 @@
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
     <dc:title>calibration response</dc:title>
-    <dc:description>Original analytical illustration for the KrakenOS active fiber alignment guide.</dc:description>
+    <dc:description>Original analytical illustration for the active fiber alignment guide.</dc:description>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>

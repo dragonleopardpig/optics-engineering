@@ -1,7 +1,7 @@
 Pupil Sampling — A Lecture on Where the Rays Go
 ===============================================
 
-Every analysis in KrakenOS — spot diagrams, PSFs, MTF, OPD maps, Seidel
+Many optical analyses — spot diagrams, PSFs, MTF, OPD maps, Seidel
 sums, radiometric throughput, Monte-Carlo stray-light — ultimately
 estimates an integral over the **entrance pupil**:
 
@@ -15,9 +15,9 @@ Choosing the sample positions :math:`\{(x_i, y_i)\}` is **pupil
 sampling**. The choice controls three different things at once:
 how fast the estimate converges, how isotropic the result is, and how
 much aliasing leaks into image-plane FFTs. This page surveys the
-strategies KrakenOS ships, derives the equal-area trick they all share,
-and motivates the **Vogel / golden-angle spiral** that the UI uses
-internally for source previews and Lambertian / lobe scattering.
+common sampling strategies, derives their equal-area construction,
+and motivates the **Vogel / golden-angle spiral** for source sampling
+and Lambertian or directional-lobe scattering.
 
 .. figure:: ../_static/knowledge_base/pupil_sampling/01_pupil_overview.svg
    :alt: Unit pupil disk with a chief ray and a few sample points
@@ -27,7 +27,7 @@ internally for source previews and Lambertian / lobe scattering.
    The unit pupil :math:`\{(x_p, y_p) : x_p^2 + y_p^2 \le 1\}`.
    The chief ray sits at the centre; analysis rays are deposited
    on the disk and then mapped to real-world starting positions and
-   direction cosines by ``PupilCalc.Pattern2Field``.
+   direction cosines using the stop position and the conjugate geometry.
 
 .. contents::
    :local:
@@ -94,7 +94,7 @@ Inverting :math:`F_R(r) = u` with :math:`u \sim \mathcal{U}(0, 1)` gives
 
 so **every linear, equal-spaced sequence in** :math:`u` **produces an
 equal-area sequence in** :math:`r`. This single identity is why
-KrakenOS's Vogel sampler uses ``r = sqrt(i/N)`` and why the Random-disk
+an equal-area Vogel sampler uses ``r = sqrt(i/N)`` and why the Random-disk
 generator works by rejection sampling on the unit square (which is
 equivalent to taking :math:`u \sim \mathcal{U}(0,1)`).
 
@@ -111,14 +111,14 @@ equivalent to taking :math:`u \sim \mathcal{U}(0,1)`).
 ----------------------------------------------
 
 For tangential / sagittal aberration slices, a 2D sampler is wasteful:
-the integrand is constant along the orthogonal direction. KrakenOS
-exposes three section patterns:
+a section through the pupil can isolate one aberration direction. Three
+common section patterns are:
 
-* **Fan Y** (``Pup.Ptype = "fany"``) — the meridional fan,
+* **Fan Y** — the meridional fan,
   :math:`\{(0, j/\mathrm{Samp})\}`. Canonical input for transverse
   ray-aberration plots :math:`\Delta y' = \mathrm{TRA}_y(p_y)`.
-* **Fan X** (``"fanx"``) — sagittal fan.
-* **Cross fan** (``"fan"``) — Fan X ∪ Fan Y, useful for a quick
+* **Fan X** — sagittal fan.
+* **Cross fan** — Fan X ∪ Fan Y, useful for a quick
   visual sanity check of both aberration directions in one trace.
 
 .. figure:: ../_static/knowledge_base/pupil_sampling/03_section_fans.svg
@@ -174,7 +174,7 @@ a vignette edge) into Moiré-like artefacts in FFTs.
 ------------------------------------------
 
 A Cartesian grid of step :math:`1/\mathrm{Samp}` clipped to the unit
-disk (``Pup.Ptype = "square"``). It contains roughly :math:`\pi
+disk. It contains roughly :math:`\pi
 \mathrm{Samp}^{2}` samples after clipping. Useful when:
 
 * The downstream computation is an FFT-based OPD → PSF pipeline that
@@ -198,7 +198,7 @@ analyses; prefer hexapolar or Vogel there.
 6. Random disk — the Monte-Carlo baseline
 -----------------------------------------
 
-``Pup.Ptype = "rand"``: rejection sampling on the square
+Use rejection sampling on the square
 :math:`[-1, 1]^2` keeping points with :math:`x^2 + y^2 < 1`. Up to
 :math:`4\,\mathrm{Samp}^{2}` candidates produce a disk population of
 roughly :math:`\pi \mathrm{Samp}^{2}`.
@@ -229,13 +229,10 @@ banding in PSF / spot estimates.
 7. The Vogel / golden-angle spiral
 ----------------------------------
 
-This is the sampler KrakenOS uses *inside* the source preview, the
-reference-disk launcher, and the Lambertian / cosine-lobe hemisphere
-generators — see ``sample_source_disk_points`` in
-``KrakenOS/UI/source_trace_helpers.py``, the matching 3D variant
-``sample_reference_disk_points_3d``, and the hemisphere code in
-``KrakenOS/KrakenSys.py``. It is colloquially called "Fibonacci sampling"
-because its azimuthal step is the limit of the Fibonacci ratios.
+The Vogel spiral distributes samples across a disk using an equal-area
+radial coordinate and a golden-angle azimuth. It is also called "Fibonacci
+sampling" because the angular step is related to the limiting ratio of
+successive Fibonacci numbers.
 
 Definition
 ~~~~~~~~~~
@@ -348,9 +345,8 @@ Why optical designers care
 8. From disk to hemisphere — Lambertian and lobe scattering
 -----------------------------------------------------------
 
-The same spiral lifts straight onto a hemisphere. KrakenOS's Lambertian
-emitter (``KrakenSys.py`` around line 2565) and its glossy lobe
-(line 2602) both use it.
+The same spiral can be mapped to a hemisphere to represent Lambertian
+emission or a directional scattering lobe.
 
 For a **cosine-weighted hemisphere** (Lambert's law), the joint PDF in
 spherical coordinates is :math:`p(\theta, \phi) = \cos\theta\,\sin\theta /
@@ -368,8 +364,8 @@ so the recipe is
    \sin^{2}\theta_{i} \;=\; i/N, \qquad
    \phi_{i} \;=\; i\cdot \alpha,
 
-which is exactly what ``KrakenSys._sample_lambertian_directions`` does
-(``sin2_max`` clamps the cone). The Vogel spiral on the disk maps
+with the distribution restricted and renormalized if a finite cone is
+specified. The Vogel spiral on the disk maps
 isomorphically onto the cosine-weighted hemisphere by reading the
 disk-radius :math:`r_{i} = \sqrt{i/N}` as :math:`\sin\theta_{i}`.
 
@@ -383,57 +379,14 @@ disk-radius :math:`r_{i} = \sqrt{i/N}` as :math:`\sin\theta_{i}`.
    toward the rim because Lambert's law puts more flux near the normal.
 
 The directional-lobe variant raises the cosine to a power :math:`n`
-(``settings["lobe_exponent"]``), giving a glossy specular highlight; the
+to represent a narrower scattering lobe; the
 golden-angle azimuth keeps the lobe rotationally uniform.
 
 
-9. KrakenOS code map
---------------------
+9. Choosing in practice
+-----------------------
 
-Where each sampler lives, for reference:
-
-.. list-table:: KrakenOS sampling sites
-   :header-rows: 1
-   :widths: 30 35 35
-
-   * - Sampler
-     - Where it is implemented
-     - Where it is used
-   * - Hexapolar / Square / Random / fans
-     - ``KrakenOS/PupilTool.py`` (``PupilCalc.Pattern``)
-     - Sequential analysis driven by ``Pup.Ptype``; UI labels in
-       ``PUPIL_PATTERN_TO_KRAKEN``.
-   * - Vogel disk (2D)
-     - ``sample_source_disk_points`` —
-       ``KrakenOS/UI/source_trace_helpers.py``
-     - 2D source previews; non-sequential disk launches with
-       ``ray_count > 9``.
-   * - Vogel disk (3D)
-     - ``sample_reference_disk_points_3d`` —
-       same file
-     - Open 3D scene reference launches.
-   * - Vogel preview overlays
-     - ``KrakenOS/UI/services/source_modeling.py`` and
-       ``KrakenOS/UI/services/trace_preview_sampling.py``
-     - Live "Source preview" and "Trace preview" overlays in the Layout
-       Editor.
-   * - Vogel hemisphere (Lambertian)
-     - ``KrakenSys.py`` ``_sample_lambertian_directions``
-     - Diffuse scattering from a surface; non-sequential thermal /
-       Lambertian sources.
-   * - Vogel cosine-lobe
-     - ``KrakenSys.py`` directional-lobe block
-     - Glossy specular scattering with adjustable ``lobe_exponent``.
-   * - Vogel finite-source offsets
-     - ``KrakenSys.py`` finite-source pupil block
-     - Mapping a finite-radius emitter to a Lambertian fan when
-       ``Source cone`` is non-zero.
-
-
-10. Choosing in practice
-------------------------
-
-A short decision tree for the analyses the Layout Editor surfaces:
+Choose a pattern according to the quantity being estimated:
 
 * **Tangential aberration plot, sagittal aberration plot, ray-fan
   display** — Fan Y or Fan X (then maybe Cross fan).
@@ -442,14 +395,13 @@ A short decision tree for the analyses the Layout Editor surfaces:
 * **Square-detector PSF / FFT-OPD pipeline** — Square grid; align
   ``Samp`` to the detector sampling.
 * **Encircled energy, throughput, stray-light Monte-Carlo, edge-of-pupil
-  vignetting** — Vogel (via source preview / disk launchers) or Random
+  vignetting** — Vogel or Random
   if you need an unbiased variance estimate.
-* **Non-sequential diffuse / glossy surface scattering** — leave it to
-  the built-in Lambertian and lobe samplers, both of which already use
-  the golden-angle spiral.
+* **Non-sequential diffuse / glossy surface scattering** — use a hemisphere
+  sampler with the required angular probability distribution.
 
 When in doubt: start with hexapolar for analysis and Vogel for source
-launches. They cover almost every workflow in KrakenOS.
+launches, then check convergence by increasing the sample count.
 
 
 Further reading

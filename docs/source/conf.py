@@ -4,8 +4,8 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent / "_ext"))
 
 project = "Optics Engineering"
-author = "KrakenOS contributors"
-copyright = "2026, KrakenOS contributors"
+author = "Optics Engineering contributors"
+copyright = "2026, Optics Engineering contributors"
 
 extensions = [
     "sphinx_rtd_theme",
@@ -49,7 +49,3 @@ jupyterlite_contents = [
 ]
 jupyterlite_new_tab_button_text = "Open the live Python notebook"
 notebooklite_new_tab_button_text = "Open the live Python notebook"
-
-rst_epilog = """
-.. |ui| replace:: KrakenOS Layout Editor
-"""

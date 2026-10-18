@@ -1,7 +1,7 @@
 (() => {
     "use strict";
 
-    const engine = window.KrakenFormula;
+    const engine = window.OpticsFormula;
     const format = (value) => Number(value.toPrecision(5)).toString();
     const display = (source) => source
         .replace(/\\left|\\right/g, "")

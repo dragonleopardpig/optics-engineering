@@ -88,11 +88,11 @@ Python physics engine
 ---------------------
 
 The browser controls and the notebook use the same equations implemented in
-``KrakenOS/Physics/photodiode.py``.  Its primary entry points are:
+the bundled ``photodiode.py`` module. Its primary entry points are:
 
 .. code-block:: python
 
-   from KrakenOS.Physics.photodiode import (
+   from photodiode import (
        PhotodiodeParameters,
        absorption_coefficient_for_transmission,
        excess_carrier_profile,

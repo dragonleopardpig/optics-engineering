@@ -82,6 +82,6 @@ page/navigation in `docs/source/index.rst`, and the logo in
 `docs/source/_static/logo.svg`. Content and existing illustrations remain in
 `docs/source/knowledge_base` and `docs/source/_static`.
 
-Adapted from the local KrakenOS documentation on 2026-10-18. The original
-contributor attribution and GPL-3.0 license are retained in the site and
-`LICENSE.txt`. Software names in code examples retain their original spelling.
+Adapted from existing optics documentation on 2026-10-18. The site credits its
+documentation contributors and retains the GPL-3.0 license in `LICENSE.txt`.
+Examples use self-contained calculations and the bundled notebook module.

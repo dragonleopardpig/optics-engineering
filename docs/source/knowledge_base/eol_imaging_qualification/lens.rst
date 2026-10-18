@@ -519,7 +519,7 @@ and adapters for responsible paths.
 **Collect and output.**
 Produce annotated source-angle image sets, veiling-glare and contrast curves,
 ghost maps/catalogue, recovery timeline, worst-case application images, and
-ray-path hypothesis or KrakenOS model where useful.
+ray-path hypotheses or an optical model where useful.
 
 **PASS.**
 No source angle or intensity produces a false feature, hidden required

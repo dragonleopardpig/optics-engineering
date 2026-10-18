@@ -18,7 +18,7 @@ only when the optical measurement preserves the relevant information.
 
    This is an engineering design and feasibility guide, developed from the
    supplied active-alignment notes. The control loops and bench arrangements
-   are proposals, not an implemented KrakenOS hardware-control feature.
+   are proposed engineering arrangements rather than a supplied hardware controller.
    Numerical examples are analytical illustrations, not measured performance.
 
 .. contents:: On this page
@@ -1117,10 +1117,10 @@ use them within their demonstrated capture region and retain guided
 power as the final acceptance measurement.
 
 
-9. Using KrakenOS and reading further
--------------------------------------
+9. Modelling and reading further
+--------------------------------
 
-Use KrakenOS to study coupling-optic geometry, stage perturbations,
+Use an optical model to study coupling-optic geometry, stage perturbations,
 clearance, and Gaussian-beam propagation. A geometrically small ray spot
 or rays landing inside the core does not establish SMF efficiency; a
 field-overlap calculation is required. Scalar Gaussian overlap calculations

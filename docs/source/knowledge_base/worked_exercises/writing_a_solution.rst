@@ -101,7 +101,7 @@ Use at least one independent check:
 * check that dimensions and units agree;
 * estimate the expected size or sign;
 * solve by a second method or with a limiting case;
-* compare with a KrakenOS paraxial calculation when appropriate.
+* compare with an independent paraxial calculation when appropriate.
 
 Sphinx equation syntax
 ----------------------

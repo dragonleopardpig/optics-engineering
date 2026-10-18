@@ -178,9 +178,8 @@ plane—equivalently, the incidence angle from the surface normal. For a
 specular fold, the chief ray deviates from its original direction by
 :math:`\delta = 180^\circ - 2\theta` — not :math:`2\theta`; at 45° both
 expressions give 90°, which is what lets that shorthand survive casual
-checks. Thus a 90° path turn uses :math:`\theta=45^\circ`; the KrakenOS
-field named ``coaxial_fold_angle_deg`` currently stores this 45°
-surface/incidence angle, not the 90° change in propagation direction.
+checks. Thus a 90° path turn uses :math:`\theta=45^\circ`.
+Keep the surface-incidence angle distinct from the change in propagation direction.
 
 .. figure:: ../_static/knowledge_base/coaxial_led_dark_edges/01_projection_rule.svg
    :alt: Reflection-law vectors d, n and d r with incidence angle theta and deviation delta; the beam footprint W footprint stretches on the tilted splitter while a tilted aperture length A projects to C fold
@@ -480,30 +479,6 @@ calibrated Object-plane irradiance map or a physical source trace. Describe
 the ray bundle's hard support.
 
 
-What the latest full KrakenOS recording shows—and does not show
-----------------------------------------------------------------
-
-The latest full UI recording,
-``attachment/recorded_bug_repros/recording_20260719_095137.json``, contains
-one flag: “All other Analysis Overlay no longer working, only the Illumination
-Overlay is working now.” It is a recording of the **simulated 3D detector
-relative-illumination overlay**, not a recording of the physical camera
-experiment. Its overlay qualitatively has the same two-side orientation—dark
-left and right edges, without comparable top and bottom edges.
-
-For that simulation, the scene source is enabled as a 55 × 74 mm
-cosine-weighted/Lambertian emitter, but the current imaging-launch descriptor
-still constructs a synthetic fold-axis width
-:math:`55\cos45^\circ=38.8909\ \mathrm{mm}`. The visual map additionally uses
-a default raised-cosine penumbra of 6% of that width—approximately 2.33 mm—and
-Gaussian display smoothing with a 1.5-bin sigma. Consequently, any numerical
-bright width inferred by thresholding the screenshot depends on software
-heuristics and the chosen threshold. The visual resemblance to the reported
-approximately 35 × 39 mm physical result is useful for comparison, but it is
-not independent validation of that result or of the :math:`55\cos45^\circ`
-interpretation.
-
-
 The MV-150 source is Lambertian, not collimated
 -------------------------------------------------
 
@@ -595,54 +570,17 @@ vignetting. They must be measured or modelled rather than inferred from the
 nominal 55 mm cube side.
 
 
-KrakenOS descriptor semantics and the legacy MV-150 approximation
------------------------------------------------------------------
+Modelling the illumination independently
+----------------------------------------
 
-KrakenOS currently evaluates the coaxial descriptor as
+Represent the emitter dimensions, angular distribution, clear apertures,
+coating boundaries, housing, and object field as separate inputs. Intersect
+the true projected apertures and compute the accepted source solid angle
+at each object point. A single rectangular crop cannot capture all these
+constraints.
 
-.. math::
-
-   C_f =
-   \mathtt{coaxial\_aperture\_fold\_mm}
-   |\cos(\mathtt{coaxial\_fold\_angle\_deg})| .
-
-That formula is physically meaningful only if
-``coaxial_aperture_fold_mm`` is an in-plane tilted-aperture length. The
-following block shows how the **existing formula** would encode the nominal
-full MV-150 diagonal:
-
-.. code-block:: python
-
-   {
-       "coaxial_illuminator": True,
-       "coaxial_aperture_fold_mm": 77.78174593,  # 55*sqrt(2), on diagonal
-       "coaxial_aperture_perp_mm": 78.0,
-       "coaxial_fold_angle_deg": 45.0,
-       "coaxial_fold_axis": "x",
-   }
-
-This evaluates to the cube's nominal 55 × 78 mm transverse acceptance.
-It is not a complete physical MV-150 descriptor: the current schema carries
-one rectangle and does not independently represent and intersect the
-55 × 74 mm source support, the cube acceptance, other clear apertures and
-the FOV. That separation requires either a richer schema or the physical
-trace. In this particular example both the nominal source and cube envelope
-over-fill the 39 × 39 mm FOV, so the missing distinction does not change the
-ideal collimated coverage verdict.
-
-.. warning::
-
-   The existing MV-150 prescription supplies 55 mm together with 45°. The
-   current kernel consequently constructs a synthetic 38.8909 mm fold-axis
-   bound and can force two dark edges. That is a legacy approximation, not a
-   result derived from the prescription's 55 × 55 × 78 mm CAD solid. Its
-   implementation guards demonstrate current software behaviour; they are not
-   evidence for the physical projection. The synthetic 38.8909 mm support and
-   the user-reported physical 35 mm usable-bright threshold width are different
-   quantities and must not be presented as the same measurement.
-
-For the actual Lambertian source, the preferred general solution is to trace
-the source through the true optical clear apertures. Accumulate
-:math:`E(x,y)` for a diffuse Object plane, or retain directional radiance for
-a specular one, and carry the resulting weights through the imaging rays to
-the detector-relative-illumination overlay.
+For a diffuse object, carry the resulting irradiance map into the imaging
+calculation as spatial weights. For a specular object, retain the incident
+directional radiance and the object's BRDF. Compare the prediction with a
+flat-field measurement and state the threshold used to define a usable
+bright area.

@@ -6,7 +6,7 @@
             require("./vendor/complex-2.4.3.min.js"),
         );
     } else {
-        root.KrakenFormula = factory(root.LatexSyntax, root.Complex);
+        root.OpticsFormula = factory(root.LatexSyntax, root.Complex);
     }
 })(typeof globalThis === "undefined" ? this : globalThis, (syntax, Complex) => {
     "use strict";

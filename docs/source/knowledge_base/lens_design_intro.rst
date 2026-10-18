@@ -3,8 +3,8 @@ Introduction To Fundamental Lens Design
 
 This chapter is a short, vendor-neutral primer on how real-world objective
 lenses are built up from a small number of recurring design "families". It is
-intended for KrakenOS users who want to recognize the shape of a prescription
-in the editable table and understand why the designer chose it.
+intended for readers who want to recognize the shape of an optical prescription
+and understand why the designer chose it.
 
 Two domains are compared:
 
@@ -334,7 +334,7 @@ Many vision tasks need a specific magnification at a specific working
 distance, not infinity focus. Vendors sell lenses specified directly as e.g.
 "0.5× at 110 mm WD". These are typically symmetric or near-symmetric designs
 optimized at that conjugate, and they perform poorly if used away from it.
-In KrakenOS terms, they are designed with a finite object distance as part
+These lenses are designed with a finite object distance as part
 of the prescription rather than the usual infinite-conjugate convention.
 
 Line-Scan Lenses
@@ -434,10 +434,10 @@ Photography vs. Machine Vision: Side by Side
      - Double Gauss, retrofocus, telephoto, modern zooms
      - Double Gauss derivatives, retrofocus, telecentric
 
-Reading A Prescription In KrakenOS
-----------------------------------
+Reading an Optical Prescription
+--------------------------------
 
-When you load or build a system in the KrakenOS editable table, the family
+When you inspect an optical system's surface prescription, the family
 usually reveals itself within the first inspection:
 
 * count the elements (rows of glass material) and the groups (consecutive
@@ -468,5 +468,5 @@ references are:
 * M. Laikin, *Lens Design*, CRC Press.
 
 These books give exact prescriptions for many of the layouts sketched above,
-which can be entered directly into the KrakenOS editable table as a starting
+which can be entered into an optical-design program as a starting
 point for further work.

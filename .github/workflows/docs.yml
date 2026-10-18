@@ -28,6 +28,24 @@ jobs:
       - name: Install documentation dependencies
         run: python -m pip install -r docs/requirements.txt
 
+      - name: Verify public documentation
+        run: |
+          python - <<'PY'
+          import re
+          from pathlib import Path
+
+          text_suffixes = {".rst", ".py", ".js", ".css", ".svg", ".html", ".ipynb", ".json"}
+          matches = []
+          for path in Path("docs/source").rglob("*"):
+              if not path.is_file() or "__pycache__" in path.parts:
+                  continue
+              content = path.read_text(errors="replace") if path.suffix in text_suffixes else ""
+              if re.search("kraken", str(path) + content, re.IGNORECASE):
+                  matches.append(str(path))
+          if matches:
+              raise SystemExit("Private simulator references remain:\n" + "\n".join(matches))
+          PY
+
       - name: Build documentation
         run: python -m sphinx -W --keep-going -b html -d docs/build/doctrees docs/source docs/build/html
 

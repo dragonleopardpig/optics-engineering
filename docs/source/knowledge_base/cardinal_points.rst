@@ -22,10 +22,8 @@ Drawing conventions
 * Coloured vertical dashes mark principal planes; small filled dots
   mark focal and nodal points.
 
-KrakenOS exposes all of these landmarks at runtime through
-``KrakenOS.PupilCalc`` (``Pup.PosPupInp``, ``Pup.PosPupOut``,
-``Pup.PPP``, ``Pup.PPA``, ``Pup.EFFL``), but the constructions below explain *why*
-those numbers are what they are.
+The constructions below explain how to locate these landmarks from traced
+rays, independently of the optical-design software used.
 
 .. contents::
    :local:
@@ -89,8 +87,8 @@ The distance from :math:`P'` to :math:`F'` is the **rear effective
 focal length** :math:`f' = \overline{P' F'}`. For a system in air
 :math:`f = f'`.
 
-In code, KrakenOS's paraxial backend reports :math:`f'` as
-``Pup.EFFL`` (see ``PupilCalc.__init__`` calling ``SYSTEM.Parax``).
+Record the rear effective focal length separately from the back focal
+distance: they are measured from different reference planes.
 
 
 3. Locating :math:`F` and :math:`P`
@@ -112,9 +110,8 @@ front focal point :math:`F`.
    ray comes from; the intersection at height :math:`h` lies on the
    front principal plane :math:`P`.
 
-The **front effective focal length** is :math:`f = \overline{F P}`,
-returned in KrakenOS as ``Pup.PPP`` together with ``Pup.PPA`` (the two
-principal-plane axial positions).
+The **front effective focal length** is :math:`f = \overline{F P}`.
+Record both principal-plane axial positions with the focal lengths.
 
 
 4. Nodal points :math:`N, N'`
@@ -181,9 +178,8 @@ The pupil magnifications
 
 are exactly the lateral
 magnifications of the front-side and back-side stop-imaging steps
-above. KrakenOS computes them numerically by tracing the same fan of
-rays shown in ``PupilCalc.__init__`` and reading ``Pup.RadPupInp``,
-``Pup.PosPupInp``, ``Pup.RadPupOut``, ``Pup.PosPupOut``.
+above. Numerically, image the stop through each side of the system and
+read the pupil position and transverse magnification from the traced fan.
 
 
 6. Chief and marginal rays — the operational definition
@@ -239,18 +235,11 @@ space and :math:`D_{\mathrm{EP}}` the entrance-pupil diameter.
    ray passes through the axis at all three; :math:`f, f'` are
    measured from the principal planes.
 
-KrakenOS surface roles (in the |ui|) map onto this picture as
-follows:
-
-* The **analysis surface** chosen via the Layout Editor's "Analysis
-  surface" combobox is the surface used as the aperture stop when
-  ``Aperture type = STOP`` (or whose image gives EP/XP when
-  ``Aperture type = EPD``).
-* Toggling **Show PP / EP / XP** in the editor toolbar overlays
-  :math:`P', \mathrm{EP}, \mathrm{XP}` markers in the 2D layout plot.
-* ``Pup.PosPupInp`` and ``Pup.PosPupOut`` are the axial coordinates
-  of EP and XP returned by ``PupilCalc``; ``Pup.PPA``, ``Pup.PPP``
-  hold the principal-plane positions; ``Pup.EFFL`` is :math:`f'`.
+For a numerical model, identify the physical aperture stop first. Image it
+through the preceding optics to locate the entrance pupil and through the
+following optics to locate the exit pupil. Record pupil diameters, pupil
+positions, principal-plane positions, and effective focal length using a
+single stated axial-coordinate convention.
 
 See :doc:`pupil_sampling` for how a chosen EP / chief-ray axis is then
 populated with sample rays.

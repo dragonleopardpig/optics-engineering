@@ -1,12 +1,9 @@
 Rules of Thumb — Optics, Imaging, Laser
 =======================================
 
-A reference of quick-recall formulas, the geometry behind them, and the
-specific KrakenOS calls that compute the exact answer. The UI's
-**Help → Paraxial Calculator** and **Help → Optics Formula Sheet** dialogs
-present the same paraxial relations against your live system; this page is
-the in-depth companion that pairs each rule with an illustration, a
-back-of-envelope number, and runnable code.
+A reference of quick-recall formulas and the geometry behind them. Each rule
+pairs an illustration with a back-of-envelope estimate. Python examples use
+explicit numerical inputs and can be adapted to a measured or modelled system.
 
 .. contents::
    :local:
@@ -21,13 +18,8 @@ Each section uses the same structure:
 * **Where each symbol comes from** — variable list pulled out of the equation.
 * **Quick number** — a worked example you can do in your head, sized so
   the right-hand side is obviously the right order of magnitude.
-* **KrakenOS** — the call that computes the same quantity exactly for your
-  actual layout, so the rule of thumb stays a sanity check, not a
-  ground-truth substitute.
-
-Several optional simulator examples refer to an achromatic doublet system as
-``Doublet``. Supply your own optical prescription and analysis setup when
-using those examples. The formulas and worked estimates are self-contained.
+* **Numerical check** — a calculation that makes the approximation and its
+  input units explicit.
 
 Section 1 — Geometric / paraxial optics
 ---------------------------------------
@@ -58,13 +50,11 @@ where:
 
 .. code-block:: python
 
-   # Exact paraxial image distance and magnification for the doublet
-   import KrakenOS as Kos
-   s = 250.0                             # object distance, mm
-   effl, ppa, ppp = (Pup.EFFL, 0.0, 0.0) # use _exact_paraxial_cardinals for thick lenses
-   sp = 1.0 / (1.0 / effl - 1.0 / s)
-   m  = -sp / s
-   print("s' =", sp, "mm   m =", m)
+   object_distance_mm = 250.0
+   focal_length_mm = 50.0
+   image_distance_mm = 1.0 / (1.0 / focal_length_mm - 1.0 / object_distance_mm)
+   magnification = -image_distance_mm / object_distance_mm
+   print(image_distance_mm, magnification)
 
 1.2 f-number, aperture cone and diffraction limit
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -99,12 +89,12 @@ f/16          21.5 µm            207 cyc/mm
 
 .. code-block:: python
 
-   D_EP = 2.0 * Pup.RadPupInp
-   f    = Pup.EFFL
-   N    = f / D_EP
-   wave_um = 0.55
-   d_airy_um = 2.44 * wave_um * N
-   nu_c_per_mm = 1.0e3 / (wave_um * N)  # cycles per mm
+   entrance_pupil_diameter_mm = 12.5
+   focal_length_mm = 50.0
+   f_number = focal_length_mm / entrance_pupil_diameter_mm
+   wavelength_um = 0.55
+   airy_diameter_um = 2.44 * wavelength_um * f_number
+   cutoff_cycles_per_mm = 1000.0 / (wavelength_um * f_number)
 
 1.3 Working f-number for finite conjugates
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -129,10 +119,10 @@ diffraction-limited resolution halves.
 
 .. code-block:: python
 
-   m  = abs(-sp / s)
-   N  = f / D_EP
-   Nw = N * (1.0 + m)
-   d_airy_um_macro = 2.44 * 0.55 * Nw
+   magnification_magnitude = 1.0
+   nominal_f_number = 4.0
+   working_f_number = nominal_f_number * (1.0 + magnification_magnitude)
+   airy_diameter_um = 2.44 * 0.55 * working_f_number
 
 1.4 Two thin lenses in series
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -153,8 +143,8 @@ where:
 * :math:`P_i = 1/f_i` — surface or element powers.
 
 **Quick number.** Two 100 mm lenses spaced 50 mm apart:
-:math:`P = 0.01 + 0.01 - 0.05 \cdot 10^{-4} = 0.0195\,\mathrm{mm}^{-1}`
-→ :math:`f \approx 51.3\,\mathrm{mm}` and the doublet is much faster than
+:math:`P = 0.01 + 0.01 - 50/10000 = 0.015\,\mathrm{mm}^{-1}`
+→ :math:`f \approx 66.7\,\mathrm{mm}` and the doublet is faster than
 either element alone.
 
 **Afocal limit.** When :math:`d = f_1 + f_2` the system becomes an afocal
@@ -162,11 +152,12 @@ telescope with angular magnification :math:`M = -f_2/f_1`.
 
 .. code-block:: python
 
-   # Exact two-element power combination via ABCD
-   import numpy as np
-   def combined_focal(f1, f2, d):
-       M = np.array([[1, 0],[-1/f2, 1]]) @ np.array([[1, d],[0,1]]) @ np.array([[1,0],[-1/f1,1]])
-       return -1.0 / M[1, 0]
+   def combined_focal_length(first_focal_mm, second_focal_mm, separation_mm):
+       power_per_mm = (1.0 / first_focal_mm + 1.0 / second_focal_mm
+                       - separation_mm / (first_focal_mm * second_focal_mm))
+       return 1.0 / power_per_mm
+
+   print(combined_focal_length(100.0, 100.0, 50.0))
 
 1.5 Macro 2f rule (1:1 imaging)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -319,14 +310,9 @@ where:
 
 .. code-block:: python
 
-   # Strehl from RMS wavefront error (Maréchal)
    import math
    sigma_waves = 0.05
    strehl_approx = math.exp(-(2*math.pi*sigma_waves)**2)
-   #  see analysis_tools.rst, section "PSF (Fraunhofer)" for the
-   #  full Fourier optics path through KrakenOS:
-   #     Zcoef, *_ = Kos.Zernike_Fitting(X, Y, Z, np.ones(15))
-   #     I = Kos.psf(Zcoef, Focal, Diameter, W, pixels=265)
 
 2.5 Pixel sampling and the Nyquist limit
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -393,9 +379,12 @@ where:
 
 .. code-block:: python
 
-   import KrakenOS as Kos
-   beam = Kos.GaussianBeamInput(w0=0.5, wavelength_um=0.633)
-   # KrakenOS-side propagation and ABCD steps live in gaussian_beams.rst
+   import math
+
+   waist_radius_mm = 0.5
+   wavelength_mm = 0.633e-3
+   rayleigh_range_mm = math.pi * waist_radius_mm**2 / wavelength_mm
+   half_divergence_rad = wavelength_mm / (math.pi * waist_radius_mm)
 
 3.2 Focused spot of a Gaussian beam
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -479,13 +468,11 @@ absorbing coatings but enough to permanently bleach a film.
 Section 4 — Cross-cutting design heuristics
 -------------------------------------------
 
-The list below intentionally repeats from the popups so the same advice
-shows up wherever the user is reading.
+Use these checks when reviewing an optical prescription or a bench measurement.
 
-* **Diameters are full, fields are semi.** In the UI, ``Object
-  Diameter``, ``Image Diameter`` and ``EPD`` are full diameters;
-  ``Field Half-Angle`` and every ``* Semi-Height`` field type is a
-  semi-field. Mixing the two doubles or halves your answers.
+* **Distinguish full and half extents.** State whether a field is specified
+  by diameter, height, semi-height, full angle, or half-angle. Mixing these
+  conventions doubles or halves your answers.
 * **Stop choice changes pupil location, not focal length.** Move the
   ``STOP`` between elements to change vignetting and pupil aberrations;
   don't expect the focal length, magnification, or image distance to
@@ -498,12 +485,12 @@ shows up wherever the user is reading.
   macro setups are so sensitive to subject movement.
 * **Don't chase Strehl below 0.8 with paraxial intuition.** Past
   :math:`\sigma \approx \lambda/14`, only the full PSF (Fraunhofer
-  propagation in :py:mod:`KrakenOS.PSFCalc`) tells you what the image
+  propagation of the complex exit-pupil field) tells you what the image
   actually looks like.
 * **The achromat is the cheapest fix.** Replacing a singlet with an
   air-spaced doublet cuts on-axis longitudinal chromatic aberration by
   ≈ 30×; a triplet adds another ≈ 5× and removes the spherochromatism
-  residual. Quantify with ``Kos.Seidel(Pup).SCW_TOTAL``.
+  residual. Quantify the residual with a wavelength-dependent ray or wavefront model.
 
 Section 5 — Where to go next
 ----------------------------

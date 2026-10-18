@@ -336,10 +336,10 @@ The finished equations satisfy several useful checks:
   :math:`1`, :math:`3`, :math:`5`, or :math:`7` in :math:`s` and
   :math:`h`.
 
-Using the polynomial with KrakenOS
-----------------------------------
+Fitting the polynomial to traced rays
+-------------------------------------
 
-KrakenOS traces the exact surface geometry; it does not need this
+A geometrical ray tracer follows the exact surface geometry; it does not need this
 truncated polynomial to propagate a ray.  The polynomial is useful as
 an interpretable fit to a set of traced image-plane intercepts:
 
