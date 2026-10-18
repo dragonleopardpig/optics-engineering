@@ -5,7 +5,8 @@ Solutions, interactive tools, and an optics development roadmap.
 The Manual and Tutorials sections and their image collections are omitted.
 The site builds independently and does not link to the private source repository.
 
-The SVG logo shows two lenses, ray paths, and plane and spherical wavefronts.
+The SVG logo shows a converging lens and a diverging lens with ray paths
+and plane and spherical wavefronts.
 
 Published site: <https://optics.engineering/>.
 Source repository: <https://github.com/dragonleopardpig/optics-engineering>.
