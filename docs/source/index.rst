@@ -16,9 +16,3 @@ notebooks connect the mathematics to engineering applications.
    :caption: Worked Exercise Solutions
 
    knowledge_base/worked_exercises/index
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Future Plan
-
-   future_plan/index

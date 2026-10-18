@@ -1,7 +1,7 @@
 # Optics Engineering
 
 A standalone Sphinx documentation site with a Knowledge Base, Worked Exercise
-Solutions, interactive tools, and an optics development roadmap.
+Solutions, and interactive tools.
 The Manual and Tutorials sections and their image collections are omitted.
 The site builds independently and does not link to the private source repository.
 
@@ -80,7 +80,7 @@ See [GitHub's custom domain documentation](https://docs.github.com/en/pages/conf
 Edit the site title and build settings in `docs/source/conf.py`, the landing
 page/navigation in `docs/source/index.rst`, and the logo in
 `docs/source/_static/logo.svg`. Content and existing illustrations remain in
-`docs/source/knowledge_base`, `docs/source/future_plan`, and `docs/source/_static`.
+`docs/source/knowledge_base` and `docs/source/_static`.
 
 Adapted from the local KrakenOS documentation on 2026-10-18. The original
 contributor attribution and GPL-3.0 license are retained in the site and
