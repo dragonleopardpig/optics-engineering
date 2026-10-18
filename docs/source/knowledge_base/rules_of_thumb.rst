@@ -105,8 +105,8 @@ f/16          21.5 µm            207 cyc/mm
 
 .. math::
 
-   N_w = N\,(1 + |m|)\quad\text{(object far from lens)}\,,\qquad
-   N_w \approx \frac{N}{1 - m}\quad\text{(object inside lens)}.
+   N_w \approx N\,(1 + |m|)
+   \quad\text{(unit pupil magnification)}.
 
 where:
 
@@ -114,8 +114,8 @@ where:
 * :math:`m` — magnification of the imaging conjugate in use.
 
 **Quick number.** A 100 mm f/4 lens used at 1:1 macro
-(:math:`|m| = 1`) acts like :math:`N_w = 8` — depth of field doubles,
-diffraction-limited resolution halves.
+(:math:`|m| = 1`) acts like :math:`N_w = 8`. The Airy diameter doubles
+relative to the nominal f/4 value.
 
 .. code-block:: python
 
@@ -148,7 +148,7 @@ where:
 either element alone.
 
 **Afocal limit.** When :math:`d = f_1 + f_2` the system becomes an afocal
-telescope with angular magnification :math:`M = -f_2/f_1`.
+telescope with angular magnification :math:`M = -f_1/f_2`.
 
 .. code-block:: python
 
@@ -364,8 +364,9 @@ where:
 * :math:`z_R` — Rayleigh range; beam radius grows by :math:`\sqrt{2}`.
 * :math:`\theta_{\mathrm{half}}` — far-field half-angle of the
   :math:`1/e^2` envelope.
-* For real (non-:math:`M^2 = 1`) beams, multiply both :math:`z_R` and
-  :math:`\theta` by :math:`M^2`.
+* For a beam-quality factor :math:`M^2 > 1` at fixed waist radius and
+  wavelength, multiply :math:`\theta` by :math:`M^2` and divide
+  :math:`z_R` by :math:`M^2`.
 
 **Quick numbers (λ = 633 nm HeNe).**
 

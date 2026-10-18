@@ -49,6 +49,9 @@ jobs:
       - name: Build documentation
         run: python -m sphinx -W --keep-going -b html -d docs/build/doctrees docs/source docs/build/html
 
+      - name: Verify illustration typography
+        run: python tools/typeset_svg_math.py --check
+
       - name: Verify notebook assets
         run: |
           test -s docs/build/html/lite/files/photodiode.py
