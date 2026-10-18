@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 140" width="260" height="140" role="img" aria-labelledby="logo-title logo-description">
   <title id="logo-title">Optics Engineering</title>
-  <desc id="logo-description">A blue converging lens and a blue diverging lens narrow and recollimate golden light rays, with turquoise plane and converging spherical wavefronts.</desc>
+  <desc id="logo-description">A blue converging lens and a smaller blue diverging lens narrow and recollimate golden light rays, with turquoise plane and converging spherical wavefronts.</desc>
   <defs>
     <linearGradient id="lensGrad" x1="0%" y1="0%" x2="0%" y2="100%">
       <stop offset="0%" stop-color="#bfdbfe" stop-opacity="0.55"/>
@@ -29,7 +29,7 @@
 
   <g fill="url(#lensGrad)" stroke="#60a5fa" stroke-width="2.5" stroke-linejoin="round">
     <path d="M 78 15 Q 53 70 78 125 Q 103 70 78 15 Z"/>
-    <path d="M 164 15 Q 180 70 164 125 H 192 Q 176 70 192 15 Z"/>
+    <path d="M 169.6 37 Q 179.2 70 169.6 103 H 186.4 Q 176.8 70 186.4 37 Z"/>
   </g>
 
 </svg>
