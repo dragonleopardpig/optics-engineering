@@ -18,6 +18,15 @@ Reciprocity relates transmission between the same pair of optical modes
 in opposite directions. It does not say that unrelated inputs all couple
 with unity efficiency into one output mode.
 
+.. figure:: /_static/knowledge_base/fiber_splitters_combiners/13_reverse_splitter.svg
+   :alt: Two independent 100 milliwatt inputs produce 100 milliwatts at each output of an ideal equal coupler; phase-locked inputs can instead yield 200 milliwatts at one output and zero at the other.
+   :width: 100%
+   :align: center
+
+   Equal input powers have different outcomes depending on their field
+   relationship. These ideal two-input examples complement the general
+   N-input calculation below; rejected power must still be accounted for.
+
 For a symmetric splitter with forward common-port transmission
 :math:`\eta/N` into each branch, the reverse transmission of each branch
 into that common port is also :math:`\eta/N`. Here :math:`\eta` is the
@@ -59,6 +68,27 @@ wavelength-selective couplers, thin-film dichroic filters, and AWGs.
 For widely separated visible laser lines, a collimator/dichroic/fiber-launch
 assembly is another implementation.
 
+.. _fiber-figure-wdm:
+
+.. figure:: /_static/knowledge_base/fiber_splitters_combiners/05_wavelength_routers.svg
+   :alt: A fused wavelength-selective coupler and a fiber-coupled dichroic assembly each route red and blue spectral channels into one common output fiber.
+   :width: 100%
+   :align: center
+
+   Fused and dichroic implementations route different wavelength bands
+   into the common output. Red and blue identify spectral channels;
+   the drawing does not assign particular wavelengths or passbands.
+
+.. figure:: /_static/knowledge_base/fiber_splitters_combiners/06_arrayed_waveguide.svg
+   :alt: A common input feeds a free-propagation region, an array of unequal-length waveguides, a second free-propagation region, and separate wavelength output ports.
+   :width: 100%
+   :align: center
+
+   An AWG uses wavelength-dependent phase accumulation and focusing to
+   route spectral channels. It is drawn as a demultiplexer; the
+   corresponding ports support reverse multiplexing. See
+   :ref:`fiber-original-smit` and :ref:`fiber-review-smit`.
+
 The output remains multiwavelength. It does not become a single optical
 frequency. Passband separation, linewidth, temperature drift, leakage
 between channels, and the common fiber's guidance and attenuation across
@@ -75,6 +105,17 @@ well-matched fiber launch to satisfy a fiber-output requirement. The
 overall spectral/coherent distinction is developed in
 :ref:`fiber-review-fan`.
 
+.. figure:: /_static/knowledge_base/fiber_splitters_combiners/17_spectral_grating.svg
+   :alt: Two different-wavelength fiber sources illuminate a transmission grating at different incidence angles and leave in a common direction before being launched into one output fiber.
+   :width: 100%
+   :align: center
+
+   A grating can align distinct wavelengths onto a common output axis
+   when the incident angles and diffraction order are chosen together.
+   This schematic shows transmission geometry; reflective gratings offer
+   another arrangement. The final fiber launch remains a separate design
+   requirement. See :ref:`fiber-review-fan`.
+
 
 Two polarizations: polarization beam combining
 ----------------------------------------------
@@ -83,6 +124,18 @@ A PBC combines two suitably aligned, orthogonally polarized inputs into
 one spatial mode. Mutual phase locking is unnecessary for transferring
 their powers into the two orthogonal output polarization states. The
 result is not generally one fixed linear polarization.
+
+.. _fiber-figure-polarization:
+
+.. figure:: /_static/knowledge_base/fiber_splitters_combiners/07_polarization_combiner.svg
+   :alt: Horizontal and vertical polarization inputs are routed into one spatial output mode, whose end-view glyph contains both orthogonal polarization directions.
+   :width: 100%
+   :align: center
+
+   The polarization arrows describe optical states, not propagation
+   directions. A micro-optic element is drawn; fused-fiber PBCs perform
+   the same polarization-routing function. Reverse operation separates
+   the two components.
 
 There are only two independent polarization states per spatial mode.
 Repeated PBC stages alone therefore cannot combine an arbitrary number of
@@ -106,6 +159,15 @@ sufficient modal capacity. This can transfer a large fraction of the
 total input power while allowing a larger output core, a larger angular
 spread, or both. It does not promise the beam quality of a single
 diffraction-limited input.
+
+.. figure:: /_static/knowledge_base/fiber_splitters_combiners/08_multimode_bundle.svg
+   :alt: Three input fibers merge through a fused taper into one larger guiding core; cross sections distinguish the separate inputs from the single common output core.
+   :width: 100%
+   :align: center
+
+   A power bundle provides enough output modal acceptance for independent
+   inputs. Orange paths indicate power transport, not distinct wavelengths
+   or three preserved output cores. See :ref:`fiber-review-stachowiak`.
 
 Two practical classes must be distinguished:
 
@@ -137,6 +199,17 @@ fabrication-induced signal degradation. An uninterrupted core still
 needs suitable heating, fusion geometry, and control of mechanical
 deformation and dopant diffusion. Verify pump transfer, backward coupling,
 and signal beam quality together.
+
+.. figure:: /_static/knowledge_base/fiber_splitters_combiners/09_pump_signal.svg
+   :alt: An end-pump bundle routes blue signal light to the core and orange pump light to inner cladding; a second panel shows pump injection through the side of a continuous signal fiber.
+   :width: 100%
+   :align: center
+
+   Pump and signal occupy different guiding regions in a double-clad
+   output. End-pump bundles join fibers at a splice; side-pump structures
+   retain the signal core through the coupling site. These conceptual
+   layouts follow :ref:`fiber-patent-digiovanni` and
+   :ref:`fiber-review-lei`.
 
 
 An initial acceptance-capacity calculation
@@ -186,11 +259,33 @@ freedom inside one fiber. For low loss in both directions over all
 supported modes, match the mode counts and maintain an adiabatic
 transition. Count polarization consistently on both sides.
 
+.. _fiber-figure-lantern:
+
+.. figure:: /_static/knowledge_base/fiber_splitters_combiners/10_photonic_lantern.svg
+   :alt: Several single-mode cores gradually evolve into one common multimode guiding core, with a bidirectional arrow emphasizing matched modal capacity.
+   :width: 100%
+   :align: center
+
+   A lantern trades separate input cores for the spatial modal capacity
+   of one output core. The field lines are symbolic; they do not imply
+   that independent inputs all occupy its fundamental mode. See
+   :ref:`fiber-review-birks`.
+
 An ordinary lantern does not guarantee a particular input-to-output-mode
 assignment. Mode-selective lanterns and other mode multiplexers address
 that mapping. Multi-plane light conversion (MPLC) implements spatial
 transformations with repeated phase manipulation and propagation;
 :ref:`fiber-original-morizur` gives an experimental basis.
+
+.. figure:: /_static/knowledge_base/fiber_splitters_combiners/11_spatial_mode_multiplexer.svg
+   :alt: Several fiber inputs pass through repeated phase planes and propagation before a common multimode fiber launch; three example orthogonal output mode shapes share the same core.
+   :width: 100%
+   :align: center
+
+   MPLC implements a designed spatial mapping. The optical path is
+   unfolded for clarity; mode lobes and phase-plane shading are
+   illustrative, with colors describing field structure rather than
+   wavelength. See :ref:`fiber-original-morizur`.
 
 The early lantern demonstration is :ref:`fiber-original-leonsaval`;
 :ref:`fiber-review-birks` explains the wider technology. The 2005
@@ -202,6 +297,15 @@ the development of low-loss lanterns.
 A multicore-fiber fan-in is a further option if separate cores inside one
 physical fiber are acceptable. It does not merge their powers into one
 core.
+
+.. figure:: /_static/knowledge_base/fiber_splitters_combiners/12_multicore_fanin.svg
+   :alt: Three separate fibers feed three distinct guiding cores inside one common cladding; the output end view explicitly shows separate cores.
+   :width: 100%
+   :align: center
+
+   A multicore fan-in packages independent channels within one physical
+   fiber while retaining separate cores. Its output is structurally
+   different from the common multimode core of a lantern.
 
 
 Same output mode and wavelength: coherent combining
@@ -232,6 +336,16 @@ compatible dispersion. A fixed 50:50 coupler additionally requires equal
 input amplitudes to cancel the other output completely; a variable
 combiner can accommodate imbalance.
 
+.. figure:: /_static/knowledge_base/fiber_splitters_combiners/14_coherent_combiner.svg
+   :alt: A shared seed splits into two amplifier branches, one with a phase actuator; a fiber coupler produces useful and dark outputs, with a detector and electronic controller closing the phase loop.
+   :width: 100%
+   :align: center
+
+   One practical coherent architecture controls relative phase using
+   an unwanted-port measurement. Optical paths are blue and electronic
+   feedback is dashed gray. The set point includes the coupler's phase
+   convention. See :ref:`fiber-review-fan`.
+
 An early all-fiber experiment is :ref:`fiber-original-kozlov`: its cleaved
 active-fiber taper was a shared output mirror for two laser cavities,
 with injection locking obtained by tuning a Bragg grating. This supplies
@@ -239,6 +353,16 @@ a concrete example of establishing coherence through coupled resonators.
 A later integrated all-fiber architecture is disclosed in
 :ref:`fiber-patent-rothenberg`. For broad context, use
 :ref:`fiber-review-fan`.
+
+.. figure:: /_static/knowledge_base/fiber_splitters_combiners/15_coupled_resonators.svg
+   :alt: Two pumped active-fiber cavities with Bragg reflectors share a half-coupler and cleaved output mirror; the output leaves the common cleave without an illustrated delivery pigtail.
+   :width: 100%
+   :align: center
+
+   Original interpretation of the architecture in
+   :ref:`fiber-original-kozlov`. The cleaved taper is part of both laser
+   cavities. The sketch identifies the output at the cleave and does
+   not add a delivery fiber that the drawing has not established.
 
 At high power, the final fiber again concentrates power into a small
 guided region. Coherent combining does not remove output-fiber limits
@@ -256,3 +380,12 @@ can also place nonoverlapping pulse streams on a common output with a
 suitable switching arrangement. These are routing solutions; they do not
 sum simultaneous powers. Specify timing, extinction, switching speed,
 and output-fiber peak-power limits.
+
+.. figure:: /_static/knowledge_base/fiber_splitters_combiners/16_switch_and_timing.svg
+   :alt: An optical switch selects the middle of three sources for a common fiber; a timeline shows optional alternating pulses from two sources in nonoverlapping time slots.
+   :width: 100%
+   :align: center
+
+   Selection and time interleaving share a fiber without adding
+   simultaneous source powers. Dashed routes indicate unselected paths;
+   the lower panel illustrates optional timed switching.

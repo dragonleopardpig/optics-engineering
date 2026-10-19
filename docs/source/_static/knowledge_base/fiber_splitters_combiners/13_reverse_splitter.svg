@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="500" viewBox="0 0 1000 500" role="img" aria-labelledby="figure-title figure-description">
+<title id="figure-title">Reversing a splitter: fields determine the result</title>
+<desc id="figure-description">Ideal two-input examples at the same wavelength, polarization, and spatial mode. Original conceptual illustration; not to scale.</desc>
+<defs>
+<style>text{font-family:DejaVu Sans,Arial,sans-serif;font-size:19px;fill:#17324d} .heading{font-size:25px;font-weight:700} .subheading{font-size:18px;fill:#52677f} .panel-title{font-size:20px;font-weight:700} .small{font-size:17px} .strong{font-weight:700}</style>
+<marker id="arrow-2563eb" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 Z" fill="#2563eb"/></marker>
+<marker id="arrow-0d9488" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 Z" fill="#0d9488"/></marker>
+<marker id="arrow-d97706" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 Z" fill="#d97706"/></marker>
+<marker id="arrow-9333ea" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 Z" fill="#9333ea"/></marker>
+<marker id="arrow-dc2626" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 Z" fill="#dc2626"/></marker>
+<marker id="arrow-94a3b8" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 Z" fill="#94a3b8"/></marker>
+</defs>
+<rect x="1" y="1" width="998" height="498" rx="18" fill="#ffffff" stroke="#dbe4ef" stroke-width="2"/>
+<rect x="26" y="24" width="6" height="52" rx="3" fill="#2563eb"/>
+<text id="label-1" x="48" y="46" class="heading" text-anchor="start">Reversing a splitter: fields determine the result</text>
+<text id="label-2" x="48" y="75" class="subheading" text-anchor="start">Ideal two-input examples at the same wavelength, polarization, and spatial mode.</text>
+<rect x="30" y="110" width="455" height="300" rx="12" fill="#f8fafc" stroke="#dbe4ef" stroke-width="2"/>
+<text id="label-3" x="48" y="140" class="panel-title" text-anchor="start">Independent or random-phase inputs</text>
+<path d="M60 215 H210" fill="none" stroke="#2563eb" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity="1" marker-end="url(#arrow-2563eb)"/>
+<text id="label-4" x="60" y="195" class="small" text-anchor="start">100 mW</text>
+<path d="M60 315 H210" fill="none" stroke="#2563eb" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity="1" marker-end="url(#arrow-2563eb)"/>
+<text id="label-5" x="60" y="295" class="small" text-anchor="start">100 mW</text>
+<rect x="210" y="194" width="92" height="143" rx="9" fill="#dbeafe" stroke="#93c5fd" stroke-width="2"/>
+<text id="label-6" x="256" y="249" class="small" text-anchor="middle">50:50</text>
+<text id="label-7" x="256" y="275" class="small" text-anchor="middle">coupler</text>
+<path d="M302 215 H452" fill="none" stroke="#2563eb" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity="1" marker-end="url(#arrow-2563eb)"/>
+<path d="M302 315 H452" fill="none" stroke="#2563eb" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity="1" marker-end="url(#arrow-2563eb)"/>
+<text id="label-8" x="315" y="188" class="small" text-anchor="start">100 mW useful</text>
+<text id="label-9" x="315" y="356" class="small" text-anchor="start">100 mW other</text>
+<rect x="515" y="110" width="455" height="300" rx="12" fill="#f8fafc" stroke="#dbe4ef" stroke-width="2"/>
+<text id="label-10" x="533" y="140" class="panel-title" text-anchor="start">Coherent inputs at the correct phase</text>
+<path d="M545 215 H695" fill="none" stroke="#2563eb" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity="1" marker-end="url(#arrow-2563eb)"/>
+<text id="label-11" x="545" y="195" class="small" text-anchor="start">100 mW</text>
+<path d="M545 315 H695" fill="none" stroke="#2563eb" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity="1" marker-end="url(#arrow-2563eb)"/>
+<text id="label-12" x="545" y="295" class="small" text-anchor="start">100 mW</text>
+<rect x="695" y="194" width="92" height="143" rx="9" fill="#dbeafe" stroke="#93c5fd" stroke-width="2"/>
+<text id="label-13" x="741" y="249" class="small" text-anchor="middle">50:50</text>
+<text id="label-14" x="741" y="275" class="small" text-anchor="middle">coupler</text>
+<path d="M787 215 H937" fill="none" stroke="#2563eb" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" opacity="1" marker-end="url(#arrow-2563eb)"/>
+<path d="M787 315 H937" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="1" marker-end="url(#arrow-94a3b8)" stroke-dasharray="8 7"/>
+<text id="label-15" x="800" y="188" class="small" text-anchor="start">200 mW useful</text>
+<text id="label-16" x="800" y="356" class="small" text-anchor="start">0 mW other</text>
+<rect x="26" y="434" width="948" height="52" rx="8" fill="#f0f7ff"/>
+<text id="label-17" x="44" y="456" class="small" text-anchor="start">Both cases conserve total power. Independent fields add as powers; phase-locked fields can cancel</text>
+<text id="label-18" x="44" y="477" class="small" text-anchor="start">one output.</text>
+</svg>

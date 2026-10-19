@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="560" viewBox="0 0 1000 560" role="img" aria-labelledby="figure-title figure-description">
+<title id="figure-title">Photonic lantern</title>
+<desc id="figure-description">Several single-mode cores evolve into the modal space of one multimode core. Original conceptual illustration; not to scale.</desc>
+<defs>
+<style>text{font-family:DejaVu Sans,Arial,sans-serif;font-size:19px;fill:#17324d} .heading{font-size:25px;font-weight:700} .subheading{font-size:18px;fill:#52677f} .panel-title{font-size:20px;font-weight:700} .small{font-size:17px} .strong{font-weight:700}</style>
+<marker id="arrow-2563eb" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 Z" fill="#2563eb"/></marker>
+<marker id="arrow-0d9488" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 Z" fill="#0d9488"/></marker>
+<marker id="arrow-d97706" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 Z" fill="#d97706"/></marker>
+<marker id="arrow-9333ea" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 Z" fill="#9333ea"/></marker>
+<marker id="arrow-dc2626" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 Z" fill="#dc2626"/></marker>
+<marker id="arrow-94a3b8" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 Z" fill="#94a3b8"/></marker>
+</defs>
+<rect x="1" y="1" width="998" height="558" rx="18" fill="#ffffff" stroke="#dbe4ef" stroke-width="2"/>
+<rect x="26" y="24" width="6" height="52" rx="3" fill="#2563eb"/>
+<text id="label-1" x="48" y="46" class="heading" text-anchor="start">Photonic lantern</text>
+<text id="label-2" x="48" y="75" class="subheading" text-anchor="start">Several single-mode cores evolve into the modal space of one multimode core.</text>
+<path d="M240 142 C380 142 460 185 630 185 H920 V305 H630 C460 305 380 348 240 348 Z" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<rect x="630" y="204" width="290" height="82" rx="3" fill="#e9e5ff" stroke="#bca7f5" stroke-width="2"/>
+<rect x="65" y="158.0" width="175" height="24" rx="4" fill="#e2e8f0" stroke="#cbd5e1" stroke-width="2"/>
+<path d="M65 170 H240" fill="none" stroke="#2563eb" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<path d="M240 170 C400 170 460 223 575 223" fill="none" stroke="#2563eb" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<path d="M575 223 H630" fill="none" stroke="#2563eb" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" opacity="0.25"/>
+<rect x="65" y="233.0" width="175" height="24" rx="4" fill="#e2e8f0" stroke="#cbd5e1" stroke-width="2"/>
+<path d="M65 245 H240" fill="none" stroke="#2563eb" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<path d="M240 245 C400 245 460 245 575 245" fill="none" stroke="#2563eb" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<path d="M575 245 H630" fill="none" stroke="#2563eb" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" opacity="0.25"/>
+<rect x="65" y="308.0" width="175" height="24" rx="4" fill="#e2e8f0" stroke="#cbd5e1" stroke-width="2"/>
+<path d="M65 320 H240" fill="none" stroke="#2563eb" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<path d="M240 320 C400 320 460 267 575 267" fill="none" stroke="#2563eb" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<path d="M575 267 H630" fill="none" stroke="#2563eb" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" opacity="0.25"/>
+<polyline points="660.00,230.00 662.81,231.87 665.62,233.63 668.44,235.20 671.25,236.47 674.06,237.39 676.88,237.90 679.69,237.98 682.50,237.61 685.31,236.82 688.12,235.66 690.94,234.18 693.75,232.47 696.56,230.63 699.38,228.75 702.19,226.94 705.00,225.30 707.81,223.92 710.62,222.87 713.44,222.22 716.25,222.00 719.06,222.22 721.88,222.87 724.69,223.92 727.50,225.30 730.31,226.94 733.12,228.75 735.94,230.63 738.75,232.47 741.56,234.18 744.38,235.66 747.19,236.82 750.00,237.61 752.81,237.98 755.62,237.90 758.44,237.39 761.25,236.47 764.06,235.20 766.88,233.63 769.69,231.87 772.50,230.00 775.31,228.13 778.12,226.37 780.94,224.80 783.75,223.53 786.56,222.61 789.38,222.10 792.19,222.02 795.00,222.39 797.81,223.18 800.62,224.34 803.44,225.82 806.25,227.53 809.06,229.37 811.88,231.25 814.69,233.06 817.50,234.70 820.31,236.08 823.12,237.13 825.94,237.78 828.75,238.00 831.56,237.78 834.38,237.13 837.19,236.08 840.00,234.70 842.81,233.06 845.62,231.25 848.44,229.37 851.25,227.53 854.06,225.82 856.88,224.34 859.69,223.18 862.50,222.39 865.31,222.02 868.12,222.10 870.94,222.61 873.75,223.53 876.56,224.80 879.38,226.37 882.19,228.13 885.00,230.00" fill="none" stroke="#9333ea" stroke-width="3"/>
+<polyline points="660.00,272.96 662.81,272.80 665.62,271.81 668.44,270.07 671.25,267.65 674.06,264.71 676.88,261.39 679.69,257.88 682.50,254.39 685.31,251.09 688.12,248.17 690.94,245.80 693.75,244.10 696.56,243.17 699.38,243.06 702.19,243.77 705.00,245.27 707.81,247.48 710.62,250.26 713.44,253.48 716.25,256.94 719.06,260.46 721.88,263.85 724.69,266.91 727.50,269.48 730.31,271.42 733.12,272.61 735.94,273.00 738.75,272.56 741.56,271.31 744.38,269.33 747.19,266.72 750.00,263.63 752.81,260.23 755.62,256.71 758.44,253.25 761.25,250.06 764.06,247.31 766.88,245.15 769.69,243.70 772.50,243.04 775.31,243.20 778.12,244.19 780.94,245.93 783.75,248.35 786.56,251.29 789.38,254.61 792.19,258.12 795.00,261.61 797.81,264.91 800.62,267.83 803.44,270.20 806.25,271.90 809.06,272.83 811.88,272.94 814.69,272.23 817.50,270.73 820.31,268.52 823.12,265.74 825.94,262.52 828.75,259.06 831.56,255.54 834.38,252.15 837.19,249.09 840.00,246.52 842.81,244.58 845.62,243.39 848.44,243.00 851.25,243.44 854.06,244.69 856.88,246.67 859.69,249.28 862.50,252.37 865.31,255.77 868.12,259.29 870.94,262.75 873.75,265.94 876.56,268.69 879.38,270.85 882.19,272.30 885.00,272.96" fill="none" stroke="#9333ea" stroke-width="3"/>
+<text id="label-3" x="70" y="120" class="strong" text-anchor="start">Single-mode ports</text>
+<text id="label-4" x="460" y="150" class="strong" text-anchor="middle">Gradual transition</text>
+<text id="label-5" x="770" y="150" class="strong" text-anchor="middle">One multimode core</text>
+<path d="M285 390 H700" fill="none" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="1" marker-end="url(#arrow-94a3b8)" marker-start="url(#arrow-94a3b8)"/>
+<text id="label-6" x="493" y="425" class="small" text-anchor="middle">Low loss in both directions requires matched modal capacity.</text>
+<text id="label-7" x="493" y="456" class="small" text-anchor="middle">A standard lantern can map each input into a mixture of output modes.</text>
+<rect x="26" y="494" width="948" height="52" rx="8" fill="#f0f7ff"/>
+<text id="label-8" x="44" y="516" class="small" text-anchor="start">Internal field lines are symbolic. Several single-mode inputs do not automatically become one</text>
+<text id="label-9" x="44" y="537" class="small" text-anchor="start">single-mode output.</text>
+</svg>

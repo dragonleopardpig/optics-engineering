@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="700" viewBox="0 0 1000 700" role="img" aria-labelledby="figure-title figure-description">
+<title id="figure-title">Fiber-coupled free-space splitting</title>
+<desc id="figure-description">Collimate the input, divide the beam, then refocus into each output fiber. Original conceptual illustration; not to scale.</desc>
+<defs>
+<style>text{font-family:DejaVu Sans,Arial,sans-serif;font-size:19px;fill:#17324d} .heading{font-size:25px;font-weight:700} .subheading{font-size:18px;fill:#52677f} .panel-title{font-size:20px;font-weight:700} .small{font-size:17px} .strong{font-weight:700}</style>
+<marker id="arrow-2563eb" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 Z" fill="#2563eb"/></marker>
+<marker id="arrow-0d9488" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 Z" fill="#0d9488"/></marker>
+<marker id="arrow-d97706" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 Z" fill="#d97706"/></marker>
+<marker id="arrow-9333ea" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 Z" fill="#9333ea"/></marker>
+<marker id="arrow-dc2626" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 Z" fill="#dc2626"/></marker>
+<marker id="arrow-94a3b8" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 Z" fill="#94a3b8"/></marker>
+</defs>
+<rect x="1" y="1" width="998" height="698" rx="18" fill="#ffffff" stroke="#dbe4ef" stroke-width="2"/>
+<rect x="26" y="24" width="6" height="52" rx="3" fill="#2563eb"/>
+<text id="label-1" x="48" y="46" class="heading" text-anchor="start">Fiber-coupled free-space splitting</text>
+<text id="label-2" x="48" y="75" class="subheading" text-anchor="start">Collimate the input, divide the beam, then refocus into each output fiber.</text>
+<rect x="30" y="104" width="940" height="275" rx="12" fill="#f8fafc" stroke="#dbe4ef" stroke-width="2"/>
+<text id="label-3" x="48" y="134" class="panel-title" text-anchor="start">Beamsplitter with two independent fiber launches</text>
+<rect x="65" y="261.0" width="95" height="24" rx="4" fill="#e2e8f0" stroke="#cbd5e1" stroke-width="2"/>
+<path d="M65 273 H160" fill="none" stroke="#2563eb" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<ellipse cx="205" cy="273" rx="9" ry="30" fill="#dff5fc" opacity="1" stroke="#0891b2" stroke-width="2"/>
+<path d="M160 273 H815" fill="none" stroke="#2563eb" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<path d="M160 273 L205 259 M160 273 L205 287" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.45"/>
+<path d="M205 259 H520 V188" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.45"/>
+<path d="M205 287 H550 V188" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.45"/>
+<path d="M520 259 H745 L815 273" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.45"/>
+<path d="M550 287 H745 L815 273" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.45"/>
+<path d="M505 303 L565 243" fill="none" stroke="#475569" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<path d="M535 273 V158" fill="none" stroke="#2563eb" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<ellipse cx="535" cy="188" rx="27" ry="9" fill="#dff5fc" opacity="1" stroke="#0891b2" stroke-width="2"/>
+<path d="M508 188 L535 173 L562 188" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.45"/>
+<rect x="815" y="261.0" width="100" height="24" rx="4" fill="#e2e8f0" stroke="#cbd5e1" stroke-width="2"/>
+<path d="M815 273 H915" fill="none" stroke="#2563eb" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity="1" marker-end="url(#arrow-2563eb)"/>
+<ellipse cx="745" cy="273" rx="9" ry="30" fill="#dff5fc" opacity="1" stroke="#0891b2" stroke-width="2"/>
+<rect x="523" y="148" width="24" height="25" rx="3" fill="#e2e8f0" stroke="#cbd5e1" stroke-width="2"/>
+<path d="M535 173 V148" fill="none" stroke="#2563eb" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" opacity="1" marker-end="url(#arrow-2563eb)"/>
+<text id="label-4" x="80" y="328" class="" text-anchor="start">Input fiber</text>
+<text id="label-5" x="205" y="229" class="small" text-anchor="middle">Collimator</text>
+<text id="label-6" x="575" y="172" class="small" text-anchor="start">Output fiber one</text>
+<text id="label-7" x="745" y="229" class="small" text-anchor="middle">Focusing lens</text>
+<text id="label-8" x="755" y="328" class="" text-anchor="start">Output fiber two</text>
+<text id="label-9" x="438" y="351" class="small" text-anchor="start">Partial reflection and transmission</text>
+<rect x="30" y="399" width="940" height="225" rx="12" fill="#f8fafc" stroke="#dbe4ef" stroke-width="2"/>
+<text id="label-10" x="48" y="429" class="panel-title" text-anchor="start">Diffractive optical element: several diffraction orders</text>
+<rect x="65" y="503.0" width="95" height="24" rx="4" fill="#e2e8f0" stroke="#cbd5e1" stroke-width="2"/>
+<path d="M65 515 H160" fill="none" stroke="#2563eb" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<ellipse cx="205" cy="515" rx="9" ry="34" fill="#dff5fc" opacity="1" stroke="#0891b2" stroke-width="2"/>
+<path d="M160 515 H335" fill="none" stroke="#2563eb" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" opacity="1" marker-end="url(#arrow-2563eb)"/>
+<rect x="335" y="465" width="18" height="100" rx="2" fill="#e9d5ff" stroke="#9333ea" stroke-width="2"/>
+<path d="M337 473 H351" fill="none" stroke="#9333ea" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<path d="M337 485 H351" fill="none" stroke="#9333ea" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<path d="M337 497 H351" fill="none" stroke="#9333ea" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<path d="M337 509 H351" fill="none" stroke="#9333ea" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<path d="M337 521 H351" fill="none" stroke="#9333ea" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<path d="M337 533 H351" fill="none" stroke="#9333ea" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<path d="M337 545 H351" fill="none" stroke="#9333ea" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<path d="M337 557 H351" fill="none" stroke="#9333ea" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<rect x="570" y="455" width="135" height="120" rx="8" fill="#e0f2fe" stroke="#7dd3fc" stroke-width="2"/>
+<text id="label-11" x="638" y="496" class="" text-anchor="middle">Focusing</text>
+<text id="label-12" x="638" y="521" class="" text-anchor="middle">optics</text>
+<path d="M353 515 L570 471" fill="none" stroke="#2563eb" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<path d="M705 471 H810" fill="none" stroke="#2563eb" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="1" marker-end="url(#arrow-2563eb)"/>
+<rect x="810" y="462.5" width="100" height="17" rx="4" fill="#e2e8f0" stroke="#cbd5e1" stroke-width="2"/>
+<path d="M810 471 H910" fill="none" stroke="#2563eb" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<path d="M353 515 L570 515" fill="none" stroke="#2563eb" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<path d="M705 515 H810" fill="none" stroke="#2563eb" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="1" marker-end="url(#arrow-2563eb)"/>
+<rect x="810" y="506.5" width="100" height="17" rx="4" fill="#e2e8f0" stroke="#cbd5e1" stroke-width="2"/>
+<path d="M810 515 H910" fill="none" stroke="#2563eb" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<path d="M353 515 L570 559" fill="none" stroke="#2563eb" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<path d="M705 559 H810" fill="none" stroke="#2563eb" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="1" marker-end="url(#arrow-2563eb)"/>
+<rect x="810" y="550.5" width="100" height="17" rx="4" fill="#e2e8f0" stroke="#cbd5e1" stroke-width="2"/>
+<path d="M810 559 H910" fill="none" stroke="#2563eb" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<text id="label-13" x="344" y="598" class="small" text-anchor="middle">Phase structure</text>
+<text id="label-14" x="850" y="598" class="small" text-anchor="middle">Fiber array</text>
+<rect x="26" y="634" width="948" height="52" rx="8" fill="#f0f7ff"/>
+<text id="label-15" x="44" y="656" class="small" text-anchor="start">Each output requires field matching. A diffractive splitter also has unwanted orders and</text>
+<text id="label-16" x="44" y="677" class="small" text-anchor="start">wavelength dependence.</text>
+</svg>

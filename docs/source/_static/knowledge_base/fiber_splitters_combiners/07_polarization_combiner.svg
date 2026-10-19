@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="500" viewBox="0 0 1000 500" role="img" aria-labelledby="figure-title figure-description">
+<title id="figure-title">Polarization beam combiner</title>
+<desc id="figure-description">Two orthogonal polarization components can occupy one spatial mode. Original conceptual illustration; not to scale.</desc>
+<defs>
+<style>text{font-family:DejaVu Sans,Arial,sans-serif;font-size:19px;fill:#17324d} .heading{font-size:25px;font-weight:700} .subheading{font-size:18px;fill:#52677f} .panel-title{font-size:20px;font-weight:700} .small{font-size:17px} .strong{font-weight:700}</style>
+<marker id="arrow-2563eb" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 Z" fill="#2563eb"/></marker>
+<marker id="arrow-0d9488" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 Z" fill="#0d9488"/></marker>
+<marker id="arrow-d97706" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 Z" fill="#d97706"/></marker>
+<marker id="arrow-9333ea" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 Z" fill="#9333ea"/></marker>
+<marker id="arrow-dc2626" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 Z" fill="#dc2626"/></marker>
+<marker id="arrow-94a3b8" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 Z" fill="#94a3b8"/></marker>
+</defs>
+<rect x="1" y="1" width="998" height="498" rx="18" fill="#ffffff" stroke="#dbe4ef" stroke-width="2"/>
+<rect x="26" y="24" width="6" height="52" rx="3" fill="#2563eb"/>
+<text id="label-1" x="48" y="46" class="heading" text-anchor="start">Polarization beam combiner</text>
+<text id="label-2" x="48" y="75" class="subheading" text-anchor="start">Two orthogonal polarization components can occupy one spatial mode.</text>
+<rect x="60" y="273.0" width="140" height="24" rx="4" fill="#e2e8f0" stroke="#cbd5e1" stroke-width="2"/>
+<path d="M60 285 H200" fill="none" stroke="#0d9488" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<path d="M200 285 H460" fill="none" stroke="#0d9488" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity="1" marker-end="url(#arrow-0d9488)"/>
+<rect x="460" y="245" width="80" height="80" rx="5" fill="#dff5f3" stroke="#5eead4" stroke-width="2"/>
+<path d="M468 253 L532 317" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<path d="M500 145 V285 H810" fill="none" stroke="#0d9488" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<rect x="488" y="115" width="24" height="30" rx="3" fill="#e2e8f0" stroke="#cbd5e1" stroke-width="2"/>
+<rect x="810" y="273.0" width="130" height="24" rx="4" fill="#e2e8f0" stroke="#cbd5e1" stroke-width="2"/>
+<path d="M810 285 H940" fill="none" stroke="#0d9488" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity="1" marker-end="url(#arrow-0d9488)"/>
+<circle cx="300" cy="205" r="35" fill="#f0fdfa" opacity="1" stroke="#99f6e4" stroke-width="2"/>
+<path d="M278 205 H322" fill="none" stroke="#0d9488" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="1" marker-end="url(#arrow-0d9488)" marker-start="url(#arrow-0d9488)"/>
+<circle cx="625" cy="170" r="35" fill="#f0fdfa" opacity="1" stroke="#99f6e4" stroke-width="2"/>
+<path d="M625 148 V192" fill="none" stroke="#0d9488" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="1" marker-end="url(#arrow-0d9488)" marker-start="url(#arrow-0d9488)"/>
+<circle cx="842" cy="158" r="49" fill="#f0fdfa" opacity="1" stroke="#99f6e4" stroke-width="2"/>
+<path d="M812 158 H872" fill="none" stroke="#0d9488" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="1" marker-end="url(#arrow-0d9488)" marker-start="url(#arrow-0d9488)"/>
+<path d="M842 128 V188" fill="none" stroke="#0d9488" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="1" marker-end="url(#arrow-0d9488)" marker-start="url(#arrow-0d9488)"/>
+<text id="label-3" x="65" y="335" class="" text-anchor="start">Input one</text>
+<text id="label-4" x="300" y="153" class="small" text-anchor="middle">Horizontal state</text>
+<text id="label-5" x="410" y="114" class="small" text-anchor="start">Input two</text>
+<text id="label-6" x="625" y="120" class="small" text-anchor="middle">Vertical state</text>
+<text id="label-7" x="842" y="229" class="small" text-anchor="middle">Both states</text>
+<text id="label-8" x="500" y="360" class="" text-anchor="middle">Polarization-selective element</text>
+<text id="label-9" x="820" y="335" class="" text-anchor="start">One output fiber</text>
+<text id="label-10" x="500" y="398" class="small" text-anchor="middle">Micro-optic and fused-fiber implementations perform the same routing function.</text>
+<rect x="26" y="434" width="948" height="52" rx="8" fill="#f0f7ff"/>
+<text id="label-11" x="44" y="456" class="small" text-anchor="start">Arrow glyphs indicate polarization. The two inputs may have the same wavelength; phase locking is</text>
+<text id="label-12" x="44" y="477" class="small" text-anchor="start">unnecessary.</text>
+</svg>

@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="610" viewBox="0 0 1000 610" role="img" aria-labelledby="figure-title figure-description">
+<title id="figure-title">Optical switching and time selection</title>
+<desc id="figure-description">An active routing element selects the input that reaches the common output. Original conceptual illustration; not to scale.</desc>
+<defs>
+<style>text{font-family:DejaVu Sans,Arial,sans-serif;font-size:19px;fill:#17324d} .heading{font-size:25px;font-weight:700} .subheading{font-size:18px;fill:#52677f} .panel-title{font-size:20px;font-weight:700} .small{font-size:17px} .strong{font-weight:700}</style>
+<marker id="arrow-2563eb" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 Z" fill="#2563eb"/></marker>
+<marker id="arrow-0d9488" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 Z" fill="#0d9488"/></marker>
+<marker id="arrow-d97706" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 Z" fill="#d97706"/></marker>
+<marker id="arrow-9333ea" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 Z" fill="#9333ea"/></marker>
+<marker id="arrow-dc2626" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 Z" fill="#dc2626"/></marker>
+<marker id="arrow-94a3b8" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 Z" fill="#94a3b8"/></marker>
+</defs>
+<rect x="1" y="1" width="998" height="608" rx="18" fill="#ffffff" stroke="#dbe4ef" stroke-width="2"/>
+<rect x="26" y="24" width="6" height="52" rx="3" fill="#2563eb"/>
+<text id="label-1" x="48" y="46" class="heading" text-anchor="start">Optical switching and time selection</text>
+<text id="label-2" x="48" y="75" class="subheading" text-anchor="start">An active routing element selects the input that reaches the common output.</text>
+<rect x="340" y="130" width="320" height="230" rx="14" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="2"/>
+<rect x="65" y="153.0" width="150" height="24" rx="4" fill="#e2e8f0" stroke="#cbd5e1" stroke-width="2"/>
+<path d="M65 165 H215" fill="none" stroke="#94a3b8" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<path d="M215 165 H380" fill="none" stroke="#94a3b8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" opacity="1" stroke-dasharray="8 7"/>
+<text id="label-3" x="65" y="138" class="small" text-anchor="start">Source one</text>
+<path d="M380 165 L600 245" fill="none" stroke="#94a3b8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.45" stroke-dasharray="8 7"/>
+<rect x="65" y="233.0" width="150" height="24" rx="4" fill="#e2e8f0" stroke="#cbd5e1" stroke-width="2"/>
+<path d="M65 245 H215" fill="none" stroke="#2563eb" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<path d="M215 245 H380" fill="none" stroke="#2563eb" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<text id="label-4" x="65" y="218" class="small" text-anchor="start">Source two</text>
+<path d="M380 245 L600 245" fill="none" stroke="#2563eb" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<rect x="65" y="313.0" width="150" height="24" rx="4" fill="#e2e8f0" stroke="#cbd5e1" stroke-width="2"/>
+<path d="M65 325 H215" fill="none" stroke="#94a3b8" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<path d="M215 325 H380" fill="none" stroke="#94a3b8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" opacity="1" stroke-dasharray="8 7"/>
+<text id="label-5" x="65" y="298" class="small" text-anchor="start">Source three</text>
+<path d="M380 325 L600 245" fill="none" stroke="#94a3b8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.45" stroke-dasharray="8 7"/>
+<path d="M600 245 H820" fill="none" stroke="#2563eb" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" opacity="1" marker-end="url(#arrow-2563eb)"/>
+<rect x="820" y="233.0" width="110" height="24" rx="4" fill="#e2e8f0" stroke="#cbd5e1" stroke-width="2"/>
+<path d="M820 245 H930" fill="none" stroke="#2563eb" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<text id="label-6" x="500" y="118" class="strong" text-anchor="middle">Switch</text>
+<text id="label-7" x="775" y="199" class="strong" text-anchor="start">Common output</text>
+<text id="label-8" x="500" y="398" class="small" text-anchor="middle">Only source two is selected in this snapshot.</text>
+<text id="label-9" x="65" y="442" class="strong" text-anchor="start">Optional timed operation with nonoverlapping pulses</text>
+<path d="M100 508 H920" fill="none" stroke="#94a3b8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="1" marker-end="url(#arrow-94a3b8)"/>
+<rect x="175" y="456" width="90" height="50" rx="4" fill="#2563eb"/>
+<text id="label-10" x="220" y="535" class="small" text-anchor="middle">One</text>
+<rect x="355" y="456" width="90" height="50" rx="4" fill="#d97706"/>
+<text id="label-11" x="400" y="535" class="small" text-anchor="middle">Two</text>
+<rect x="535" y="456" width="90" height="50" rx="4" fill="#2563eb"/>
+<text id="label-12" x="580" y="535" class="small" text-anchor="middle">One</text>
+<rect x="715" y="456" width="90" height="50" rx="4" fill="#d97706"/>
+<text id="label-13" x="760" y="535" class="small" text-anchor="middle">Two</text>
+<text id="label-14" x="920" y="535" class="small" text-anchor="end">Time</text>
+<rect x="26" y="544" width="948" height="52" rx="8" fill="#f0f7ff"/>
+<text id="label-15" x="44" y="566" class="small" text-anchor="start">Switching shares a fiber in time. It does not sum the simultaneous optical powers of the</text>
+<text id="label-16" x="44" y="587" class="small" text-anchor="start">unselected sources.</text>
+</svg>

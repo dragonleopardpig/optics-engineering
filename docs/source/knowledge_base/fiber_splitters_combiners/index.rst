@@ -8,6 +8,19 @@ power combining, and coherent laser combining. No wavelength, power level,
 fiber type, or channel count has been specified, so the recommendations
 identify suitable architectures rather than a particular purchase.
 
+.. figure:: /_static/knowledge_base/fiber_splitters_combiners/00_overview.svg
+   :alt: Six visual summaries distinguish power distribution, wavelength routing, polarization combining, spatial modes, coherent combining, and time selection.
+   :width: 100%
+   :align: center
+
+   The allowed output determines the architecture. One physical fiber can
+   carry several wavelengths, polarization states, spatial modes, or cores.
+
+All illustrations in this survey are original conceptual SVG schematics.
+They show operating principles and optical paths; dimensions, field
+patterns, and component shapes are illustrative. Each figure defines its
+colors, and numerical power examples assume ideal components.
+
 The practical starting points are:
 
 * **Distribute the same optical spectrum:** use a fused-fiber coupler for

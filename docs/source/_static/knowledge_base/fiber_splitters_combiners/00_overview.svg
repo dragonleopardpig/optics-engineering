@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="700" viewBox="0 0 1000 700" role="img" aria-labelledby="figure-title figure-description">
+<title id="figure-title">What can share one output fiber?</title>
+<desc id="figure-description">Choose the optical degrees of freedom that the output is allowed to retain. Original conceptual illustration; not to scale.</desc>
+<defs>
+<style>text{font-family:DejaVu Sans,Arial,sans-serif;font-size:19px;fill:#17324d} .heading{font-size:25px;font-weight:700} .subheading{font-size:18px;fill:#52677f} .panel-title{font-size:20px;font-weight:700} .small{font-size:17px} .strong{font-weight:700}</style>
+<marker id="arrow-2563eb" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 Z" fill="#2563eb"/></marker>
+<marker id="arrow-0d9488" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 Z" fill="#0d9488"/></marker>
+<marker id="arrow-d97706" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 Z" fill="#d97706"/></marker>
+<marker id="arrow-9333ea" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 Z" fill="#9333ea"/></marker>
+<marker id="arrow-dc2626" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 Z" fill="#dc2626"/></marker>
+<marker id="arrow-94a3b8" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 Z" fill="#94a3b8"/></marker>
+</defs>
+<rect x="1" y="1" width="998" height="698" rx="18" fill="#ffffff" stroke="#dbe4ef" stroke-width="2"/>
+<rect x="26" y="24" width="6" height="52" rx="3" fill="#2563eb"/>
+<text id="label-1" x="48" y="46" class="heading" text-anchor="start">What can share one output fiber?</text>
+<text id="label-2" x="48" y="75" class="subheading" text-anchor="start">Choose the optical degrees of freedom that the output is allowed to retain.</text>
+<rect x="38" y="108" width="444" height="152" rx="12" fill="#f8fafc" stroke="#dbe4ef" stroke-width="2"/>
+<text id="label-3" x="56" y="138" class="panel-title" text-anchor="start">Power distribution</text>
+<text id="label-4" x="56" y="168" class="small" text-anchor="start">One input; several weaker copies</text>
+<path d="M68 213 H208" fill="none" stroke="#2563eb" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity="1" marker-end="url(#arrow-2563eb)"/>
+<path d="M208 213 Q278 189 408 189" fill="none" stroke="#2563eb" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="1" marker-end="url(#arrow-2563eb)"/>
+<path d="M208 213 Q278 213 408 213" fill="none" stroke="#2563eb" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="1" marker-end="url(#arrow-2563eb)"/>
+<path d="M208 213 Q278 237 408 237" fill="none" stroke="#2563eb" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="1" marker-end="url(#arrow-2563eb)"/>
+<rect x="518" y="108" width="444" height="152" rx="12" fill="#f8fafc" stroke="#dbe4ef" stroke-width="2"/>
+<text id="label-5" x="536" y="138" class="panel-title" text-anchor="start">Wavelength routing</text>
+<text id="label-6" x="536" y="168" class="small" text-anchor="start">Different colors; one common core</text>
+<path d="M548 200 L718 218 H908" fill="none" stroke="#dc2626" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" opacity="1" marker-end="url(#arrow-dc2626)"/>
+<path d="M548 236 L718 224 H908" fill="none" stroke="#2563eb" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" opacity="1" marker-end="url(#arrow-2563eb)"/>
+<rect x="38" y="282" width="444" height="152" rx="12" fill="#f8fafc" stroke="#dbe4ef" stroke-width="2"/>
+<text id="label-7" x="56" y="312" class="panel-title" text-anchor="start">Polarization combining</text>
+<text id="label-8" x="56" y="342" class="small" text-anchor="start">Two orthogonal polarization states</text>
+<path d="M78 392 H148" fill="none" stroke="#0d9488" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity="1" marker-end="url(#arrow-0d9488)" marker-start="url(#arrow-0d9488)"/>
+<path d="M198 367 V417" fill="none" stroke="#0d9488" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity="1" marker-end="url(#arrow-0d9488)" marker-start="url(#arrow-0d9488)"/>
+<path d="M258 392 H338" fill="none" stroke="#94a3b8" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity="1" marker-end="url(#arrow-94a3b8)"/>
+<path d="M368 392 H428" fill="none" stroke="#0d9488" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity="1" marker-end="url(#arrow-0d9488)" marker-start="url(#arrow-0d9488)"/>
+<path d="M398 367 V417" fill="none" stroke="#0d9488" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity="1" marker-end="url(#arrow-0d9488)" marker-start="url(#arrow-0d9488)"/>
+<rect x="518" y="282" width="444" height="152" rx="12" fill="#f8fafc" stroke="#dbe4ef" stroke-width="2"/>
+<text id="label-9" x="536" y="312" class="panel-title" text-anchor="start">Spatial mode combining</text>
+<text id="label-10" x="536" y="342" class="small" text-anchor="start">Several modes; one larger core</text>
+<circle cx="608" cy="392" r="20" fill="#ede9fe" opacity="1" stroke="#9333ea" stroke-width="2"/>
+<circle cx="678" cy="392" r="20" fill="#ede9fe" opacity="1" stroke="#9333ea" stroke-width="2"/>
+<path d="M728 392 H798" fill="none" stroke="#94a3b8" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity="1" marker-end="url(#arrow-94a3b8)"/>
+<circle cx="868" cy="392" r="31" fill="#ede9fe" opacity="1" stroke="#9333ea" stroke-width="2"/>
+<ellipse cx="855" cy="392" rx="9" ry="16" fill="#9333ea" opacity="0.7"/>
+<ellipse cx="881" cy="392" rx="9" ry="16" fill="#2563eb" opacity="0.7"/>
+<rect x="38" y="456" width="444" height="152" rx="12" fill="#f8fafc" stroke="#dbe4ef" stroke-width="2"/>
+<text id="label-11" x="56" y="486" class="panel-title" text-anchor="start">Coherent combining</text>
+<text id="label-12" x="56" y="516" class="small" text-anchor="start">Controlled phases; one chosen mode</text>
+<polyline points="68.00,550.00 69.31,552.33 70.62,554.54 71.94,556.49 73.25,558.09 74.56,559.24 75.88,559.88 77.19,559.97 78.50,559.51 79.81,558.53 81.12,557.07 82.44,555.22 83.75,553.09 85.06,550.78 86.38,548.44 87.69,546.17 89.00,544.12 90.31,542.40 91.62,541.09 92.94,540.28 94.25,540.00 95.56,540.28 96.88,541.09 98.19,542.40 99.50,544.12 100.81,546.17 102.12,548.44 103.44,550.78 104.75,553.09 106.06,555.22 107.38,557.07 108.69,558.53 110.00,559.51 111.31,559.97 112.62,559.88 113.94,559.24 115.25,558.09 116.56,556.49 117.88,554.54 119.19,552.33 120.50,550.00 121.81,547.67 123.12,545.46 124.44,543.51 125.75,541.91 127.06,540.76 128.38,540.12 129.69,540.03 131.00,540.49 132.31,541.47 133.62,542.93 134.94,544.78 136.25,546.91 137.56,549.22 138.88,551.56 140.19,553.83 141.50,555.88 142.81,557.60 144.12,558.91 145.44,559.72 146.75,560.00 148.06,559.72 149.38,558.91 150.69,557.60 152.00,555.88 153.31,553.83 154.62,551.56 155.94,549.22 157.25,546.91 158.56,544.78 159.88,542.93 161.19,541.47 162.50,540.49 163.81,540.03 165.12,540.12 166.44,540.76 167.75,541.91 169.06,543.51 170.38,545.46 171.69,547.67 173.00,550.00" fill="none" stroke="#2563eb" stroke-width="3"/>
+<polyline points="68.00,583.00 69.31,585.33 70.62,587.54 71.94,589.49 73.25,591.09 74.56,592.24 75.88,592.88 77.19,592.97 78.50,592.51 79.81,591.53 81.12,590.07 82.44,588.22 83.75,586.09 85.06,583.78 86.38,581.44 87.69,579.17 89.00,577.12 90.31,575.40 91.62,574.09 92.94,573.28 94.25,573.00 95.56,573.28 96.88,574.09 98.19,575.40 99.50,577.12 100.81,579.17 102.12,581.44 103.44,583.78 104.75,586.09 106.06,588.22 107.38,590.07 108.69,591.53 110.00,592.51 111.31,592.97 112.62,592.88 113.94,592.24 115.25,591.09 116.56,589.49 117.88,587.54 119.19,585.33 120.50,583.00 121.81,580.67 123.12,578.46 124.44,576.51 125.75,574.91 127.06,573.76 128.38,573.12 129.69,573.03 131.00,573.49 132.31,574.47 133.62,575.93 134.94,577.78 136.25,579.91 137.56,582.22 138.88,584.56 140.19,586.83 141.50,588.88 142.81,590.60 144.12,591.91 145.44,592.72 146.75,593.00 148.06,592.72 149.38,591.91 150.69,590.60 152.00,588.88 153.31,586.83 154.62,584.56 155.94,582.22 157.25,579.91 158.56,577.78 159.88,575.93 161.19,574.47 162.50,573.49 163.81,573.03 165.12,573.12 166.44,573.76 167.75,574.91 169.06,576.51 170.38,578.46 171.69,580.67 173.00,583.00" fill="none" stroke="#2563eb" stroke-width="3"/>
+<path d="M203 566 H278" fill="none" stroke="#94a3b8" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity="1" marker-end="url(#arrow-94a3b8)"/>
+<polyline points="318.00,566.00 319.50,569.97 321.00,573.72 322.50,577.04 324.00,579.75 325.50,581.71 327.00,582.79 328.50,582.95 330.00,582.17 331.50,580.49 333.00,578.02 334.50,574.88 336.00,571.25 337.50,567.33 339.00,563.34 340.50,559.49 342.00,556.01 343.50,553.07 345.00,550.85 346.50,549.47 348.00,549.00 349.50,549.47 351.00,550.85 352.50,553.07 354.00,556.01 355.50,559.49 357.00,563.34 358.50,567.33 360.00,571.25 361.50,574.88 363.00,578.02 364.50,580.49 366.00,582.17 367.50,582.95 369.00,582.79 370.50,581.71 372.00,579.75 373.50,577.04 375.00,573.72 376.50,569.97 378.00,566.00 379.50,562.03 381.00,558.28 382.50,554.96 384.00,552.25 385.50,550.29 387.00,549.21 388.50,549.05 390.00,549.83 391.50,551.51 393.00,553.98 394.50,557.12 396.00,560.75 397.50,564.67 399.00,568.66 400.50,572.51 402.00,575.99 403.50,578.93 405.00,581.15 406.50,582.53 408.00,583.00 409.50,582.53 411.00,581.15 412.50,578.93 414.00,575.99 415.50,572.51 417.00,568.66 418.50,564.67 420.00,560.75 421.50,557.12 423.00,553.98 424.50,551.51 426.00,549.83 427.50,549.05 429.00,549.21 430.50,550.29 432.00,552.25 433.50,554.96 435.00,558.28 436.50,562.03 438.00,566.00" fill="none" stroke="#2563eb" stroke-width="3"/>
+<rect x="518" y="456" width="444" height="152" rx="12" fill="#f8fafc" stroke="#dbe4ef" stroke-width="2"/>
+<text id="label-13" x="536" y="486" class="panel-title" text-anchor="start">Time selection</text>
+<text id="label-14" x="536" y="516" class="small" text-anchor="start">One selected source at each instant</text>
+<rect x="548" y="546" width="75" height="35" rx="5" fill="#2563eb"/>
+<rect x="643" y="546" width="75" height="35" rx="5" fill="#d97706"/>
+<rect x="738" y="546" width="75" height="35" rx="5" fill="#2563eb"/>
+<rect x="833" y="546" width="75" height="35" rx="5" fill="#d97706"/>
+<rect x="26" y="634" width="948" height="52" rx="8" fill="#f0f7ff"/>
+<text id="label-15" x="44" y="656" class="small" text-anchor="start">Double-clad fibers separate core-guided signals and cladding-guided pumps. Multicore fibers offer</text>
+<text id="label-16" x="44" y="677" class="small" text-anchor="start">another option.</text>
+</svg>

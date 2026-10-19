@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="480" viewBox="0 0 1000 480" role="img" aria-labelledby="figure-title figure-description">
+<title id="figure-title">Fused biconical taper coupler</title>
+<desc id="figure-description">Two fibers approach in a heated, stretched coupling region. Original conceptual illustration; not to scale.</desc>
+<defs>
+<style>text{font-family:DejaVu Sans,Arial,sans-serif;font-size:19px;fill:#17324d} .heading{font-size:25px;font-weight:700} .subheading{font-size:18px;fill:#52677f} .panel-title{font-size:20px;font-weight:700} .small{font-size:17px} .strong{font-weight:700}</style>
+<marker id="arrow-2563eb" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 Z" fill="#2563eb"/></marker>
+<marker id="arrow-0d9488" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 Z" fill="#0d9488"/></marker>
+<marker id="arrow-d97706" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 Z" fill="#d97706"/></marker>
+<marker id="arrow-9333ea" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 Z" fill="#9333ea"/></marker>
+<marker id="arrow-dc2626" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 Z" fill="#dc2626"/></marker>
+<marker id="arrow-94a3b8" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11 Z" fill="#94a3b8"/></marker>
+</defs>
+<rect x="1" y="1" width="998" height="478" rx="18" fill="#ffffff" stroke="#dbe4ef" stroke-width="2"/>
+<rect x="26" y="24" width="6" height="52" rx="3" fill="#2563eb"/>
+<text id="label-1" x="48" y="46" class="heading" text-anchor="start">Fused biconical taper coupler</text>
+<text id="label-2" x="48" y="75" class="subheading" text-anchor="start">Two fibers approach in a heated, stretched coupling region.</text>
+<path d="M70 155 H235 C330 155 350 214 435 214 H565 C650 214 675 155 765 155 H930" fill="none" stroke="#cbd5e1" stroke-width="30" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<path d="M70 305 H235 C330 305 350 246 435 246 H565 C650 246 675 305 765 305 H930" fill="none" stroke="#cbd5e1" stroke-width="30" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<rect x="430" y="199" width="140" height="62" rx="16" fill="#cbd5e1"/>
+<path d="M70 155 H235 C330 155 350 214 435 214 H565 C650 214 675 155 765 155 H930" fill="none" stroke="#2563eb" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<path d="M70 305 H235 C330 305 350 246 435 246 H565 C650 246 675 305 765 305 H930" fill="none" stroke="#94a3b8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<path d="M450 214 C490 214 510 246 550 246 H565 C650 246 675 305 765 305 H930" fill="none" stroke="#2563eb" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity="1"/>
+<path d="M120 155 H205" fill="none" stroke="#2563eb" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity="1" marker-end="url(#arrow-2563eb)"/>
+<path d="M795 155 H900" fill="none" stroke="#2563eb" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity="1" marker-end="url(#arrow-2563eb)"/>
+<path d="M795 305 H900" fill="none" stroke="#2563eb" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity="1" marker-end="url(#arrow-2563eb)"/>
+<text id="label-3" x="70" y="115" class="strong" text-anchor="start">Input light</text>
+<text id="label-4" x="70" y="355" class="" text-anchor="start" style="fill:#64748b">Unused input port</text>
+<text id="label-5" x="750" y="115" class="strong" text-anchor="start">Through output</text>
+<text id="label-6" x="750" y="355" class="strong" text-anchor="start">Coupled output</text>
+<text id="label-7" x="500" y="145" class="strong" text-anchor="middle">Coupled waist</text>
+<path d="M500 158 V198" fill="none" stroke="#94a3b8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="1" marker-end="url(#arrow-94a3b8)"/>
+<text id="label-8" x="500" y="345" class="" text-anchor="middle">Coupling length and taper geometry set</text>
+<text id="label-9" x="500" y="370" class="" text-anchor="middle">the ratio.</text>
+<rect x="26" y="414" width="948" height="52" rx="8" fill="#f0f7ff"/>
+<text id="label-10" x="44" y="436" class="small" text-anchor="start">A packaged one-to-two coupler may terminate the unused port inside its housing.</text>
+</svg>

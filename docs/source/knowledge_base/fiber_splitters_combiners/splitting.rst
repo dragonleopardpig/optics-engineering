@@ -19,6 +19,15 @@ coupled taper. A 2-by-2 device exposes both ports at each end. A packaged
 geometry determine the split ratio; cascades or multi-fiber structures
 provide more outputs.
 
+.. figure:: /_static/knowledge_base/fiber_splitters_combiners/01_fused_coupler.svg
+   :alt: Two tapered fibers share a coupling region; light entering one fiber reaches both through and coupled outputs, while the second input remains unused.
+   :width: 100%
+   :align: center
+
+   An FBT coupler exchanges guided optical power in a shared waist.
+   The blue paths indicate power transfer, rather than individual rays
+   or a calculated field distribution.
+
 This is a useful starting point for a two-way split, a monitoring tap, or
 a small distribution tree. Choose single-mode (SM), polarization-maintaining
 (PM), or multimode (MM) fiber to match the source. PM fiber preserves
@@ -42,6 +51,15 @@ These examples establish available device categories, not suitability for
 an unspecified laser. Check the exact fiber, operating band, split-ratio
 tolerance, and termination-dependent power rating.
 
+.. figure:: /_static/knowledge_base/fiber_splitters_combiners/02_star_coupler.svg
+   :alt: One illuminated fiber input feeds a fused mixing region and distributes light to three output fibers; other inputs are inactive.
+   :width: 100%
+   :align: center
+
+   A conceptual transmission star distributes an input among several
+   output ports. Reflection and hybrid stars use different port layouts;
+   :doc:`patents` describes the looped-fiber implementation in P2.
+
 
 PLC and other integrated splitters
 ----------------------------------
@@ -52,6 +70,16 @@ one implementation; integrated directional couplers and multimode
 interference (MMI) structures provide other splitting mechanisms. Here
 "multimode interference" describes the internal waveguide region; the
 external pigtails can still be single-mode.
+
+.. figure:: /_static/knowledge_base/fiber_splitters_combiners/03_planar_splitters.svg
+   :alt: Three planar implementations show a cascaded Y-branch tree feeding four fibers, two adjacent coupled waveguides, and a wider multimode-interference region forming two output images.
+   :width: 100%
+   :align: center
+
+   Y-branches divide the path geometrically, directional couplers exchange
+   power between neighboring guides, and MMI devices use internal modal
+   interference. The same tree topology can also be built from discrete
+   fused couplers. See :ref:`fiber-review-singh` for planar-circuit context.
 
 PLC packaging is attractive when many outputs must fit into one module.
 Do not assume that a telecom splitter is suitable for visible light,
@@ -78,6 +106,16 @@ engineering trade-off is optical flexibility against alignment,
 packaging, coating, and coupling losses. See
 :doc:`../active_fiber_alignment` for the overlap calculation.
 
+.. figure:: /_static/knowledge_base/fiber_splitters_combiners/04_free_space_splitters.svg
+   :alt: A collimated fiber beam is partially reflected and transmitted into two separately focused fiber outputs; a second panel shows a diffractive element feeding several fiber launches.
+   :width: 100%
+   :align: center
+
+   Free-space splitting requires a separate fiber launch for each output.
+   A beamsplitter divides reflection and transmission; a diffractive
+   optical element creates several orders that are relayed into a fiber
+   array. Optical paths are schematic, not a ray-traced prescription.
+
 For a coherent laser, splitting also establishes relative branch phases.
 Separate branch lengths then introduce phase drift and pulse delays.
 Equal powers alone do not guarantee equal arrival times or stable
@@ -99,6 +137,12 @@ Splitting by wavelength, polarization, or mode
   a mapping of a multimode input field. This does not inherently give
   equal powers or identical fields in every port. See
   :ref:`fiber-review-birks` and :ref:`fiber-original-morizur`.
+
+The :ref:`wavelength-routing <fiber-figure-wdm>`,
+:ref:`polarization <fiber-figure-polarization>`, and
+:ref:`photonic-lantern <fiber-figure-lantern>` diagrams on the combining
+page also illustrate the corresponding splitting functions when the
+specified ports and modes are used in reverse.
 
 
 Power and loss accounting
