@@ -5,6 +5,11 @@ First decide whether every branch needs the same spectrum, or whether
 different branches should receive different wavelengths, polarizations,
 or spatial modes. Only the first case is ordinary power splitting.
 
+For a broad historical review of fiber-coupler constructions, see
+:ref:`fiber-review-agarwal`. Its diagrams and discussion complement the
+selected architectures below; its quoted performance is not a modern
+component specification.
+
 .. contents:: On this page
    :local:
    :depth: 2
@@ -86,6 +91,11 @@ Do not assume that a telecom splitter is suitable for visible light,
 ultrashort pulses, or high-power fiber lasers. Material transparency,
 waveguide modes, fiber coupling, dispersion, and thermal behavior all
 need to match the application.
+
+For silicon photonic implementations, :ref:`fiber-review-marchetti`
+reviews the fiber-to-chip interfaces. That coupling operation is separate
+from the on-chip splitting function; a silicon photonics interface design
+is not automatically applicable to a silica PLC package.
 
 An early experimental reference is
 `Hibino et al. (1994) <https://doi.org/10.1364/OFC.1994.PD7>`_: its

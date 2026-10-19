@@ -9,7 +9,7 @@ records. See :doc:`access` for exactly which full texts were obtained and
 which summaries rely on abstracts or bibliographic records.
 
 Download the :download:`BibTeX bibliography <references.bib>` for the
-13 papers below. Patent records are listed separately in :doc:`patents`.
+15 papers below. Patent records are listed separately in :doc:`patents`.
 
 
 Recommended reviews
@@ -19,6 +19,8 @@ Start with Fan for the overall combining problem, Stachowiak for physical
 fiber components, and Birks for mode capacity and lanterns. Smit and van
 Dam cover wavelength routing; Singh covers planar circuits; Lei and
 colleagues focus on side-pump combiners.
+Agarwal provides the historical overview of fiber-coupler constructions;
+Marchetti and colleagues cover the separate fiber-to-chip interface problem.
 
 .. _fiber-review-fan:
 
@@ -119,6 +121,59 @@ power-scaling challenges. The supplied full text was consulted for input
 NA sensitivity, taper geometry, backward coupling, and signal-beam
 degradation. Section 4 explains why a continuous signal core still needs
 careful control of heating and mechanical deformation during fabrication.
+
+.. _fiber-review-agarwal:
+
+R7. Historical fiber-coupler overview: Agarwal, 1987
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Arun K. Agarwal, **Review of optical fiber couplers**, *Fiber and
+Integrated Optics* **6** (1), 27–53 (1987).
+`DOI: 10.1080/01468038708219344 <https://doi.org/10.1080/01468038708219344>`_.
+
+**Read for:** a broad historical catalog of fused tapers, transmission
+and reflection stars, micro-optic and grating splitters, offset and mixer
+constructions, polished couplers, and early SM devices. The supplied PDF
+contains the complete 27-page article plus a publisher cover. Figures 1–2
+give its construction taxonomy; Figures 3–16 illustrate the historical
+implementations. The characterization discussion on pages 45–47 explains
+why launch-dependent MM devices need more than a single integrated power
+measurement to predict cascaded behavior. Pages 47–49 distinguish SM
+evanescent coupling from the MM taper description.
+
+This is particularly useful for the **one-fiber-to-many** side of the
+survey. Treat manufacturing and performance comparisons as historical,
+not current specifications. Check the author's loss definition before
+comparing a quoted value with per-branch insertion loss. The journal year
+is **1987**; 2006 is the publisher's online-posting date, and 2013 is the
+download date printed on the supplied cover.
+
+.. _fiber-review-marchetti:
+
+R8. Fiber-to-chip interfaces: Marchetti et al., 2019
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Riccardo Marchetti, Cosimo Lacava, Lee Carroll, Kamil Gradkowski, and
+Paolo Minzioni, **Coupling strategies for silicon photonics integrated
+chips [Invited]**, *Photonics Research* **7** (2), 201–239 (2019).
+`DOI: 10.1364/PRJ.7.000201 <https://doi.org/10.1364/PRJ.7.000201>`_.
+
+**Read for:** interfacing fibers to a silicon photonic splitter, AWG, or
+other integrated circuit. The supplied 39-page review covers fiber types
+and mode-field matching (section 2), edge coupling and inverse tapers
+(section 3), grating coupling (sections 4–5), and packaging, alignment,
+microlenses, and photonic wire bonds (section 6). Table 1 compares coupling
+efficiency, polarization dependence, bandwidth, alignment tolerance, and
+mode-field diameter. Its notes distinguish **experiments from simulations**
+and the different loss thresholds used for bandwidth and tolerance.
+
+A fiber-to-chip coupler transfers a field between a fiber and a waveguide;
+it is not by itself a power splitter or a many-source combiner. For an
+integrated device, budget the input and output interfaces separately from
+on-chip splitting or routing. Section 6 also explains why fiber-array
+alignment and adhesive curing can limit assembled performance even when
+the bare coupling structure is efficient. The review is about silicon
+photonics, not a qualification of silica PLCs or high-power fiber packages.
 
 
 Selected original papers

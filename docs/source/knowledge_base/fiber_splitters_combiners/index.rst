@@ -113,12 +113,16 @@ and qualifications are developed in the following pages.
 Where to start reading
 ----------------------
 
-For an overall view, start with :ref:`fiber-review-fan`. For physical
+For a broad historical catalog of fiber splitters and coupler
+constructions, start with :ref:`fiber-review-agarwal`. For an overall view
+of beam combining, start with :ref:`fiber-review-fan`. For physical
 fiber-combiner construction, read :ref:`fiber-review-stachowiak`. For why
 several single-mode fibers can feed one multimode fiber efficiently, read
-:ref:`fiber-review-birks`. The :doc:`literature` page also covers PLC and
-AWG reviews and selected original demonstrations. The :doc:`patents` page
-provides named inventors, dates, and technical disclosures.
+:ref:`fiber-review-birks`. For the separate fiber-to-chip interfaces of an
+integrated solution, read :ref:`fiber-review-marchetti`. The
+:doc:`literature` page also covers PLC and AWG reviews and selected original
+demonstrations. The :doc:`patents` page provides named inventors, dates,
+and technical disclosures.
 
 The :doc:`access` page explicitly identifies papers whose full texts could
 not be obtained, and distinguishes a downloaded manuscript from an

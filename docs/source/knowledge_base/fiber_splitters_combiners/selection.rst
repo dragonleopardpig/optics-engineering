@@ -77,6 +77,16 @@ fusion-spliced device can have a different limit from a connectorized
 version. Return loss is not an optical-isolator rating. A component with
 low reflection can still transmit backward light from another source.
 
+For a chip-based device, separate the fiber-to-chip interfaces from the
+on-chip splitter or wavelength router. In a fiber-input/fiber-output
+measurement, the input coupling, on-chip transmission, and output coupling
+all contribute to the measured branch loss; do not add interface losses
+again if they are already included in the packaged-device specification.
+:ref:`fiber-review-marchetti` covers mode matching, fiber-array alignment,
+and curing-induced movement in silicon photonic packages. Its Table 1
+distinguishes measured from simulated results and flags different loss
+thresholds for bandwidth and alignment tolerance.
+
 
 Read the quoted metrics carefully
 ---------------------------------
@@ -116,6 +126,12 @@ stability limits. Coherent sources require field or interference
 measurements instead: sweep phase, observe bright and dark outputs, and
 measure stability during operation. A power-transfer table alone does
 not capture phase.
+
+For a mode-selective MM coupler, a transfer table measured with one launch
+distribution may not predict a cascade in which later stages see a
+different modal population. The characterization discussion in
+:ref:`fiber-review-agarwal` motivates recording the launch conditions and,
+where necessary, measuring mode-resolved transfer as well as total power.
 
 For MM and pump devices, measure output near and far fields or an
 appropriate modal/beam-quality metric, and distinguish core power from

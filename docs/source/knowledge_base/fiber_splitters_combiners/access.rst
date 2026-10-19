@@ -2,11 +2,13 @@ Full-Text Access and Download Requests
 ======================================
 
 **Checked: 19 October 2026.** Full-text downloads were attempted for all
-13 papers in :doc:`literature`. Five readable PDFs were obtained from
-publisher or author-repository hosts, and seven more were supplied
-locally. All seven supplied PDFs match the cited papers by title,
-authors, venue, year, and page range, and their text was successfully
-extracted. Relevant sections of all 12 available papers were consulted.
+13 papers originally listed in :doc:`literature`. Five readable PDFs were
+obtained from publisher or author-repository hosts, and seven more were
+supplied locally. Two additional review papers have since been supplied
+and added, bringing the bibliography to **15 papers**. All nine supplied
+PDFs match the cited papers by title, authors, venue, year, and page range,
+and their text was successfully extracted. Relevant sections of all
+**14 available papers** were consulted.
 Only the Hibino et al. (1994) PLC conference paper is still missing.
 
 The survey distinguishes results verified from complete manuscripts from
@@ -45,6 +47,12 @@ PDFs obtained and consulted
    * - R6: Lei et al. (2020)
      - Supplied local publisher PDF; 14 pages
      - Taper geometry, pump-input NA, backward coupling, and fabrication-induced signal-beam degradation in sections 3–4.
+   * - R7: Agarwal (1987)
+     - Supplied local publisher PDF; 28 pages including a publisher cover
+     - Construction taxonomy and configurations on pages 27–44, mode-dependent characterization on pages 45–47, and SM coupler technology on pages 47–49.
+   * - R8: Marchetti et al. (2019)
+     - Supplied local publisher PDF; 39 pages
+     - Interface taxonomy, fiber and edge-coupling principles in sections 1–3, grating principles in section 4.A, packaging in section 6, and conclusions and comparison-table notes in section 7.
    * - O1: Kawasaki and Hill (1977)
      - Supplied local publisher PDF; 2 pages
      - Fabrication, excess-loss definition, experimental launch, mode conversion, and output mode mixing.
@@ -67,6 +75,9 @@ PDFs obtained and consulted
 The seven supplied copies resolve the earlier access failures for Fan,
 Singh, Lei, Kawasaki/Hill, Kawasaki et al., Kozlov, and Leon-Saval.
 Their full-text results now inform the survey and annotated bibliography.
+The two later additions are *Review of optical fiber couplers* and
+*Coupling strategies for silicon photonics integrated chips [Invited]*.
+They are additional reviews, not substitutes for the missing Hibino paper.
 
 
 Full texts still needed
