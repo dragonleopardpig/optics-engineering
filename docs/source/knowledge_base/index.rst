@@ -1,10 +1,9 @@
 Knowledge Base
 ==============
 
-Cross-cutting notes on optical-imaging physics that informs engineering
-design decisions — sampling, contrast mechanisms, sensor noise, and the kinds of
-trade-offs that show up when the simulator output meets a real lens and a
-real sensor.
+Cross-cutting references on optical engineering, including imaging, fiber
+photonics, laser systems, alignment, and measurement. These notes connect
+physical limits and practical design choices.
 
 .. toctree::
    :maxdepth: 1
@@ -13,6 +12,7 @@ real sensor.
    formula_plotter
    cardinal_points
    active_fiber_alignment
+   fiber_splitters_combiners/index
    pupil_sampling
    lens_design_intro
    aberration_polynomial
