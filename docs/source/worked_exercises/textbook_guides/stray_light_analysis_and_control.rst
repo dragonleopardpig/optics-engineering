@@ -38,6 +38,6 @@ and detector definitions as the original prediction.
 Related documentation
 ---------------------
 
-* :doc:`../../coaxial_led_dark_edges`
-* :doc:`../../pupil_sampling`
-* :doc:`../../eol_imaging_qualification/lens`
+* :doc:`/knowledge_base/coaxial_led_dark_edges`
+* :doc:`/knowledge_base/pupil_sampling`
+* :doc:`/knowledge_base/eol_imaging_qualification/lens`

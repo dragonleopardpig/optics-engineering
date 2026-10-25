@@ -30,7 +30,7 @@ Why does the carrier equation later contain the second derivative
 The small-slab picture
 ----------------------
 
-.. figure:: ../../../_static/knowledge_base/worked_exercises/photonics_essentials/ch03_carrier_balance.svg
+.. figure:: /_static/knowledge_base/worked_exercises/photonics_essentials/ch03_carrier_balance.svg
    :alt: Carrier balance in a small semiconductor slab
    :align: center
    :width: 94%

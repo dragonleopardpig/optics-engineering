@@ -78,7 +78,7 @@ silicon value :math:`V_{\mathrm{bi}}=0.8\ \mathrm V`.  The results are:
 All entries are in :math:`\mathrm{F/cm^2}`.  On log-log axes each voltage
 curve is a straight line:
 
-.. figure:: ../../../_static/knowledge_base/worked_exercises/photonics_essentials/ch04_capacitance.svg
+.. figure:: /_static/knowledge_base/worked_exercises/photonics_essentials/ch04_capacitance.svg
    :alt: Four log-log capacitance curves rising with carrier concentration
    :align: center
    :width: 92%

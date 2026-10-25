@@ -1128,9 +1128,9 @@ provide a starting point for idealized studies. They do not by themselves
 model cladding-mode transport, motion dynamics, or a production alignment
 controller.
 
-* :doc:`worked_exercises/optical_alignment_methods/fiber_and_interferometers`
+* :doc:`/worked_exercises/optical_alignment_methods/fiber_and_interferometers`
   gives related bench procedures for fiber injection and interferometers.
-* :doc:`worked_exercises/optical_alignment_methods/axis_and_mirror_steering`
+* :doc:`/worked_exercises/optical_alignment_methods/axis_and_mirror_steering`
   develops the distinction between position and angle alignment.
 * `Newport: Fiber Optic Coupling
   <https://www.newport.com/n/fiber-optic-coupling>`_ provides the mode-matching

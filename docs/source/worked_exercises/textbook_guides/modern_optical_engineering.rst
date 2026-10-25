@@ -41,7 +41,7 @@ separately from the on-axis nominal result.
 Related documentation
 ---------------------
 
-* :doc:`../../cardinal_points`
-* :doc:`../../lens_design_intro`
-* :doc:`../../aberration_polynomial`
-* :doc:`../../pupil_sampling`
+* :doc:`/knowledge_base/cardinal_points`
+* :doc:`/knowledge_base/lens_design_intro`
+* :doc:`/knowledge_base/aberration_polynomial`
+* :doc:`/knowledge_base/pupil_sampling`

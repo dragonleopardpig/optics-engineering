@@ -38,7 +38,7 @@ alignment perturbations, and unwanted illumination paths.
 Related documentation
 ---------------------
 
-* :doc:`../../lens_design_intro`
-* :doc:`../../pupil_sampling`
-* :doc:`../../step_overlay_promotion`
+* :doc:`/knowledge_base/lens_design_intro`
+* :doc:`/knowledge_base/pupil_sampling`
+* :doc:`/knowledge_base/step_overlay_promotion`
 * :doc:`optical_system_design`

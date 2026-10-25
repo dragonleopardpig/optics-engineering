@@ -500,5 +500,5 @@ Section 5 — Where to go next
   PP, PP', FFL, BFL.
 * :doc:`pupil_sampling` — pupil patterns and numerical ray sampling.
 * :doc:`aberration_polynomial` — wavefront and ray-aberration polynomials.
-* :doc:`worked_exercises/fundamentals_of_photonics/ch03_beam_optics` —
+* :doc:`/worked_exercises/fundamentals_of_photonics/ch03_beam_optics` —
   Gaussian beam optics and worked exercises.

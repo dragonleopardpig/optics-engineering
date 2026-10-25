@@ -42,6 +42,6 @@ wavelength dependence, identify compensators, then define acceptance tests.
 Related documentation
 ---------------------
 
-* :doc:`../../rules_of_thumb`
-* :doc:`../../active_fiber_alignment`
-* :doc:`../../eol_imaging_qualification/index`
+* :doc:`/knowledge_base/rules_of_thumb`
+* :doc:`/knowledge_base/active_fiber_alignment`
+* :doc:`/knowledge_base/eol_imaging_qualification/index`

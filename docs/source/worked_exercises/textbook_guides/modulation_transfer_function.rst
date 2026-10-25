@@ -42,6 +42,6 @@ field, orientation, focus, and repeatability before comparing these methods.
 Related documentation
 ---------------------
 
-* :doc:`../../eol_imaging_qualification/lens`
-* :doc:`../../eol_imaging_qualification/camera`
-* :doc:`../../rules_of_thumb`
+* :doc:`/knowledge_base/eol_imaging_qualification/lens`
+* :doc:`/knowledge_base/eol_imaging_qualification/camera`
+* :doc:`/knowledge_base/rules_of_thumb`

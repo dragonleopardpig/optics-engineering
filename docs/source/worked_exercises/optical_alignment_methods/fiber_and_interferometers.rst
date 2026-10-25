@@ -51,7 +51,7 @@ lateral offset alone reduces power coupling approximately as
 If :math:`w=2.5\ \mu\mathrm{m}` and :math:`\delta=1.0\ \mu\mathrm{m}`, only
 85.2% remains before angular, focus, Fresnel, and mode-shape losses. This is
 the squared field-overlap integral, not the intensity at one point in the
-displaced beam. See :doc:`../../active_fiber_alignment` for the derivation,
+displaced beam. See :doc:`/knowledge_base/active_fiber_alignment` for the derivation,
 directional sensing, and power-gradient control methods.
 
 .. figure:: /_static/knowledge_base/worked_exercises/optical_alignment_methods/fiber_coupling.svg

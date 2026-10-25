@@ -15,4 +15,4 @@ notebooks connect the mathematics to engineering applications.
    :maxdepth: 2
    :caption: Worked Exercise Solutions
 
-   knowledge_base/worked_exercises/index
+   worked_exercises/index

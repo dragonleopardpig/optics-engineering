@@ -8,7 +8,7 @@ from collections.abc import Callable
 from docutils import nodes
 
 
-WORKED_PREFIX = "knowledge_base/worked_exercises/"
+WORKED_PREFIX = "worked_exercises/"
 FUNDAMENTALS_PREFIX = f"{WORKED_PREFIX}fundamentals_of_photonics/ch"
 UNDERSTANDING_PAGE = re.compile(
     rf"^{WORKED_PREFIX}understanding_lasers_ch\d+_quiz$"
@@ -566,7 +566,7 @@ def _transform_solutions(app, doctree: nodes.document, docname: str) -> None:
 
 def setup(app):
     app.connect("doctree-resolved", _transform_solutions)
-    app.add_css_file("knowledge_base/worked_exercises/solution_toggle.css")
+    app.add_css_file("worked_exercises/solution_toggle.css")
     return {
         "version": "2.0",
         "parallel_read_safe": True,

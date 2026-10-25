@@ -82,7 +82,7 @@ The requested plotting function is
 
    \boxed{2\theta(N)=2\tan^{-1}\left(\frac1{2N}\right)}.
 
-.. figure:: ../../../_static/knowledge_base/worked_exercises/photonics_essentials/ch10_fnumber_angle.svg
+.. figure:: /_static/knowledge_base/worked_exercises/photonics_essentials/ch10_fnumber_angle.svg
    :alt: Full aperture angle decreasing as lens f-number increases
    :align: center
    :width: 92%

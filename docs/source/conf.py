@@ -17,7 +17,7 @@ extensions = [
 ]
 exclude_patterns = [
     "_contents/**",
-    "knowledge_base/worked_exercises/photonics_essentials/notebooks/*.ipynb",
+    "worked_exercises/photonics_essentials/notebooks/*.ipynb",
 ]
 html_theme = "sphinx_rtd_theme"
 html_theme_options = {
@@ -43,7 +43,7 @@ html_js_files = [
 jupyterlite_contents = [
     "_notebook_support/photodiode.py",
     (
-        "knowledge_base/worked_exercises/photonics_essentials/"
+        "worked_exercises/photonics_essentials/"
         "notebooks/*.ipynb"
     ),
 ]

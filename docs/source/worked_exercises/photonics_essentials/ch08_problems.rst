@@ -88,7 +88,7 @@ Problem 8.3: Other prebias levels
 
 Repeat the same calculation:
 
-.. figure:: ../../../_static/knowledge_base/worked_exercises/photonics_essentials/ch08_turn_on_delay.svg
+.. figure:: /_static/knowledge_base/worked_exercises/photonics_essentials/ch08_turn_on_delay.svg
    :alt: Laser turn-on delay curves for three prebias current levels
    :align: center
    :width: 92%

@@ -18,10 +18,10 @@ Choose a route
 --------------
 
 * **System requirements and budgets:** Fischer, Tadic-Galeb, and Yoder.
-* **Paraxial optics and aberrations:** Smith, with :doc:`../../cardinal_points`.
-* **Lens design workflow:** Sasián, with :doc:`../../lens_design_intro`.
-* **Ghosts and radiometry:** Fest, with :doc:`../../coaxial_led_dark_edges`.
-* **Image quality:** Boreman, with :doc:`../../eol_imaging_qualification/index`.
+* **Paraxial optics and aberrations:** Smith, with :doc:`/knowledge_base/cardinal_points`.
+* **Lens design workflow:** Sasián, with :doc:`/knowledge_base/lens_design_intro`.
+* **Ghosts and radiometry:** Fest, with :doc:`/knowledge_base/coaxial_led_dark_edges`.
+* **Image quality:** Boreman, with :doc:`/knowledge_base/eol_imaging_qualification/index`.
 
 State ray-vector order, sign conventions, wavelength units, pupil
 normalization, and Fourier-transform convention before comparing results.
