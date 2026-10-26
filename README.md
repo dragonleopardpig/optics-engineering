@@ -40,7 +40,9 @@ the publishing source. Push changes to `main` or `master` to deploy, or run
 **Actions → Build and deploy documentation** manually.
 
 The workflow builds the site and deploys `docs/build/html`. Pull requests
-build the documentation without deploying. The published URL appears in
+do not trigger this workflow, so fork contributions do not automatically
+execute on the self-hosted machine. Review their changes before merging.
+The published URL appears in
 the deployment and the repository's Pages settings. Project sites under a
 repository path are supported; no hard-coded domain or repository name is
 needed. Sphinx generates `.nojekyll` to preserve underscore-prefixed assets.
@@ -48,6 +50,28 @@ The canonical site URL is set by `html_baseurl` in `docs/source/conf.py`.
 
 See [GitHub's custom workflow documentation](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages)
 for Pages configuration.
+
+### Local runner and pre-push checks
+
+Both build and deployment jobs require a self-hosted Linux x64 runner with
+the `thinky-local` label; neither job falls back to a GitHub-hosted runner.
+On the development workstation, start the existing rootless Ubuntu runner
+before pushing:
+
+```bash
+gh-runner start optics-engineering
+python -m sphinx -W --keep-going -b html -d docs/build/doctrees docs/source docs/build/html
+python tools/typeset_svg_math.py --check
+git push origin main
+```
+
+Activate the documentation virtual environment first, as in the build
+instructions. After a source-directory move, add `-E` to the Sphinx command
+once to discard cached document paths. The runner runs in an isolated,
+one-job container and is replaced between build and deployment. Keep the
+workstation awake and the runner online until both jobs finish; otherwise
+the workflow waits for a matching runner. Check it with `gh-runner status`
+and stop it when no jobs are running with `gh-runner stop optics-engineering`.
 
 ## Custom domain
 

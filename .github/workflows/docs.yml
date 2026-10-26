@@ -3,19 +3,19 @@ name: Build and deploy documentation
 on:
   push:
     branches: [main, master]
-  pull_request:
   workflow_dispatch:
 
 permissions:
   contents: read
 
 concurrency:
-  group: pages-${{ github.event_name == 'pull_request' && github.ref || 'production' }}
+  group: pages-production
   cancel-in-progress: true
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, linux, x64, thinky-local]
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v7
 
@@ -58,15 +58,14 @@ jobs:
           test -s docs/build/html/lite/files/ch03_photodiode_lab.ipynb
 
       - name: Upload GitHub Pages artifact
-        if: github.event_name != 'pull_request'
         uses: actions/upload-pages-artifact@v4
         with:
           path: docs/build/html
 
   deploy:
-    if: github.event_name != 'pull_request'
     needs: build
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, linux, x64, thinky-local]
+    timeout-minutes: 10
     permissions:
       contents: read
       pages: write
