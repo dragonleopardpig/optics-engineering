@@ -4,6 +4,12 @@ import re
 
 
 LABELS = {
+    "wₓ = a/2": r"w_x=\frac{a}{2}",
+    "wᵧ = a/2": r"w_y=\frac{a}{2}",
+    "δνₓ = 1/wₓ": r"\delta\nu_x=\frac{1}{w_x}",
+    "δνᵧ = 1/wᵧ": r"\delta\nu_y=\frac{1}{w_y}",
+    "M ≤ (B wₓ)(B wᵧ) = (Ba)²/4": r"M\leq(Bw_x)(Bw_y)=\frac{(Ba)^2}{4}",
+    "ML ≤ (Ba)²": r"ML\leq(Ba)^2",
     "[[1,t/n],[0,1]]": r"\begin{pmatrix}1&\frac{t}{n}\\0&1\end{pmatrix}",
     "[[1,0],[-P,1]]": r"\begin{pmatrix}1&0\\-P&1\end{pmatrix}",
     "[[1,0],[2n/r,1]]": r"\begin{pmatrix}1&0\\\frac{2n}{r}&1\end{pmatrix}",

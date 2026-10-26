@@ -449,40 +449,142 @@ In-text exercises
 Exercise 23.1-1 — Interconnection capacity
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-**Step 1 — Definitions and setup.**  Symbols are local to this item and follow the chapter convention.  Each physical quantity and supplied numerical value is introduced at its first use below; angles are in radians unless a degree symbol is shown, and units are retained through numerical substitution.
+**Step 1 — Definitions and setup.**  The exercise asks for an upper bound on
+the number of independently resolvable input-to-output connections, not just
+the number of rays that can be drawn.  Use the segmented hologram of textbook
+Fig. 23.1-6: each incoming beam illuminates its own grating region, and the
+spatial frequencies recorded in that region select its outgoing directions.
+The notation resets for this exercise: :math:`L` counts inputs and
+:math:`M` counts directions per input, unlike the preceding matrix section's
+use of :math:`M` for the number of inputs.
+
+* :math:`a` is the side length of the whole square hologram, in mm.
+* :math:`B` is its printable spatial-frequency limit, in lines/mm.  We use
+  the exercise's bandwidth convention, for which the full hologram has
+  space-bandwidth product :math:`(Ba)^2`.
+* :math:`L` is the number of incoming beams, hence the number of independently
+  illuminated regions sharing the total area :math:`a^2`.
+* :math:`M` is the number of resolvable outgoing directions **per incoming
+  beam**.  There are therefore :math:`ML` input-to-output connections.
+
+For an equal-area division, one beam gets a rectangular region of width
+:math:`w_x` and height :math:`w_y`, with :math:`w_xw_y=a^2/L`.  These are
+dimensions of a grating region, not the distance to the output screen.
 
 .. _fop-exercise-23-1-1-illustration:
 
 .. figure:: /_static/knowledge_base/worked_exercises/fundamentals_of_photonics/exercise_illustrations/exercise_23_01_01.svg
-   :alt: Illustrated calculation map for Exercise 23.1-1, Interconnection capacity
+   :alt: A hologram divided among four input beams, and the spatial-frequency grid of resolvable outgoing directions for one region
    :align: center
    :width: 95%
 
-   **Figure 129 — Exercise 23.1-1: Interconnection capacity.** The
-   diagram identifies the input quantities, physical operation, requested
-   result, variable meanings, and an independent verification route. Every
-   symbol in the variable strip is labeled on the model itself.
+   **Figure 129 — Exercise 23.1-1: Interconnection capacity.**  In the
+   example :math:`L=4`, each beam illuminates a square of side :math:`a/2`.
+   Its finite size sets frequency spacings :math:`1/w_x` and :math:`1/w_y`;
+   the available two-dimensional frequency range holds at most
+   :math:`B^2w_xw_y=(Ba)^2/4` resolvable directions for that beam.
 
-**Step 2 — Mathematical formulas used.**  The working uses :ref:`stationary-value condition <fop-formula-stationary>` and :ref:`algebraic rearrangement and dimensional checks <fop-formula-algebra>`.
+**Step 2 — Mathematical formulas used.**  A finite rectangular aperture has
+a sinc-shaped angular spectrum, by the :ref:`Fourier-transform relation
+<fop-formula-fourier>`.  Its width gives the spatial-frequency resolution.
+Counting resolvable directions then requires only
+:ref:`algebra and dimensional checks <fop-formula-algebra>`, not a
+stationary-value calculation.  This is the spatial analogue of the
+time-duration/frequency-resolution argument in textbook Sec. 19.2C,
+Eq. (19.2-9), which the exercise gives as a hint.
 
-**Step 3 — Worked derivation.**  The calculation is kept in symbolic form until the governing relation has been rearranged for the requested quantity.
+**Step 3 — Worked derivation.**
 
-An aperture of width :math:`a` contains :math:`Ba` independent grating
-samples in either transverse coordinate, hence :math:`(Ba)^2` independent
-space-frequency cells.  Assigning :math:`M` directions to each of :math:`L`
-inputs consumes :math:`ML` cells, proving :math:`\boxed{ML\le(Ba)^2}`.  If
-every input is connected to every output, the maximum density is therefore
-:math:`\boxed{B^2=10^6\ \mathrm{interconnections/mm^2}}` for 1000 lines/mm.
+**Why does region size limit the number of directions?**  A grating with
+spatial frequency :math:`\nu_x` deflects a paraxial beam through an angle
+:math:`\theta_x\simeq\lambda\nu_x`, where :math:`\lambda` is the optical
+wavelength.  But a beam passing through a region of width :math:`w_x` does
+not emerge as an infinitely narrow ray: diffraction gives an angular width
+of order :math:`\lambda/w_x`.  Two grating frequencies must consequently
+differ by about :math:`1/w_x` to give resolvable directions.  The same
+argument applies along :math:`y`:
 
-**Step 4 — State the numbered result.**  The principal result obtained in the working is
+.. math::
+   :label: fop-exercise-23-1-1-frequency-resolution
+
+   \delta\nu_x\simeq\frac{1}{w_x},\qquad
+   \delta\nu_y\simeq\frac{1}{w_y}.
+
+More explicitly, truncating a sinusoidal grating to width :math:`w_x`
+changes its sharp spatial-frequency peak at :math:`\nu_{x0}` into a factor
+:math:`\operatorname{sinc}[w_x(\nu_x-\nu_{x0})]`, where
+:math:`\operatorname{sinc}(u)=\sin(\pi u)/(\pi u)`.  Its first zeros are
+:math:`1/w_x` from the peak.  This is the missing physical reason that
+different written frequencies cannot be packed arbitrarily close together.
+
+**Count the directions available to one input.**  Within the bandwidth
+:math:`B`, the region resolves about :math:`B/\delta\nu_x=Bw_x` directions
+along :math:`x` and :math:`B/\delta\nu_y=Bw_y` along :math:`y`.
+An outgoing direction is a pair of these frequency coordinates, so the
+two counts multiply.  Using the ideal space-bandwidth counting convention
+specified in the exercise gives
+
+.. math::
+   :label: fop-exercise-23-1-1-directions-per-input
+
+   M\leq(Bw_x)(Bw_y)
+     =B^2w_xw_y
+     =\frac{B^2a^2}{L}.
+
+**Now count all input-to-output connections.**  Multiplying by the
+:math:`L` inputs gives the requested capacity bound:
+
+.. math::
+   :label: fop-exercise-23-1-1-capacity
+
+   \boxed{ML\leq B^2a^2=(Ba)^2}.
+
+Thus :math:`L` and :math:`M` are not independent capacities: adding inputs
+divides the same hologram area into smaller regions, which broadens each
+diffracted spot and reduces the number of resolvable directions per input.
+For unequal regions of areas :math:`A_\ell`, the same reasoning gives
+:math:`M_\ell\leq B^2A_\ell`; summing over the nonoverlapping regions again
+limits the total number of connections to :math:`B^2a^2`.
+
+**Convert capacity into a density.**  If every one of the :math:`L` inputs
+connects to every one of the :math:`M` output points, the number of links is
+:math:`ML`, not :math:`M+L`.  Divide by the hologram area:
+
+.. math::
+   :label: fop-exercise-23-1-1-link-density
+
+   \frac{ML}{a^2}\leq B^2
+     =(1000\ \mathrm{mm}^{-1})^2
+     =10^6\ \mathrm{interconnections/mm^2}.
+
+The essential chain is :math:`w_xw_y=a^2/L`, then
+:math:`M\leq(Bw_x)(Bw_y)=B^2a^2/L`, hence :math:`ML\leq(Ba)^2`.
+This is an ideal resolution-based upper bound, not a guarantee that a real
+hologram attains it.  Diffraction efficiency, crosstalk, numerical aperture,
+and a stricter spot-separation criterion can reduce the usable count.
+
+**Step 4 — State the numbered result.**  The total connection count and its
+maximum density in the exercise's model are
 
 .. math::
    :label: fop-exercise-23-1-1-result
 
-   \boxed{B^2=10^6\ \mathrm{interconnections/mm^2}}
+   \boxed{ML\leq(Ba)^2,\qquad
+   \left(\frac{ML}{a^2}\right)_{\max}
+   =B^2=10^6\ \mathrm{interconnections/mm^2}}.
 
 
-**Step 5 — Check.**  Equation :eq:`fop-exercise-23-1-1-result` can be checked by substituting it back into the preceding governing relation and reversing the algebraic steps.  Check that dimensions agree term by term, then test the simplest symmetry or limiting case for the expected sign and scale.  Repeat the substitution with unrounded intermediate values and retain the displayed units; the final unit must have the requested dimension.
+**Step 5 — Check.**  The product :math:`Ba` is dimensionless, as a direction
+count must be, whereas :math:`B^2` has units :math:`\mathrm{mm}^{-2}`.
+For :math:`L=1`, one input uses the whole aperture and can access at most
+:math:`(Ba)^2` directions.  For four equal square regions, each side is
+halved, the frequency spacing doubles in both coordinates, and each input
+gets only :math:`(Ba)^2/4` directions: multiplying by four recovers the same
+total.  For a numerical check, :math:`a=1\ \mathrm{mm}`, :math:`L=100`, and
+:math:`B=1000\ \mathrm{mm}^{-1}` give
+:math:`w_x=w_y=0.1\ \mathrm{mm}` and :math:`\delta\nu_x=\delta\nu_y=
+10\ \mathrm{mm}^{-1}`.  There are at most :math:`100\times100=10^4`
+directions per input, hence :math:`100\times10^4=10^6` links in total.
 
 Exercise 23.1-2 — Separable logarithmic map
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -551,9 +653,6 @@ case (e) has
 :math:`\boxed{x=2,5}`.  The same derivative test, rather than visual guesswork,
 verifies the other four plots.
 
-End-of-chapter problems
------------------------
-
 **Step 4 — State the numbered result.**  The principal result obtained in the working is
 
 .. math::
@@ -563,6 +662,9 @@ End-of-chapter problems
 
 
 **Step 5 — Check.**  Equation :eq:`fop-exercise-23-4-1-result` can be checked by substituting it back into the preceding governing relation and reversing the algebraic steps.  Check that dimensions agree term by term, then test the simplest symmetry or limiting case for the expected sign and scale.
+
+End-of-chapter problems
+-----------------------
 
 Problem 23.1-3 — Conformal-map hologram
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
