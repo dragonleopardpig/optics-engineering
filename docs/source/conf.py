@@ -23,20 +23,34 @@ html_theme = "sphinx_rtd_theme"
 html_theme_options = {
     "collapse_navigation": False,
     "navigation_depth": 4,
-    "sticky_navigation": True,
+    "sticky_navigation": False,
+    "titles_only": True,
+    "version_selector": False,
+    "language_selector": False,
     "logo_only": False,
 }
 html_logo = "_static/logo.svg"
 html_favicon = "_static/logo.svg"
 html_title = project
 html_short_title = project
+templates_path = ["_templates"]
+html_context = {
+    "docs_description": (
+        "Optical engineering references, worked textbook solutions, "
+        "and interactive tools for understanding and designing optical systems."
+    ),
+}
+html_show_sphinx = False
+pygments_style = "friendly"
 html_baseurl = "https://optics.engineering/"
 html_static_path = ["_static"]
 html_css_files = [
-    "custom.css",
+    "modern.css",
     "knowledge_base/worked_exercises/photonics_essentials/photodiode_lab.css",
+    "custom.css",
 ]
 html_js_files = [
+    ("theme-ui.js", {"defer": "defer"}),
     "knowledge_base/worked_exercises/photonics_essentials/photodiode_lab.js"
 ]
 

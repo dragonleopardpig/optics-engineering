@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 140" width="260" height="140" role="img" aria-labelledby="logo-title logo-description">
+  <title id="logo-title">Optics Engineering</title>
+  <desc id="logo-description">A teal converging lens and a smaller diverging lens narrow and recollimate amber light rays, with teal plane and converging spherical wavefronts.</desc>
+  <defs>
+    <linearGradient id="lensGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#9ce3c9" stop-opacity="0.55"/>
+      <stop offset="50%" stop-color="#80dcb8" stop-opacity="0.30"/>
+      <stop offset="100%" stop-color="#9ce3c9" stop-opacity="0.55"/>
+    </linearGradient>
+  </defs>
+
+  <line x1="6" y1="70" x2="254" y2="70"
+        stroke="#526d65" stroke-width="1"
+        stroke-dasharray="3 4" stroke-opacity="0.6"/>
+
+  <g stroke="#80c7b2" stroke-width="1.5" stroke-linecap="round" fill="none" stroke-opacity="0.8">
+    <path d="M 18 35 V 105 M 38 35 V 105 M 58 35 V 105"/>
+    <path d="M 110.3 46.5 A 120 120 0 0 0 110.3 93.5"/>
+    <path d="M 134.8 51.4 A 95 95 0 0 0 134.8 88.6"/>
+    <path d="M 159.4 56.3 A 70 70 0 0 0 159.4 83.7"/>
+    <path d="M 198 54 V 86 M 218 54 V 86 M 238 54 V 86"/>
+  </g>
+
+  <g stroke="#e2b477" stroke-width="2.2" stroke-linecap="round" fill="none">
+    <path d="M 8 40 H 78 L 178 60 H 248"/>
+    <path d="M 8 70 H 248"/>
+    <path d="M 8 100 H 78 L 178 80 H 248"/>
+  </g>
+
+  <g fill="url(#lensGrad)" stroke="#80dcb8" stroke-width="2.5" stroke-linejoin="round">
+    <path d="M 78 15 Q 53 70 78 125 Q 103 70 78 15 Z"/>
+    <path d="M 169.6 37 Q 179.2 70 169.6 103 H 186.4 Q 176.8 70 186.4 37 Z"/>
+  </g>
+
+</svg>

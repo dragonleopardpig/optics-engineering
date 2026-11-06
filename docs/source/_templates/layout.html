@@ -1,0 +1,226 @@
+{% extends "!layout.html" %}
+
+{% macro icon(name, cls='') -%}
+<svg class="ui-icon {{ cls }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+{% if name == 'sun' %}<circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42m0-14.14-1.42 1.42m-11.3 11.3-1.42 1.42"/>
+{% elif name == 'moon' %}<path d="M20.9 13.1A9 9 0 0 1 10.9 3.1 9 9 0 1 0 20.9 13.1Z"/>
+{% elif name == 'monitor' %}<rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8m-4-4v4"/>
+{% elif name == 'arrow' %}<path d="M4 12h16m-6-6 6 6-6 6"/>
+{% elif name == 'book' %}<path d="M12 5c-3-2-6-2-9-1v15c3-1 6-1 9 1 3-2 6-2 9-1V4c-3-1-6-1-9 1Zm0 0v15"/>
+{% elif name == 'code' %}<path d="m8 7-5 5 5 5m8-10 5 5-5 5m-3-13-2 20"/>
+{% elif name == 'spark' %}<path d="m12 3 2.5 6.5L21 12l-6.5 2.5L12 21l-2.5-6.5L3 12l6.5-2.5L12 3Z"/>
+{% elif name == 'compass' %}<circle cx="12" cy="12" r="9"/><path d="m16 8-2.5 5.5L8 16l2.5-5.5L16 8Z"/>
+{% elif name == 'menu' %}<path d="M4 6h16M4 12h16M4 18h16"/>
+{% elif name == 'chevron' %}<path d="m9 5 7 7-7 7"/>
+{% elif name == 'search' %}<circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4.5 4.5"/>
+{% elif name == 'palette' %}<circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.932 6.13 17.472 2 12 2z"/>
+{% endif %}</svg>
+{%- endmacro %}
+
+{% block extrahead %}
+{{ super() }}
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="{{ docs_description }}">
+<script>
+(() => {
+  let preference = 'system';
+  try {
+    const params = new URLSearchParams(window.location.search);
+    const fromUrl = params.get('theme') || (window.location.hash.match(/[#&]theme=([a-z]+)/) || [])[1];
+    if (['light', 'dark', 'system'].includes(fromUrl)) preference = fromUrl;
+  } catch (_) {}
+  if (preference === 'system') {
+    try {
+      const match = window.name && window.name.match(/optics-engineering-appearance=([a-z]+)/);
+      if (match && ['light', 'dark', 'system'].includes(match[1])) preference = match[1];
+    } catch (_) {}
+  }
+  if (preference === 'system') {
+    try {
+      const stored = localStorage.getItem('optics-engineering-appearance');
+      if (['light', 'dark', 'system'].includes(stored)) preference = stored;
+    } catch (_) {}
+  }
+  if (preference === 'system') {
+    try {
+      const sess = sessionStorage.getItem('optics-engineering-appearance');
+      if (['light', 'dark', 'system'].includes(sess)) preference = sess;
+    } catch (_) {}
+  }
+  if (preference !== 'system') {
+    try { localStorage.setItem('optics-engineering-appearance', preference); } catch (_) {}
+    try {
+      const cleanName = (window.name || '').replace(/(^|;)optics-engineering-appearance=[a-z]+/, '');
+      window.name = cleanName ? `${cleanName};optics-engineering-appearance=${preference}` : `optics-engineering-appearance=${preference}`;
+    } catch (_) {}
+  }
+  const dark = preference === 'dark' || (preference === 'system' && matchMedia('(prefers-color-scheme: dark)').matches);
+  document.documentElement.dataset.theme = dark ? 'dark' : 'light';
+  document.documentElement.dataset.appearance = preference;
+
+  let textSize = '1.0';
+  try {
+    const params = new URLSearchParams(window.location.search);
+    const sizeFromUrl = params.get('size');
+    if (sizeFromUrl && !isNaN(Number(sizeFromUrl))) textSize = String(Number(sizeFromUrl));
+  } catch (_) {}
+  if (textSize === '1.0') {
+    try {
+      const match = window.name && window.name.match(/optics-engineering-text-size=([0-9.]+)/);
+      if (match && !isNaN(Number(match[1]))) textSize = match[1];
+    } catch (_) {}
+  }
+  if (textSize === '1.0') {
+    try {
+      const stored = localStorage.getItem('optics-engineering-text-size');
+      if (stored && !isNaN(Number(stored))) textSize = stored;
+    } catch (_) {}
+  }
+  if (textSize === '1.0') {
+    try {
+      const sess = sessionStorage.getItem('optics-engineering-text-size');
+      if (sess && !isNaN(Number(sess))) textSize = sess;
+    } catch (_) {}
+  }
+  if (textSize !== '1.0') {
+    try { localStorage.setItem('optics-engineering-text-size', textSize); } catch (_) {}
+    try {
+      const cleanName = (window.name || '').replace(/(^|;)optics-engineering-text-size=[0-9.]+/, '');
+      window.name = cleanName ? `${cleanName};optics-engineering-text-size=${textSize}` : `optics-engineering-text-size=${textSize}`;
+    } catch (_) {}
+  }
+  document.documentElement.style.setProperty('--text-scale', textSize);
+  document.documentElement.dataset.textSize = textSize;
+
+  let palette = 'old-paper';
+  const allowedPalettes = ['old-paper', 'modern', 'umbriel-cyberpunk', 'original', 'olo-red', 'olo-magenta', 'olo-violet', 'olo-blue', 'olo-teal', 'olo-green', 'olo-yellow', 'olo-gray'];
+  try {
+    const params = new URLSearchParams(window.location.search);
+    const paletteFromUrl = params.get('palette') || (window.location.hash.match(/[#&]palette=([a-z-]+)/) || [])[1];
+    if (allowedPalettes.includes(paletteFromUrl)) palette = paletteFromUrl;
+  } catch (_) {}
+  if (palette === 'old-paper') {
+    try {
+      const match = window.name && window.name.match(/optics-engineering-palette=([a-z-]+)/);
+      if (match && allowedPalettes.includes(match[1])) palette = match[1];
+    } catch (_) {}
+  }
+  if (palette === 'old-paper') {
+    try {
+      const stored = localStorage.getItem('optics-engineering-palette');
+      if (allowedPalettes.includes(stored)) palette = stored;
+    } catch (_) {}
+  }
+  if (palette === 'old-paper') {
+    try {
+      const sess = sessionStorage.getItem('optics-engineering-palette');
+      if (allowedPalettes.includes(sess)) palette = sess;
+    } catch (_) {}
+  }
+  if (palette !== 'old-paper') {
+    try { localStorage.setItem('optics-engineering-palette', palette); } catch (_) {}
+    try {
+      const cleanName = (window.name || '').replace(/(^|;)optics-engineering-palette=[a-z-]+/, '');
+      window.name = cleanName ? `${cleanName};optics-engineering-palette=${palette}` : `optics-engineering-palette=${palette}`;
+    } catch (_) {}
+  }
+  document.documentElement.dataset.palette = palette;
+})();
+</script>
+<link rel="preload" href="{{ pathto('_static/fonts/dm-sans-latin.woff2', 1) }}" as="font" type="font/woff2" crossorigin>
+{% endblock %}
+
+{% block extrabody %}
+<a class="skip-link" href="#main-content">Skip to content</a>
+<button class="nav-scrim" type="button" aria-label="Close navigation" data-menu-close></button>
+<div class="sr-only" role="status" aria-live="polite" id="copy-status"></div>
+{% endblock %}
+
+{% block sidebartitle %}
+<a class="brand" href="{{ pathto(root_doc) }}" aria-label="{{ project }} documentation home">
+  <span class="brand-optics-mark">{% include 'logo.html' %}</span>
+  <span class="brand-optics-name">Optics Engineering</span>
+</a>
+<div class="sidebar-subtitle">Principles. Practice. Perspective.</div>
+<form class="sidebar-search" action="{{ pathto('search') }}" method="get" role="search">
+  {{ icon('search') }}<input type="text" name="q" aria-label="Search documentation" placeholder="Search optics…" autocomplete="off"><kbd>⌘ K</kbd>
+  <input type="hidden" name="check_keywords" value="yes"><input type="hidden" name="area" value="default">
+</form>
+<a class="overview-link{% if pagename == 'index' %} is-current{% endif %}" href="{{ pathto(root_doc) }}"{% if pagename == 'index' %} aria-current="page"{% endif %}>{{ icon('book') }}Overview</a>
+{% endblock %}
+
+{% block navigation %}
+{{ super() }}
+<div class="sidebar-note">
+  <span class="sidebar-note-icon">{{ icon('compass') }}</span>
+  <strong>Work through the details.</strong>
+  <p>A method, a derivation, a result.<br>Learn by solving a real problem.</p>
+  <a href="{{ pathto('worked_exercises/thin_lens_image_distance') }}">Try a worked example {{ icon('arrow') }}</a>
+</div>
+<div class="sidebar-bottom"><span class="version-dot"></span> Open reference <span>optics.engineering</span></div>
+{% endblock %}
+
+{% block mobile_nav %}
+<button type="button" class="mobile-menu" data-menu-toggle aria-label="Open navigation" aria-expanded="false" aria-controls="site-navigation">{{ icon('menu') }}</button>
+<a class="mobile-brand" href="{{ pathto(root_doc) }}"><span class="mobile-optics-mark">{% include 'logo.html' %}</span>{{ project }}</a>
+{% endblock %}
+
+{% block content %}
+<header class="doc-toolbar">
+  <div class="toolbar-breadcrumb"><span>Optics Engineering</span>{{ icon('chevron') }}<span>{{ 'Overview' if pagename == 'index' else title|striptags }}</span></div>
+  <div class="toolbar-actions">
+    <a class="toolbar-link" href="{{ pathto('knowledge_base/formula_plotter') }}">Equation plotter {{ icon('arrow') }}</a>
+    <span class="toolbar-divider"></span>
+    <div class="theme-palette-control" role="group" aria-label="Theme palette">
+      {{ icon('palette', 'theme-palette-icon') }}
+      <label for="theme-palette-picker" class="sr-only">Theme</label>
+      <select id="theme-palette-picker" class="theme-palette-select" data-palette-picker aria-label="Theme">
+        <option value="old-paper">Old Paper</option>
+        <option value="modern">Modern</option>
+        <option value="umbriel-cyberpunk">⚡ Umbriel Cyberpunk</option>
+        <option value="original">Original RTD</option>
+        <optgroup label="OLO 96 Colors">
+          <option value="olo-red">OLO Row 1 · Red &amp; Rose</option>
+          <option value="olo-magenta">OLO Row 2 · Magenta &amp; Plum</option>
+          <option value="olo-violet">OLO Row 3 · Violet &amp; Iris</option>
+          <option value="olo-blue">OLO Row 4 · Budgie &amp; Ocean Blue</option>
+          <option value="olo-teal">OLO Row 5 · Teal &amp; Emerald</option>
+          <option value="olo-green">OLO Row 6 · Green &amp; Basil</option>
+          <option value="olo-yellow">OLO Row 7 · Yellow &amp; Amber</option>
+          <option value="olo-gray">OLO Row 8 · Red-Gray &amp; Slate</option>
+        </optgroup>
+      </select>
+    </div>
+    <span class="toolbar-divider"></span>
+    <div class="text-size-control" role="group" aria-label="Text size">
+      <button type="button" data-text-size="decrease" aria-label="Decrease text size" title="Decrease text size (smaller)"><span class="text-size-symbol">A−</span></button>
+      <button type="button" data-text-size="reset" aria-label="Reset text size to 100%" title="Reset text size (100%)"><span data-role="text-size-value">100%</span></button>
+      <button type="button" data-text-size="increase" aria-label="Increase text size" title="Increase text size (larger)"><span class="text-size-symbol">A+</span></button>
+    </div>
+    <span class="toolbar-divider"></span>
+    <div class="appearance-control" role="group" aria-label="Color scheme">
+      <button type="button" data-appearance="light" aria-label="Use light theme" title="Light" aria-pressed="false">{{ icon('sun') }}</button>
+      <button type="button" data-appearance="dark" aria-label="Use dark theme" title="Dark" aria-pressed="false">{{ icon('moon') }}</button>
+      <button type="button" data-appearance="system" aria-label="Follow system theme" title="System" aria-pressed="false">{{ icon('monitor') }}</button>
+    </div>
+  </div>
+</header>
+<div class="content-grid{% if pagename == 'index' %} is-home{% endif %}">
+  <div class="content-column rst-content">
+    {% block document %}
+    {# Sphinx search requires the explicit role when extracting result snippets. #}
+    <main id="main-content" class="doc-article" role="main" tabindex="-1" itemscope itemtype="https://schema.org/Article">
+      {% if pagename == 'index' %}{% include 'landing.html' %}{% else %}
+      <div class="article-eyebrow"><span class="eyebrow-line"></span>{{ 'Worked exercises' if pagename.startswith('worked_exercises/') else 'Knowledge base' if pagename.startswith('knowledge_base/') else 'Documentation' }}</div>
+      {% endif %}
+      <div class="doc-body{% if pagename == 'index' %} home-body{% endif %}" itemprop="articleBody">{% block body %}{{ body }}{% endblock %}</div>
+    </main>
+    {% endblock %}
+    {% include 'footer.html' %}
+    <div class="site-credit"><a href="https://www.sphinx-doc.org/">Sphinx</a><span>×</span><a href="https://sphinx-rtd-theme.readthedocs.io/">Read the Docs</a><span class="credit-note">From first principles to practical systems.</span></div>
+  </div>
+  {% if toc and pagename not in ('index', 'search', 'genindex', 'py-modindex') %}
+  <aside class="page-toc" aria-label="On this page"><div class="toc-title">On this page</div>{{ toc }}<a class="toc-back" href="#main-content">Back to top <span>↑</span></a></aside>
+  {% endif %}
+</div>
+{% endblock %}

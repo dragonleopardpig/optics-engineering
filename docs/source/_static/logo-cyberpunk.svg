@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 140" width="260" height="140" role="img" aria-labelledby="logo-title logo-description">
+  <title id="logo-title">Optics Engineering - Umbriel Cyberpunk</title>
+  <desc id="logo-description">Electric cyan converging lens and diverging lens with luminous neon magenta laser rays, sky blue wavefronts, and neon amber accents on cyber dark optics axis.</desc>
+  <defs>
+    <filter id="neonGlowMagenta" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="3.5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <filter id="neonGlowCyan" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="2.5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <linearGradient id="cyberLensGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#00F5C8" stop-opacity="0.65"/>
+      <stop offset="50%" stop-color="#77F9E0" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#00F5C8" stop-opacity="0.65"/>
+    </linearGradient>
+    <linearGradient id="cyberDivergeGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#6BC5FF" stop-opacity="0.65"/>
+      <stop offset="50%" stop-color="#A5D1FF" stop-opacity="0.30"/>
+      <stop offset="100%" stop-color="#6BC5FF" stop-opacity="0.65"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Optical axis (Umbriel cyber line) -->
+  <line x1="6" y1="70" x2="254" y2="70"
+        stroke="#213846" stroke-width="1.2"
+        stroke-dasharray="4 4" stroke-opacity="0.9"/>
+
+  <!-- Wavefronts (Umbriel Sky Blue & Mint) -->
+  <g stroke="#6BC5FF" stroke-width="1.5" stroke-linecap="round" fill="none" stroke-opacity="0.85">
+    <path d="M 18 35 V 105 M 38 35 V 105 M 58 35 V 105"/>
+    <path d="M 110.3 46.5 A 120 120 0 0 0 110.3 93.5" stroke="#4EF2C2"/>
+    <path d="M 134.8 51.4 A 95 95 0 0 0 134.8 88.6" stroke="#4EF2C2"/>
+    <path d="M 159.4 56.3 A 70 70 0 0 0 159.4 83.7" stroke="#4EF2C2"/>
+    <path d="M 198 54 V 86 M 218 54 V 86 M 238 54 V 86"/>
+  </g>
+
+  <!-- Luminous Neon Magenta Rays (Background Glow) -->
+  <g stroke="#FF149E" stroke-width="5" stroke-linecap="round" fill="none" stroke-opacity="0.35" filter="url(#neonGlowMagenta)">
+    <path d="M 8 40 H 78 L 178 60 H 248"/>
+    <path d="M 8 52 H 78 L 178 64 H 248"/>
+    <path d="M 8 88 H 78 L 178 76 H 248"/>
+    <path d="M 8 100 H 78 L 178 80 H 248"/>
+  </g>
+
+  <!-- Sharp Neon Magenta Rays (Fore Core) -->
+  <g stroke="#FF24AE" stroke-width="2.2" stroke-linecap="round" fill="none">
+    <path d="M 8 40 H 78 L 178 60 H 248"/>
+    <path d="M 8 52 H 78 L 178 64 H 248"/>
+    <path d="M 8 88 H 78 L 178 76 H 248"/>
+    <path d="M 8 100 H 78 L 178 80 H 248"/>
+  </g>
+
+  <!-- Converging lens (Electric Teal / Cyan - Umbriel Primary) -->
+  <path d="M 78 20 A 130 130 0 0 1 78 120 A 130 130 0 0 1 78 20 Z"
+        fill="url(#cyberLensGrad)" stroke="#00F5C8" stroke-width="1.6" filter="url(#neonGlowCyan)"/>
+
+  <!-- Diverging lens (Umbriel Sky Blue / Secondary) -->
+  <path d="M 174 44 A 65 65 0 0 0 174 96 H 182 A 65 65 0 0 0 182 44 Z"
+        fill="url(#cyberDivergeGrad)" stroke="#6BC5FF" stroke-width="1.6"/>
+
+  <!-- Focal points / ray markers (Umbriel Neon Amber #FFD166) -->
+  <circle cx="78" cy="70" r="2.2" fill="#FFD166"/>
+  <circle cx="178" cy="70" r="2.2" fill="#FFD166"/>
+</svg>
