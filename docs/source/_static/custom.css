@@ -100,7 +100,7 @@
 .rst-content .formula-plotter button { color: var(--text); background: var(--surface); border-color: var(--line); border-radius: 6px; }
 .rst-content .formula-plotter textarea { font-family: var(--mono); }
 .rst-content .formula-plotter input[type="range"] { accent-color: var(--accent); }
-.rst-content .formula-plotter button.formula-plotter__primary { background: var(--accent); color: var(--canvas); border-color: var(--accent); }
+.rst-content .formula-plotter button.formula-plotter__primary { background: var(--accent); color: var(--button-primary-text); border-color: var(--accent); }
 .rst-content .formula-plotter :focus-visible { outline-color: var(--accent); }
 .rst-content .formula-plotter .formula-plotter__hint,
 .rst-content .formula-plotter [data-role="edit-state"] { color: var(--muted); }
@@ -143,8 +143,8 @@
 .rst-content .photodiode-lab__plot .curve:nth-of-type(4n+2) { stroke: var(--blue); }
 .rst-content .photodiode-lab__plot .curve:nth-of-type(4n+3) { stroke: var(--peach); }
 .rst-content .photodiode-lab__plot .curve:nth-of-type(4n+4) { stroke: var(--syntax-keyword); }
-.rst-content .try_examples_button { background: var(--accent); color: var(--canvas); border: 1px solid var(--accent); border-radius: 7px; padding: 12px 17px; font-family: var(--font); font-weight: 650; cursor: pointer; }
-.rst-content .try_examples_button:hover { background: var(--accent-hover); }
+.rst-content .try_examples_button { background: var(--accent); color: var(--button-primary-text); border: 1px solid var(--accent); border-radius: 7px; padding: 12px 17px; font-family: var(--font); font-weight: 650; cursor: pointer; }
+.rst-content .try_examples_button:hover { background: var(--accent-hover); color: var(--button-primary-text); }
 
 @media (max-width: 599px) {
   .mobile-brand { font-size: 16px; letter-spacing: -.5px; }
@@ -852,20 +852,20 @@ body, .wy-body-for-nav, html {
 :root[data-palette="umbriel-cyberpunk"][data-theme="dark"] .button-primary,
 :root[data-palette="umbriel-cyberpunk"][data-theme="dark"] .button-primary:visited {
   background: #ff149e !important;
-  color: #080d19 !important;
+  color: #ffffff !important;
   border: 1px solid #ff4db3;
   box-shadow: 0 0 18px rgba(255, 20, 158, 0.45);
   font-weight: 750 !important;
 }
 :root[data-palette="umbriel-cyberpunk"][data-theme="dark"] .button-primary:hover {
   background: #ff4db3 !important;
-  color: #080d19 !important;
+  color: #ffffff !important;
   box-shadow: 0 0 26px rgba(255, 20, 158, 0.65);
   transform: translateY(-1px);
 }
 :root[data-palette="umbriel-cyberpunk"][data-theme="dark"] .button-primary .ui-icon {
-  color: #080d19 !important;
-  stroke: #080d19 !important;
+  color: #ffffff !important;
+  stroke: #ffffff !important;
 }
 
 /* Homepage Hero Components (Light Mode) */
@@ -1590,9 +1590,14 @@ body, .wy-body-for-nav, html {
 }
 :root[data-palette="umbriel-cyberpunk"][data-theme="dark"] .rst-content .formula-plotter button.formula-plotter__primary {
   background: #ff149e;
-  color: #080d19;
+  color: #ffffff;
   border-color: #ff4db3;
   box-shadow: 0 0 14px rgba(255, 20, 158, 0.4);
+}
+:root[data-palette="umbriel-cyberpunk"][data-theme="dark"] .rst-content .formula-plotter button.formula-plotter__primary:hover {
+  background: #ff4db3;
+  color: #ffffff;
+  border-color: #ff4db3;
 }
 :root[data-palette="umbriel-cyberpunk"][data-theme="dark"] .rst-content .formula-plotter__chart,
 :root[data-palette="umbriel-cyberpunk"][data-theme="dark"] .rst-content .formula-plotter__preview-panel {
@@ -1708,8 +1713,12 @@ body, .wy-body-for-nav, html {
 }
 :root[data-palette="umbriel-cyberpunk"][data-theme="dark"] .rst-content .try_examples_button {
   background: #ff149e;
-  color: #080d19;
+  color: #ffffff;
   border-color: #ff4db3;
+}
+:root[data-palette="umbriel-cyberpunk"][data-theme="dark"] .rst-content .try_examples_button:hover {
+  background: #ff4db3;
+  color: #ffffff;
 }
 
 /* Photodiode Lab (Light Mode) */
