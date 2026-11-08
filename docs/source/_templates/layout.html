@@ -92,32 +92,32 @@
   document.documentElement.style.setProperty('--text-scale', textSize);
   document.documentElement.dataset.textSize = textSize;
 
-  let palette = 'old-paper';
-  const allowedPalettes = ['old-paper', 'modern', 'umbriel-cyberpunk', 'original', 'olo-red', 'olo-magenta', 'olo-violet', 'olo-blue', 'olo-teal', 'olo-green', 'olo-yellow', 'olo-gray'];
+  let palette = 'umbriel-cyberpunk';
+  const allowedPalettes = ['umbriel-cyberpunk', 'old-paper', 'modern', 'original', 'olo-red', 'olo-magenta', 'olo-violet', 'olo-blue', 'olo-teal', 'olo-green', 'olo-yellow', 'olo-gray'];
   try {
     const params = new URLSearchParams(window.location.search);
     const paletteFromUrl = params.get('palette') || (window.location.hash.match(/[#&]palette=([a-z-]+)/) || [])[1];
     if (allowedPalettes.includes(paletteFromUrl)) palette = paletteFromUrl;
   } catch (_) {}
-  if (palette === 'old-paper') {
+  if (palette === 'umbriel-cyberpunk') {
     try {
       const match = window.name && window.name.match(/optics-engineering-palette=([a-z-]+)/);
       if (match && allowedPalettes.includes(match[1])) palette = match[1];
     } catch (_) {}
   }
-  if (palette === 'old-paper') {
+  if (palette === 'umbriel-cyberpunk') {
     try {
       const stored = localStorage.getItem('optics-engineering-palette');
       if (allowedPalettes.includes(stored)) palette = stored;
     } catch (_) {}
   }
-  if (palette === 'old-paper') {
+  if (palette === 'umbriel-cyberpunk') {
     try {
       const sess = sessionStorage.getItem('optics-engineering-palette');
       if (allowedPalettes.includes(sess)) palette = sess;
     } catch (_) {}
   }
-  if (palette !== 'old-paper') {
+  if (palette !== 'umbriel-cyberpunk') {
     try { localStorage.setItem('optics-engineering-palette', palette); } catch (_) {}
     try {
       const cleanName = (window.name || '').replace(/(^|;)optics-engineering-palette=[a-z-]+/, '');
@@ -175,9 +175,9 @@
       {{ icon('palette', 'theme-palette-icon') }}
       <label for="theme-palette-picker" class="sr-only">Theme</label>
       <select id="theme-palette-picker" class="theme-palette-select" data-palette-picker aria-label="Theme">
+        <option value="umbriel-cyberpunk" selected>⚡ Umbriel Cyberpunk</option>
         <option value="old-paper">Old Paper</option>
         <option value="modern">Modern</option>
-        <option value="umbriel-cyberpunk">⚡ Umbriel Cyberpunk</option>
         <option value="original">Original RTD</option>
         <optgroup label="OLO 96 Colors">
           <option value="olo-red">OLO Row 1 · Red &amp; Rose</option>

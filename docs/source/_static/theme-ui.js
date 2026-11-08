@@ -7,9 +7,9 @@
   const paletteStorageKey = "optics-engineering-palette";
   const TEXT_SIZES = [0.9, 1.0, 1.15, 1.3, 1.45];
   const VALID_PALETTES = [
+    "umbriel-cyberpunk",
     "old-paper",
     "modern",
-    "umbriel-cyberpunk",
     "original",
     "olo-red",
     "olo-magenta",
@@ -84,7 +84,7 @@
       const sess = sessionStorage.getItem(paletteStorageKey);
       if (VALID_PALETTES.includes(sess)) return sess;
     } catch (_) {}
-    return root.dataset.palette || "old-paper";
+    return root.dataset.palette || "umbriel-cyberpunk";
   }
 
   let preference = readPreference();
@@ -108,7 +108,7 @@
         } else {
           url.searchParams.set("size", String(currentSize));
         }
-        if (currentPal === "old-paper") {
+        if (currentPal === "umbriel-cyberpunk") {
           url.searchParams.delete("palette");
         } else {
           url.searchParams.set("palette", currentPal);
@@ -167,7 +167,7 @@
   }
 
   function applyPalette(value, persist = false) {
-    currentPalette = VALID_PALETTES.includes(value) ? value : "old-paper";
+    currentPalette = VALID_PALETTES.includes(value) ? value : "umbriel-cyberpunk";
     root.dataset.palette = currentPalette;
     const picker = document.querySelector("select[data-palette-picker]");
     if (picker && picker.value !== currentPalette) {
@@ -182,7 +182,7 @@
       } catch (_) {}
       try {
         const currentUrl = new URL(window.location.href);
-        if (currentPalette === "old-paper") {
+        if (currentPalette === "umbriel-cyberpunk") {
           currentUrl.searchParams.delete("palette");
         } else {
           currentUrl.searchParams.set("palette", currentPalette);

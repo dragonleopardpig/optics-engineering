@@ -30,13 +30,17 @@
 /* Umbriel Cyberpunk logo display */
 :root[data-palette="umbriel-cyberpunk"] .optics-logo-light,
 :root[data-palette="umbriel-cyberpunk"] .optics-logo-dark,
-:root[data-palette="umbriel-cyberpunk"] .optics-logo-original {
+:root[data-palette="umbriel-cyberpunk"] .optics-logo-original,
+:root:not([data-palette]) .optics-logo-light,
+:root:not([data-palette]) .optics-logo-dark,
+:root:not([data-palette]) .optics-logo-original {
   display: none !important;
 }
-:root[data-palette="umbriel-cyberpunk"] .optics-logo-cyberpunk {
+:root[data-palette="umbriel-cyberpunk"] .optics-logo-cyberpunk,
+:root:not([data-palette]) .optics-logo-cyberpunk {
   display: block !important;
 }
-:root:not([data-palette="umbriel-cyberpunk"]) .optics-logo-cyberpunk {
+:root[data-palette]:not([data-palette="umbriel-cyberpunk"]) .optics-logo-cyberpunk {
   display: none !important;
 }
 .mobile-brand { display: inline-flex; align-items: center; gap: 7px; white-space: nowrap; }
@@ -165,23 +169,15 @@
 :root[data-palette="old-paper"] .rst-content h3, 
 :root[data-palette="old-paper"] .rst-content h4, 
 :root[data-palette="old-paper"] .rst-content h5, 
-:root[data-palette="old-paper"] .rst-content h6,
-:root:not([data-palette]) .rst-content h1, 
-:root:not([data-palette]) .rst-content h2, 
-:root:not([data-palette]) .rst-content h3, 
-:root:not([data-palette]) .rst-content h4, 
-:root:not([data-palette]) .rst-content h5, 
-:root:not([data-palette]) .rst-content h6 {
+:root[data-palette="old-paper"] .rst-content h6 {
   color: var(--accent) !important;
   font-weight: 700;
 }
-:root[data-palette="old-paper"] .rst-content h1,
-:root:not([data-palette]) .rst-content h1 {
+:root[data-palette="old-paper"] .rst-content h1 {
   border-bottom: 2px solid var(--accent) !important;
   padding-bottom: 8px;
 }
-:root[data-palette="old-paper"] .rst-content h2,
-:root:not([data-palette]) .rst-content h2 {
+:root[data-palette="old-paper"] .rst-content h2 {
   border-bottom: 1px solid var(--line) !important;
   padding-bottom: 6px;
 }
@@ -287,20 +283,13 @@ body, .wy-body-for-nav, html {
 :root[data-palette="old-paper"] .rst-content li > a,
 :root[data-palette="old-paper"] .rst-content dt a,
 :root[data-palette="old-paper"] .rst-content dd a,
-:root[data-palette="old-paper"] .rst-content table a,
-:root:not([data-palette]) .rst-content p a,
-:root:not([data-palette]) .rst-content li > a,
-:root:not([data-palette]) .rst-content dt a,
-:root:not([data-palette]) .rst-content dd a,
-:root:not([data-palette]) .rst-content table a {
+:root[data-palette="old-paper"] .rst-content table a {
   color: var(--accent) !important;
   text-decoration: underline;
   text-underline-offset: 3px;
 }
 :root[data-palette="old-paper"] .rst-content p a:hover,
-:root[data-palette="old-paper"] .rst-content li > a:hover,
-:root:not([data-palette]) .rst-content p a:hover,
-:root:not([data-palette]) .rst-content li > a:hover {
+:root[data-palette="old-paper"] .rst-content li > a:hover {
   color: var(--accent-hover) !important;
 }
 

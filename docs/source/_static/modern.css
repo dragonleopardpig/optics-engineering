@@ -1,7 +1,6 @@
 @font-face{font-family:"DM Sans";src:url("fonts/dm-sans-latin.woff2") format("woff2");font-style:normal;font-weight:100 1000;font-display:swap}
 @font-face{font-family:"JetBrains Mono";src:url("fonts/jetbrains-mono-latin.woff2") format("woff2");font-style:normal;font-weight:100 800;font-display:swap}
 
-:root,
 :root[data-palette="old-paper"] {
   color-scheme: light;
   --canvas: #f4ecd8; --sidebar: #ebe0c6; --surface: #faf4e6; --surface-soft: #e6d9bd;
@@ -181,6 +180,7 @@
 }
 
 /* Umbriel Cyberpunk Theme (Light Mode / High-Tech Solar Lab) */
+:root,
 :root[data-palette="umbriel-cyberpunk"] {
   color-scheme: light;
   --canvas: #f1f6fb; --sidebar: #e3edf7; --surface: #ffffff; --surface-soft: #ebf4fc;
@@ -197,7 +197,6 @@
   --sidebar-width: 272px;
 }
 
-:root[data-theme="dark"],
 :root[data-palette="old-paper"][data-theme="dark"] {
   color-scheme: dark;
   --canvas: #1c1814; --sidebar: #15120f; --surface: #231e19; --surface-soft: #2c2520;
@@ -347,6 +346,7 @@
 }
 
 /* Umbriel Cyberpunk Theme (Dark Mode - Modern Cyberpunk) */
+:root[data-theme="dark"],
 :root[data-palette="umbriel-cyberpunk"][data-theme="dark"] {
   color-scheme: dark;
   --canvas: #080d19; --sidebar: #050811; --surface: #0f1826; --surface-soft: #142234;
@@ -364,7 +364,6 @@
 }
 
 @media(prefers-color-scheme:dark){
-  :root:not([data-theme]),
   :root[data-palette="old-paper"]:not([data-theme]) {
     color-scheme: dark;
     --canvas: #1c1814; --sidebar: #15120f; --surface: #231e19; --surface-soft: #2c2520;
@@ -501,6 +500,7 @@
     --syntax-number: #f7a477; --syntax-name: #75b7e8; --syntax-operator: #a5b5c2;
     --button-primary-text: #18110e;
   }
+  :root:not([data-theme]),
   :root[data-palette="umbriel-cyberpunk"]:not([data-theme]) {
     color-scheme: dark;
     --canvas: #080d19; --sidebar: #050811; --surface: #0f1826; --surface-soft: #142234;
