@@ -46,6 +46,11 @@
 .mobile-brand { display: inline-flex; align-items: center; gap: 7px; white-space: nowrap; }
 .mobile-optics-mark { width: 44px; display: block; }
 .content-grid.is-home { display: block; }
+.hero-logo-banner { display: block; width: 100%; max-width: 600px; margin-bottom: 22px; }
+.hero-logo-banner svg { display: block; width: 100%; height: auto; }
+@media (max-width: 768px) {
+  .hero-logo-banner { max-width: 100%; margin-bottom: 16px; }
+}
 .home-hero .hero-description { max-width: 600px; }
 .kicker-version { font-size: 9px; }
 .page-toc { max-height: calc(100vh - 64px); overflow-y: auto; scrollbar-width: thin; padding-right: 7px; }

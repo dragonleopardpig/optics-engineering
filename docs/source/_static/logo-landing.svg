@@ -1,0 +1,164 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 1200 320"
+     role="img"
+     aria-labelledby="opp-logo-title opp-logo-desc">
+
+  <title id="opp-logo-title">Optics and Photonics Engineering</title>
+  <desc id="opp-logo-desc">
+    A lens focuses light rays into a photon point inside an orbital ring,
+    beside the Optics and Photonics Engineering title.
+  </desc>
+
+  <style>
+    .opp-title {
+      font-family: "Inter", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+      font-size: 68px;
+      font-weight: 800;
+      letter-spacing: -1px;
+      fill: #0f172a;
+    }
+
+    .opp-subtitle {
+      font-family: "Inter", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+      font-size: 27px;
+      font-weight: 600;
+      letter-spacing: 6px;
+      fill: #475569;
+    }
+
+    .opp-accent {
+      fill: url(#opp-spectrum);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .opp-title {
+        fill: #f8fafc;
+      }
+
+      .opp-subtitle {
+        fill: #cbd5e1;
+      }
+    }
+
+    :root[data-theme="dark"] .opp-title {
+      fill: #f8fafc;
+    }
+
+    :root[data-theme="dark"] .opp-subtitle {
+      fill: #cbd5e1;
+    }
+
+    :root[data-theme="light"] .opp-title {
+      fill: #0f172a;
+    }
+
+    :root[data-theme="light"] .opp-subtitle {
+      fill: #475569;
+    }
+  </style>
+
+  <defs>
+    <linearGradient id="opp-spectrum" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#22d3ee"/>
+      <stop offset="45%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#a855f7"/>
+    </linearGradient>
+
+    <linearGradient id="opp-lens" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#67e8f9"/>
+      <stop offset="100%" stop-color="#a78bfa"/>
+    </linearGradient>
+
+    <linearGradient id="opp-beam"
+                    gradientUnits="userSpaceOnUse"
+                    x1="26" y1="160"
+                    x2="252" y2="160">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.2"/>
+      <stop offset="30%" stop-color="#22d3ee"/>
+      <stop offset="70%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+
+    <radialGradient id="opp-halo" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.22"/>
+      <stop offset="70%" stop-color="#38bdf8" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="opp-photon" cx="35%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="45%" stop-color="#e879f9"/>
+      <stop offset="100%" stop-color="#a855f7"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Optical mark -->
+  <circle cx="160" cy="160" r="132" fill="url(#opp-halo)"/>
+
+  <circle cx="160" cy="160" r="124"
+          fill="none"
+          stroke="#22d3ee"
+          stroke-width="2"
+          stroke-dasharray="1 12"
+          opacity="0.65"/>
+
+  <circle cx="160" cy="160" r="104"
+          fill="none"
+          stroke="url(#opp-spectrum)"
+          stroke-width="10"
+          opacity="0.95"/>
+
+  <!-- Lens -->
+  <path d="M160 80
+           C190 114 190 206 160 240
+           C130 206 130 114 160 80
+           Z"
+        fill="url(#opp-lens)"
+        opacity="0.95"/>
+
+  <path d="M160 92
+           C182 120 182 200 160 228"
+        fill="none"
+        stroke="#ffffff"
+        stroke-opacity="0.35"
+        stroke-width="3"/>
+
+  <!-- Light rays -->
+  <g fill="none"
+     stroke="url(#opp-beam)"
+     stroke-width="7"
+     stroke-linecap="round">
+    <path d="M26 120 H110 L230 160"/>
+    <path d="M26 160 H236"/>
+    <path d="M26 200 H110 L230 160"/>
+  </g>
+
+  <!-- Photon focus -->
+  <circle cx="252" cy="160" r="11" fill="url(#opp-photon)"/>
+  <circle cx="252" cy="160" r="20"
+          fill="none"
+          stroke="#c084fc"
+          stroke-opacity="0.45"
+          stroke-width="2"/>
+  <circle cx="252" cy="160" r="30"
+          fill="none"
+          stroke="#22d3ee"
+          stroke-opacity="0.22"
+          stroke-width="2"/>
+
+  <!-- Photon particles / orbit accents -->
+  <circle cx="74" cy="78" r="6" fill="#22d3ee"/>
+  <circle cx="256" cy="240" r="5" fill="#a855f7"/>
+  <circle cx="266" cy="82" r="4" fill="#6366f1"/>
+
+  <!-- Text -->
+  <text x="330" y="150" class="opp-title">
+    Optics <tspan class="opp-accent">&amp;</tspan> Photonics
+  </text>
+
+  <text x="334" y="208" class="opp-subtitle">
+    ENGINEERING DOCUMENTATION
+  </text>
+
+  <rect x="334" y="228" width="520" height="5" rx="2.5" fill="url(#opp-spectrum)"/>
+</svg>
