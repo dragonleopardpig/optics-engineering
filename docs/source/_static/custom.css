@@ -7,42 +7,6 @@
 .brand-optics-name { display: block; font-size: 18px; line-height: 1.25; letter-spacing: -0.4px; white-space: nowrap; }
 .brand-optics-name > span { display: inline; }
 .sidebar-subtitle { margin-top: 12px; font-size: 10px; }
-.brand .optics-logo-light, .mobile-brand .optics-logo-light { display: block; }
-.brand .optics-logo-dark, .mobile-brand .optics-logo-dark { display: none; }
-:root[data-theme="dark"] .optics-logo-light { display: none; }
-:root[data-theme="dark"] .optics-logo-dark { display: block; }
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme]) .optics-logo-light { display: none; }
-  :root:not([data-theme]) .optics-logo-dark { display: block; }
-}
-/* Original RTD logo display */
-:root[data-palette="original"] .optics-logo-light,
-:root[data-palette="original"] .optics-logo-dark {
-  display: none !important;
-}
-:root[data-palette="original"] .optics-logo-original {
-  display: block !important;
-}
-:root:not([data-palette="original"]) .optics-logo-original {
-  display: none !important;
-}
-
-/* Umbriel Cyberpunk logo display */
-:root[data-palette="umbriel-cyberpunk"] .optics-logo-light,
-:root[data-palette="umbriel-cyberpunk"] .optics-logo-dark,
-:root[data-palette="umbriel-cyberpunk"] .optics-logo-original,
-:root:not([data-palette]) .optics-logo-light,
-:root:not([data-palette]) .optics-logo-dark,
-:root:not([data-palette]) .optics-logo-original {
-  display: none !important;
-}
-:root[data-palette="umbriel-cyberpunk"] .optics-logo-cyberpunk,
-:root:not([data-palette]) .optics-logo-cyberpunk {
-  display: block !important;
-}
-:root[data-palette]:not([data-palette="umbriel-cyberpunk"]) .optics-logo-cyberpunk {
-  display: none !important;
-}
 .mobile-brand { display: inline-flex; align-items: center; gap: 7px; white-space: nowrap; }
 .mobile-optics-mark { width: 44px; display: block; }
 .content-grid.is-home { display: block; }

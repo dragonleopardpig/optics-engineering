@@ -29,7 +29,7 @@ html_theme_options = {
     "language_selector": False,
     "logo_only": False,
 }
-html_logo = "_static/logo.svg"
+html_logo = "_static/logo-photonics.svg"
 html_favicon = "_static/logo.svg"
 html_title = project
 html_short_title = project
