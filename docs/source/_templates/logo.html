@@ -1,1 +1,152 @@
-<img class="optics-logo" src="{{ pathto('_static/logo-photonics.svg', 1) }}" alt="Optics &amp; Photonics — Engineering Documentation" width="512" height="410">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 410" width="512" height="410" class="optics-logo" role="img" aria-label="Optics &amp; Photonics logo">
+  <title>Optics &amp; Photonics — Engineering Documentation</title>
+  <defs>
+    <linearGradient id="pBus" gradientUnits="userSpaceOnUse" x1="96" y1="0" x2="416" y2="0">
+      <stop offset="0%"   stop-color="#eafdff"/>
+      <stop offset="35%"  stop-color="#5ef0ff"/>
+      <stop offset="50%"  stop-color="#38d6ff"/>
+      <stop offset="100%" stop-color="#2aa8ff" stop-opacity="0.55"/>
+    </linearGradient>
+    <linearGradient id="pDrop" gradientUnits="userSpaceOnUse" x1="256" y1="0" x2="96" y2="0">
+      <stop offset="0%"   stop-color="#ff5fa2"/>
+      <stop offset="100%" stop-color="#ff8cc0" stop-opacity="0.9"/>
+    </linearGradient>
+    <linearGradient id="pRing" gradientUnits="userSpaceOnUse" x1="156" y1="120" x2="356" y2="320">
+      <stop offset="0%"   stop-color="#ff5fa2"/>
+      <stop offset="50%"  stop-color="#c86bff"/>
+      <stop offset="100%" stop-color="#6c7bff"/>
+    </linearGradient>
+    <radialGradient id="pCore" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%"   stop-color="#c86bff" stop-opacity="0.22"/>
+      <stop offset="70%"  stop-color="#ff5fa2" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#ff5fa2" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="pGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="pHalo" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="10"/>
+    </filter>
+    <style>
+      .port-label {
+        font-family: 'JetBrains Mono', 'Consolas', 'Menlo', monospace;
+        font-size: 16px;
+        font-weight: 750;
+        letter-spacing: 1.5px;
+        transition: fill 0.2s ease;
+      }
+      /* Light theme defaults */
+      .port-label-in   { fill: #0369a1; }
+      .port-label-thru { fill: #7e22ce; }
+      .port-label-drop { fill: #be185d; }
+      .port-label-add  { fill: #047857; }
+
+      /* Dark theme overrides */
+      :root[data-theme="dark"] .port-label-in,
+      @media (prefers-color-scheme: dark) {
+        .port-label-in   { fill: #38d6ff; }
+        .port-label-thru { fill: #c084fc; }
+        .port-label-drop { fill: #ff5fa2; }
+        .port-label-add  { fill: #4ade80; }
+      }
+      :root[data-theme="light"] .port-label-in   { fill: #0369a1; }
+      :root[data-theme="light"] .port-label-thru { fill: #7e22ce; }
+      :root[data-theme="light"] .port-label-drop { fill: #be185d; }
+      :root[data-theme="light"] .port-label-add  { fill: #047857; }
+    </style>
+  </defs>
+
+  <!-- Silicon waveguide layer (unlit cores) -->
+  <g fill="none" stroke="#26396b" stroke-width="10">
+    <path d="M96 336 H416"/>
+    <path d="M96 104 H416"/>
+    <circle cx="256" cy="220" r="100"/>
+  </g>
+
+  <!-- Tapers + grating couplers -->
+  <g fill="#26396b">
+    <!-- bottom-left (IN) -->
+    <polygon points="96,331 96,341 76,358 76,314"/>
+    <rect x="68" y="312" width="4" height="48" rx="2"/>
+    <rect x="60" y="312" width="4" height="48" rx="2"/>
+    <rect x="52" y="312" width="4" height="48" rx="2"/>
+    <!-- bottom-right (THRU) -->
+    <polygon points="416,331 416,341 436,358 436,314"/>
+    <rect x="440" y="312" width="4" height="48" rx="2"/>
+    <rect x="448" y="312" width="4" height="48" rx="2"/>
+    <rect x="456" y="312" width="4" height="48" rx="2"/>
+    <!-- top-left (DROP) -->
+    <polygon points="96,99 96,109 76,126 76,82"/>
+    <rect x="68" y="80" width="4" height="48" rx="2"/>
+    <rect x="60" y="80" width="4" height="48" rx="2"/>
+    <rect x="52" y="80" width="4" height="48" rx="2"/>
+    <!-- top-right (ADD) -->
+    <polygon points="416,99 416,109 436,126 436,82"/>
+    <rect x="440" y="80" width="4" height="48" rx="2"/>
+    <rect x="448" y="80" width="4" height="48" rx="2"/>
+    <rect x="456" y="80" width="4" height="48" rx="2"/>
+  </g>
+
+  <!-- ===== Light layer ===== -->
+  <circle cx="256" cy="220" r="94" fill="url(#pCore)"/>
+  <path d="M96 336 H416" stroke="url(#pBus)" stroke-width="5" fill="none" filter="url(#pGlow)"/>
+
+  <!-- Input grating lit (cyan) -->
+  <g fill="#5ef0ff" opacity="0.85" filter="url(#pGlow)">
+    <rect x="68" y="312" width="4" height="48" rx="2"/>
+    <rect x="60" y="312" width="4" height="48" rx="2"/>
+    <rect x="52" y="312" width="4" height="48" rx="2"/>
+  </g>
+  <!-- Through grating lit (neon purple) -->
+  <g fill="#bc13fe" opacity="0.95" filter="url(#pGlow)">
+    <rect x="440" y="312" width="4" height="48" rx="2"/>
+    <rect x="448" y="312" width="4" height="48" rx="2"/>
+    <rect x="456" y="312" width="4" height="48" rx="2"/>
+  </g>
+
+  <!-- Drop waveguide light -->
+  <path d="M256 104 H96" stroke="url(#pDrop)" stroke-width="5" fill="none" filter="url(#pGlow)"/>
+  <g fill="#ff5fa2" opacity="0.9" filter="url(#pGlow)">
+    <rect x="68" y="80" width="4" height="48" rx="2"/>
+    <rect x="60" y="80" width="4" height="48" rx="2"/>
+    <rect x="52" y="80" width="4" height="48" rx="2"/>
+  </g>
+
+  <!-- Add grating lit (bright neon green) -->
+  <g fill="#39ff14" opacity="0.95" filter="url(#pGlow)">
+    <rect x="440" y="80" width="4" height="48" rx="2"/>
+    <rect x="448" y="80" width="4" height="48" rx="2"/>
+    <rect x="456" y="80" width="4" height="48" rx="2"/>
+  </g>
+
+  <!-- Ring resonance -->
+  <circle cx="256" cy="220" r="100" fill="none" stroke="url(#pRing)" stroke-width="10" opacity="0.8" filter="url(#pHalo)"/>
+  <circle cx="256" cy="220" r="100" fill="none" stroke="url(#pRing)" stroke-width="6" filter="url(#pGlow)"/>
+  <circle cx="256" cy="220" r="100" fill="none" stroke="#ffffff" stroke-opacity="0.85"
+          stroke-width="5" stroke-linecap="round" stroke-dasharray="3 23.18">
+    <animate attributeName="stroke-dashoffset" values="0;26.18" dur="1.4s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Hotspots -->
+  <ellipse cx="256" cy="328" rx="28" ry="7" fill="#ffffff" opacity="0.45" filter="url(#pGlow)"/>
+  <ellipse cx="256" cy="112" rx="28" ry="7" fill="#ffd1e6" opacity="0.45" filter="url(#pGlow)"/>
+
+  <!-- Traveling pulses -->
+  <path d="M96 336 H416" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round"
+        stroke-dasharray="16 144" opacity="0.9">
+    <animate attributeName="stroke-dashoffset" values="160;0" dur="1.6s" repeatCount="indefinite"/>
+  </path>
+  <path d="M256 104 H96" fill="none" stroke="#ffe3f0" stroke-width="4" stroke-linecap="round"
+        stroke-dasharray="16 64" opacity="0.9">
+    <animate attributeName="stroke-dashoffset" values="80;0" dur="0.8s" repeatCount="indefinite"/>
+  </path>
+
+  <!-- Port labels -->
+  <g class="port-label">
+    <text class="port-label-in" x="62" y="388" text-anchor="middle">IN</text>
+    <text class="port-label-thru" x="448" y="388" text-anchor="middle">THRU</text>
+    <text class="port-label-drop" x="62" y="56" text-anchor="middle">DROP</text>
+    <text class="port-label-add" x="448" y="56" text-anchor="middle">ADD</text>
+  </g>
+</svg>
